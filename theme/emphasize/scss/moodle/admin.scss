@@ -828,7 +828,78 @@ div[data-region="drawer-toggle"] {
             color: #fff;
     }
 }
-
+//Code added for Quick Links Navigation
+ul.user_navigation_ul {
+    margin: 0px;
+    list-style: none;
+    li.user_nav_div.user_link_active_page {
+        background-color: #2674be;
+    }
+    li.user_nav_div {
+        padding: 5px 0%;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+#nav-drawer{
+    ul.user_navigation_ul li.user_nav_div.user_link_active_page a.user_navigation_link {
+        padding: 5px 5%;
+        width: 100%;
+        i.fa {
+            font-size: 22px;
+            color: #fff;
+            text-shadow: none;
+            min-width: 30px;
+            margin: auto;
+            float: left;
+            padding-left: 8px;
+        }
+        span.user_navigation_link_text {
+            display: inherit;
+            float: left;
+            font-weight: 600;
+            font-size: 14px;
+            text-shadow: none;
+            line-height: 25px;
+            font-weight: 300;
+        }
+    }
+}
+#nav-drawer.closed{
+    ul.user_navigation_ul li.user_nav_div.user_link_active_page a.user_navigation_link {
+            padding: 5px 2%;
+            float: left;
+            width: 96%;
+            i.fa {
+                font-size: 22px;
+                color: #fff;
+                text-shadow: none;
+                min-width: 30px;
+                margin: auto;
+                float: left;
+                padding-left: 8px;
+            }
+            span.user_navigation_link_text {
+                display: none;
+                font-weight: 600;
+                font-size: 14px;
+                text-shadow: none;
+            }
+    }
+    ul.user_navigation_ul li.user_nav_div {
+        padding: 2px 0px;
+        width: 100%;
+        border-top: 1px solid #484848;
+        position: relative;
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+//Code ends for Quick Links Navigation
 @media (max-width:1440px) {
     #page.container-fluid {
         max-width: 1187px;

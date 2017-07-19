@@ -7,7 +7,11 @@
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
 }
-
+.list-group {
+  .list-group-item:active{
+    background-color: #2674be;    
+  }
+}
 
 // Individual list items
 //
@@ -19,8 +23,8 @@
   padding: $list-group-item-padding-y $list-group-item-padding-x;
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -$list-group-border-width;
-  background-color: $list-group-bg;
-  border: $list-group-border-width solid $list-group-border-color;
+  //background-color: $list-group-bg;
+  border-top: $list-group-border-width solid $list-group-border-bottom-color;
 
   &:first-child {
     @include border-top-radius($list-group-border-radius);
@@ -84,7 +88,11 @@
   width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: $list-group-link-color;
   text-align: inherit; // For `<button>`s (anchors inherit)
-
+  font-weight: normal;
+  text-transform: uppercase;
+  .m-l-0 {
+    font-weight: normal;
+  }
   .list-group-item-heading {
     color: $list-group-link-heading-color;
   }

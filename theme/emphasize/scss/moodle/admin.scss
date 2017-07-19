@@ -806,6 +806,34 @@
     @extend .table-warning;
 }
 //code added by Raghuvaran
+.toggle_btn {
+    position: relative;
+}
+#nav-drawer{
+    padding-top: 5px;
+    .list-group {
+        margin-top: 39px;
+    }
+}
+div[data-region="drawer-toggle"] {
+    button.btn.pull-xs-left.m-r-1.btn-secondary {
+        position: absolute;
+        right: -10px;
+        background-color: #232323;
+        @include hover-focus {
+            outline: none;
+        }
+    }
+    button.btn.pull-xs-left.m-r-1.btn-secondary span[aria-hidden="true"]{
+            color: #fff;
+    }
+}
+
+@media (max-width:1440px) {
+    #page.container-fluid {
+        max-width: 1187px;
+    }
+}
 @media (min-width:768px) {
     body#page-my-index section#region-main.col-md-8 {
         width: 66.66667%;

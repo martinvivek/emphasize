@@ -51,6 +51,7 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
 ];
 
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
+//$templatecontext['flatnavigation'] = $PAGE->flatnav;
+$templatecontext['flatnavigation'] = flatnav_icon_support($PAGE->flatnav);
 echo $OUTPUT->render_from_template('theme_emphasize/columns2', $templatecontext);
 

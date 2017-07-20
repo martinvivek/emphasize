@@ -106,3 +106,39 @@ function theme_emphasize_get_pre_scss($theme) {
 
     return $scss;
 }
+
+/*
+ * function added by Raghuvaran Regarding Icons for Left side toggle links in 20-7-2017
+ * this function need to be call in the layout files where we are showing the toggle
+ * we need to add the below line in flat_navigation.mustache file 
+ * <i class="site-menu-icon {{{remuiicon}}}" aria-hidden="true"></i>
+ * according to the key values passed to the anchor tag the icons will be displayed
+*/
+function flatnav_icon_support($flatnav) {
+    // Getting strings for privatefiles & competencies, because their keys are numeric in $PAGE-flatnav
+    $pf = get_string('privatefiles');
+    $cmpt = get_string('competencies', 'core_competency');
+    $flatnav_new = array();
+    foreach ($flatnav as $key => $value)
+    {
+        $flatnav_new[$key] = $value;
+        switch ($value->key) {
+            case 'myhome' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-dashboard'; break;
+            case 'home': $flatnav_new[$key]->nav_drwer_icon = 'fa fa-home'; break;
+            case 'calendar' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-calendar'; break;
+            case 'mycourses' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-book'; break;
+            case 'sitesettings' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-settings'; break;
+            case 'addblock' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-plus-circle'; break;
+            case 'badgesview' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-bookmark'; break;
+            case 'participants' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-users'; break;
+            case 'grades' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-star'; break;
+            case 'coursehome' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-book'; break;
+            default : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-folder'; break;
+        }
+        switch($value->text) {
+            case $pf : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-copy'; break;
+            case $cmpt : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-check-circle'; break;
+        }
+    }
+    return $flatnav_new;
+}

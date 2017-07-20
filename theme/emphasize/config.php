@@ -147,6 +147,22 @@ $THEME->layouts = [
         'file' => 'secure.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre'
+    ),
+    //new layouts
+    'fullpage' => array(
+        'file' => 'fullpage.php',
+        'regions' => array(),
+        'options' => array('nofooter' => true, 'nocoursefooter' => true),
+    ),
+    'partial_page' => array(
+        'file' => 'partial_page.php',
+        'regions' => array(),
+        'options' => array('nofooter' => true, 'nocoursefooter' => true),
+    ),
+    'image_page' => array(
+        'file' => 'image_page.php',
+        'regions' => array(),
+        'options' => array('nofooter' => true, 'nocoursefooter' => true),
     )
 ];
 

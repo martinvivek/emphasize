@@ -900,9 +900,9 @@ ul.user_navigation_ul {
     }
 }
 //Code ends for Quick Links Navigation
-@media (max-width:1440px) {
-    #page.container-fluid {
-        max-width: 1187px;
+@media (min-width:768px) {
+    body {
+        margin-left: 50px;
     }
 }
 @media (min-width:768px) {

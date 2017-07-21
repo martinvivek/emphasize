@@ -897,6 +897,9 @@ div[data-region="drawer-toggle"] {
     body {
         margin-left: 50px;
     }
+    body.notloggedin {
+        margin-left: inherit;
+    }
 }
 @media (min-width:768px) {
     body#page-my-index section#region-main.col-md-8 {

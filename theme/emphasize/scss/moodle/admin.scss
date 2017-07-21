@@ -901,6 +901,38 @@ div[data-region="drawer-toggle"] {
     }
 }
 //Code ends for Quick Links Navigation
+
+//Code added for social links
+#page-footer .social_imgs {
+        float: right;
+        padding: 20px 25px;
+    }
+    ul.social_bookmarks {
+        list-style-type: none;
+        margin: 0px;
+        li.social-link {
+            display: inline;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        li.social-link.twitter:hover {
+            background-color: #46D4FE;
+        }
+        li.social-link.facebook:hover {
+            background-color: #0070a8;
+        }
+        li.social-link.youtube:hover {
+            background-color: #A72B1D;
+        }
+        li.social-link.linkedin:hover {
+            background-color: #419CCA;
+        }
+        li.social-link.instagram:hover {
+            background-color: #419CCA;
+        }
+    }
+    
+// Code ends here for social links
 @media (min-width:768px) {
     body {
         margin-left: 50px;

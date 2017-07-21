@@ -300,4 +300,53 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
+        
+        //code added for Social links url
+        //Marketing Spots
+        $name = 'theme_emphasize/sociallinks';
+        $title = get_string('sociallinks', 'theme_emphasize');
+        $description = get_string('sociallinksdesc', 'theme_emphasize');
+        $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $settings->add($setting);
+        
+        $name = 'theme_emphasize/fburl';
+        $title = get_string('fburl', 'theme_emphasize');
+        $description = get_string('fburldesc', 'theme_emphasize');
+        $default = '';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        $name = 'theme_emphasize/twitter';
+        $title = get_string('twitter', 'theme_emphasize');
+        $description = get_string('twitterdesc', 'theme_emphasize');
+        $default = '';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        $name = 'theme_emphasize/linkedin';
+        $title = get_string('linkedin', 'theme_emphasize');
+        $description = get_string('linkedindesc', 'theme_emphasize');
+        $default = '';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        $name = 'theme_emphasize/youtube';
+        $title = get_string('youtube', 'theme_emphasize');
+        $description = get_string('youtubedesc', 'theme_emphasize');
+        $default = '';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        $name = 'theme_emphasize/instagram';
+        $title = get_string('instagram', 'theme_emphasize');
+        $description = get_string('instagramdesc', 'theme_emphasize');
+        $default = '';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
 }

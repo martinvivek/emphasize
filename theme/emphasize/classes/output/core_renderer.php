@@ -704,7 +704,44 @@ class core_renderer extends \core_renderer {
         }
         return $skipped;
     }
-
+    
+    /**
+     *Function added by Raghuvaran for footer social networks
+     * Returns a social links.
+     *
+     * @return social links.
+     */
+    public function social_bookmarks(){
+        global $CFG;
+        $social_bookmarks = '';
+        if (!empty($this->page->theme->settings->sociallinks)) {
+            $social_bookmarks .= '<div class="social_imgs">';
+                $social_bookmarks .= '<ul class="social_bookmarks">';
+                    $social_bookmarks .= '<li class="social-link facebook">';
+                        $social_bookmarks .= "<a target='_blank' href='https://www.facebook.com/iihsin' title='Facebook'>";
+                            $social_bookmarks .= '<i class="fa fa-facebook" aria-hidden="true"></i></a>';
+                    $social_bookmarks .= "</li>";
+                    $social_bookmarks .= '<li class="social-link twitter">';
+                        $social_bookmarks .= '<a target="_blank" href="http://twitter.com/iihsin" title="Twitter">';
+                            $social_bookmarks .= '<i class="fa fa-twitter" aria-hidden="true"></i></a>';
+                    $social_bookmarks .= "</li>";
+                    $social_bookmarks .= '<li class="social-link linkedin">';
+                        $social_bookmarks .= '<a target="_blank" href="http://linkedin.com/company/indian-institute-for-human-settlements" title="Linkedin">';
+                            $social_bookmarks .= '<i class="fa fa-linkedin" aria-hidden="true"></i></a>';
+                    $social_bookmarks .= '</li>';
+                    $social_bookmarks .= '<li class="social-link youtube">';
+                        $social_bookmarks .= '<a target="_blank" href="https://www.youtube.com/channel/UCM5RA4WAMWhtX3okNzjWr_w?sub_confirmation=1" title="Youtube">';
+                            $social_bookmarks .= '<i class="fa fa-youtube" aria-hidden="true"></i></a>';
+                    $social_bookmarks .= '</li>';
+                    $social_bookmarks .= '<li class="social-link instagram">';
+                        $social_bookmarks .= '<a target="_blank" href="https://www.instagram.com/?hl=en" title="Youtube">';
+                            $social_bookmarks .= '<i class="fa fa-instagram" aria-hidden="true"></i></a>';
+                    $social_bookmarks .= '</li>';
+                $social_bookmarks .= "</ul>";
+            $social_bookmarks .= "</div>";
+        }   
+        return $social_bookmarks;
+    }
     /**
      * Secure login info.
      *

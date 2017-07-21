@@ -99,3 +99,21 @@ $string['sliderfifth'] = "Fifth Slider";
 $string['sliderfifthdesc'] = "The Image you uploaded here will be displayed as Fifth image of the sliders";
 $string['sliderfifthtxt'] = "Fifth Slider Text";
 $string['sldrfifthtxtdesc'] = "The text you added here will be displayed as text for the Fifth slider image";
+
+$string['sociallinks'] = "Social links";
+$string['sociallinksdesc'] = "If you enable this, you can find the social links at footer, And you can add your social networking page urls below text boxes respectively. ";
+
+$string['fburl'] = "FaceBook URL";
+$string['fburldesc'] = "The URL you added here will be the path for your FaceBook page";
+
+$string['twitter'] = "Twitter URL";
+$string['twitterdesc'] = "The URL you added here will be the path for your Twitter page";
+
+$string['linkedin'] = "linkedIn";
+$string['linkedindesc'] = "The URL you added here will be the path for your linkedIn page";
+
+$string['youtube'] = "Youtube URL";
+$string['youtubedesc'] = "The URL you added here will be the path for your Youtube page";
+
+$string['instagram'] = "Instagram URL";
+$string['instagramdesc'] = "The URL you added here will be the path for your Instagram page";

@@ -31,6 +31,7 @@ $string['choosereadme'] = 'Emphasize is a modern highly-customisable theme. This
 $string['currentinparentheses'] = '(current)';
 $string['configtitle'] = 'Emphasize';
 $string['generalsettings'] = 'General settings';
+$string['footersettings'] = 'Footer settings';
 $string['pluginname'] = 'Emphasize';
 $string['presetfiles'] = 'Additional theme preset files';
 $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Emphasize_Presets>Emphasize presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/emphasize>Presets repository</a> for presets that others have shared.';
@@ -64,3 +65,37 @@ $string['footertextcolor'] = "Footer's text color";
 $string['footertext_desc'] = "The color you added here will be affects as Footer's text color";
 $string['footerlinkcolor'] = "Footer's links text color";
 $string['footerlink_desc'] = "The color you added here will be affects as each Footer's link text color";
+
+$string['profileimage'] = "Profile Page Image";
+$string['profileimagedesc'] = "The Image you uploaded here will be displayed as banner in Profile Page";
+
+$string['courseimage'] = "Course Page Image";
+$string['courseimagedesc'] = "The Image you uploaded here will be displayed as banner in Course Page";
+
+$string['messageimage'] = "Message Page Image";
+$string['messageimagedesc'] = "The Image you uploaded here will be displayed as banner in Message Page";
+
+$string['sliderone'] = "First Slider";
+$string['slideronedesc'] = "The Image you uploaded here will be displayed as first image of the sliders";
+$string['slideronetext'] = "First Slider Text";
+$string['sldronetxtdesc'] = "The text you added here will be displayed as text for the first slider image";
+
+$string['slidertwo'] = "Second Slider";
+$string['slidertwodesc'] = "The Image you uploaded here will be displayed as Second image of the sliders";
+$string['slidertwotext'] = "Second Slider Text";
+$string['sldrtwotxtdesc'] = "The text you added here will be displayed as text for the Second slider image";
+
+$string['sliderthree'] = "Third Slider";
+$string['sliderthreedesc'] = "The Image you uploaded here will be displayed as Third image of the sliders";
+$string['sliderthreetxt'] = "Third Slider Text";
+$string['sldrthreetxtdesc'] = "The text you added here will be displayed as text for the Third slider image";
+
+$string['sliderfourth'] = "Fourth Slider";
+$string['sliderfourthdesc'] = "The Image you uploaded here will be displayed as Fourth image of the sliders";
+$string['sliderfourthtxt'] = "Fourth Slider Text";
+$string['sldrfourthtxtdesc'] = "The text you added here will be displayed as text for the Fourth slider image";
+
+$string['sliderfifth'] = "Fifth Slider";
+$string['sliderfifthdesc'] = "The Image you uploaded here will be displayed as Fifth image of the sliders";
+$string['sliderfifthtxt'] = "Fifth Slider Text";
+$string['sldrfifthtxtdesc'] = "The text you added here will be displayed as text for the Fifth slider image";

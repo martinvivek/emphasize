@@ -41,3 +41,26 @@ $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will
 $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['region-side-pre'] = 'Right';
+
+//Code Added by Raghuvaran for custom settings
+$string['blockheaderbg'] = "Block's Header bg color";
+$string['blockheaderbg_desc'] = "The color you added here will be affects as each block's header background color";
+$string['blocktextcolor'] = "Block's Header text color";
+$string['blocktext_desc'] = "The color you added here will be affects as each block's header text color";
+$string['buttonbgcolor'] = "Button's background color";
+$string['buttonbg_desc'] = "The color you added here will be affects as each Button's background color";
+$string['btntextcolor'] = "Button's text color";
+$string['btntext_desc'] = "The color you added here will be affects as each Button's text color";
+$string['btnhoverbgcolor'] = "Button's Hover bg color";
+$string['btnhover_desc'] = "The color you added here will be affects as each Button's background color when mouse hover on them";
+$string['btnhovertextcolor'] = "Button's hover text color";
+$string['btnhovertext_desc'] = "The color you added here will be affects as each Button's text color when mouse hover on them";
+$string['btnradius'] = "Button radius";
+$string['btnradius_desc'] = "The value you added here will be affects as each Button's border radius";
+$string['customscss'] = 'Custom SCSS';
+$string['footerbgcolor'] = "Footer's bg color";
+$string['footerbg_desc'] = "The color you added here will be affects as Footer's background color";
+$string['footertextcolor'] = "Footer's text color";
+$string['footertext_desc'] = "The color you added here will be affects as Footer's text color";
+$string['footerlinkcolor'] = "Footer's links text color";
+$string['footerlink_desc'] = "The color you added here will be affects as each Footer's link text color";

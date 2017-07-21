@@ -871,6 +871,9 @@ div[data-region="drawer-toggle"] {
         i.fa {
             float: right;
             text-align: center;
+            -webkit-transition: 0.8s ease-out;
+            -moz-transition: 0.8s ease-out;
+            transition: 0.8s ease-out;
         }
     }
     a.list-group-item:hover {
@@ -889,6 +892,11 @@ div[data-region="drawer-toggle"] {
             text-align: left;
             font-weight: 300;
             text-transform: uppercase;
+        }
+        i.fa {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            transform: rotateY(180deg);
         }
     }
 }

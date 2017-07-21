@@ -85,4 +85,119 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     $settings->add($page);
+    
+    // New Settings added by Raghuvaran
+    // Block's Header background color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/blockheaderbg';
+    $title = get_string('blockheaderbg', 'theme_emphasize');
+    $description = get_string('blockheaderbg_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Block's Header text color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/blocktextcolor';
+    $title = get_string('blocktextcolor', 'theme_emphasize');
+    $description = get_string('blocktext_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Button's Header background color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/buttonbgcolor';
+    $title = get_string('buttonbgcolor', 'theme_emphasize');
+    $description = get_string('buttonbg_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Button's Header text color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/btntextcolor';
+    $title = get_string('btntextcolor', 'theme_emphasize');
+    $description = get_string('btntext_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Button's Hover Header background color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/btnhoverbgcolor';
+    $title = get_string('btnhoverbgcolor', 'theme_emphasize');
+    $description = get_string('btnhover_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Button's Hover Header text color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/btnhovertextcolor';
+    $title = get_string('btnhovertextcolor', 'theme_emphasize');
+    $description = get_string('btnhovertext_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Custom SCSS to include after the content.
+    $setting = new admin_setting_scsscode('theme_emphasize/btnradius', get_string('customscss', 'theme_emphasize'),
+        get_string('btnradius_desc', 'theme_emphasize'), '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // Footer background color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/footerbgcolor';
+    $title = get_string('footerbgcolor', 'theme_emphasize');
+    $description = get_string('footerbg_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Footer's text color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/footertextcolor';
+    $title = get_string('footertextcolor', 'theme_emphasize');
+    $description = get_string('footertext_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
+    
+    // Footer's Links text color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/footerlinkcolor';
+    $title = get_string('footerlinkcolor', 'theme_emphasize');
+    $description = get_string('footerlink_desc', 'theme_emphasize');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Must add the page after definiting all the settings!
+    //$settings->add($page);
 }

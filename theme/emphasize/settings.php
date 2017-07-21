@@ -303,12 +303,12 @@ if ($ADMIN->fulltree) {
         
         //code added for Social links url
         //Marketing Spots
-        $name = 'theme_emphasize/sociallinks';
-        $title = get_string('sociallinks', 'theme_emphasize');
-        $description = get_string('sociallinksdesc', 'theme_emphasize');
-        $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-        $setting->set_updatedcallback('theme_reset_all_caches');
-        $settings->add($setting);
+        //$name = 'theme_emphasize/sociallinks';
+        //$title = get_string('sociallinks', 'theme_emphasize');
+        //$description = get_string('sociallinksdesc', 'theme_emphasize');
+        //$setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+        //$setting->set_updatedcallback('theme_reset_all_caches');
+        //$settings->add($setting);
         
         $name = 'theme_emphasize/fburl';
         $title = get_string('fburl', 'theme_emphasize');

@@ -143,6 +143,11 @@ $string['footerlink_desc'] = "The color you added here will be affects as each F
 //--- end Footer Settings ---
 
 //user profile strings
+
+$string['blogentries'] = 'Blog Entries';
+$string['discussions'] = 'Discussions';
+$string['aboutme'] = 'About Me';
+
 $string['interests'] = 'Interests';
 $string['institution'] = 'Unit';
 $string['location'] = 'Location';

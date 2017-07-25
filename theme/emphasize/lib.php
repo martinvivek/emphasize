@@ -165,13 +165,7 @@ function theme_emphasize_pluginfile($course, $cm, $context, $filearea, $args, $f
         $theme = theme_config::load('emphasize');
     }
     if ($context->contextlevel == CONTEXT_SYSTEM) {
-        if ($filearea === 'profileimage') {
-            return $theme->setting_file_serve('profileimage', $args, $forcedownload, $options);
-        } else if ($filearea === 'courseimage') {
-            return $theme->setting_file_serve('courseimage', $args, $forcedownload, $options);
-        } else if ($filearea === 'messageimage') {
-            return $theme->setting_file_serve('messageimage', $args, $forcedownload, $options);
-        } else if ($filearea === 'sliderone') {
+        if ($filearea === 'sliderone') {
             return $theme->setting_file_serve('sliderone', $args, $forcedownload, $options);
         } else if ($filearea === 'slidertwo') {
             return $theme->setting_file_serve('slidertwo', $args, $forcedownload, $options);
@@ -179,6 +173,28 @@ function theme_emphasize_pluginfile($course, $cm, $context, $filearea, $args, $f
             return $theme->setting_file_serve('sliderthree', $args, $forcedownload, $options);
         } else if ($filearea === 'sliderfourth') {
             return $theme->setting_file_serve('sliderfourth', $args, $forcedownload, $options);
+         //code added by Bunesh
+        }  else if($filearea === 'profileimage'){
+            $theme = theme_config::load('emphasize');
+            // By default, theme files must be cache-able by both browsers and proxies.
+            if (!array_key_exists('cacheability', $options)) {
+                $options['cacheability'] = 'public';
+            }
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+        }  else if($filearea === 'courseimage'){
+            $theme = theme_config::load('emphasize');
+            // By default, theme files must be cache-able by both browsers and proxies.
+            if (!array_key_exists('cacheability', $options)) {
+                $options['cacheability'] = 'public';
+            }
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+        }  else if($filearea === 'messageimage'){
+            $theme = theme_config::load('emphasize');
+            // By default, theme files must be cache-able by both browsers and proxies.
+            if (!array_key_exists('cacheability', $options)) {
+                $options['cacheability'] = 'public';
+            }
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
         } else if ($filearea === 'sliderfifth') {
             return $theme->setting_file_serve('sliderfifth', $args, $forcedownload, $options);
         } else {

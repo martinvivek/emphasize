@@ -651,7 +651,38 @@ class core_renderer extends \core_renderer {
         }
         return $this->render($menu);
     }
+//function added for profile page image by Bunesh
+    public function profileimage() {
+        global $CFG;
 
+        $profileimgurl = '';
+         //$profileimage .='<div class="item">';
+            $profileimgurl = $this->page->theme->setting_file_url('profileimage', 'profileimage');
+            //$pimage5 = html_writer::empty_tag('img', array('src' => $profileimgurl, 'class' => 's5'));
+            //$profileimage.= $pimage5;
+        //$profileimage.='</div>';
+        return $profileimgurl;
+    }
+    
+    //function added for profile page image by Bunesh
+    public function courseimage() {
+        global $CFG;
+
+        $courseimageurl = '';
+            $courseimageurl = $this->page->theme->setting_file_url('courseimage', 'courseimage');
+        
+        return $courseimageurl;
+    }
+    
+    //function added for profile page image by Bunesh
+    public function messageimage() {
+        global $CFG;
+
+        $messageimageurl = '';
+            $messageimageurl = $this->page->theme->setting_file_url('messageimage', 'messageimage');
+        
+        return $messageimageurl;
+    }
     /**
      * Take a node in the nav tree and make an action menu out of it.
      * The links are injected in the action menu.

@@ -97,7 +97,11 @@ if (!$currentpage = my_get_page($userid, MY_PAGE_PUBLIC)) {
 }
 
 $PAGE->set_context($context);
-$PAGE->set_pagelayout('mypublic');
+if($USER->id==2){
+    $PAGE->set_pagelayout('mypublic');
+}else{
+    $PAGE->set_pagelayout('userpublic');}
+
 $PAGE->set_pagetype('user-profile');
 
 // Set up block editing capabilities.

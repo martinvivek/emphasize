@@ -91,6 +91,13 @@ $THEME->layouts = [
     ),
     // My public page.
     'mypublic' => array(
+        'file' => 'columns2.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+    ),
+
+    // user profile page.
+    'userpublic' => array(
         'file' => 'mypublic.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',

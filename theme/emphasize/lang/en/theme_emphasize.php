@@ -43,7 +43,8 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['region-side-pre'] = 'Right';
 
-//Code Added by Raghuvaran for custom settings
+// color settings
+$string['colorsetting'] = "Color Settings";
 $string['blockheaderbg'] = "Block's Header bg color";
 $string['blockheaderbg_desc'] = "The color you added here will be affects as each block's header background color";
 $string['blocktextcolor'] = "Block's Header text color";
@@ -59,12 +60,7 @@ $string['btnhovertext_desc'] = "The color you added here will be affects as each
 $string['btnradius'] = "Button radius";
 $string['btnradius_desc'] = "The value you added here will be affects as each Button's border radius";
 $string['customscss'] = 'Custom SCSS';
-$string['footerbgcolor'] = "Footer's bg color";
-$string['footerbg_desc'] = "The color you added here will be affects as Footer's background color";
-$string['footertextcolor'] = "Footer's text color";
-$string['footertext_desc'] = "The color you added here will be affects as Footer's text color";
-$string['footerlinkcolor'] = "Footer's links text color";
-$string['footerlink_desc'] = "The color you added here will be affects as each Footer's link text color";
+
 
 $string['profileimage'] = "Profile Page Image";
 $string['profileimagedesc'] = "The Image you uploaded here will be displayed as banner in Profile Page";
@@ -74,6 +70,17 @@ $string['courseimagedesc'] = "The Image you uploaded here will be displayed as b
 
 $string['messageimage'] = "Message Page Image";
 $string['messageimagedesc'] = "The Image you uploaded here will be displayed as banner in Message Page";
+//--- end color settings ---
+
+//slider settings
+
+$string['imagesettings'] = "Image Settings";
+$string['pagebannerdesc'] = "The Images you uploaded here will be displayed as banner images for respective pages";
+$string['pagebanner'] = "Page Banner Settings";
+
+
+$string['slidersetting'] = "Slider Settings";
+$string['slidersettingdesc'] = "The Images you uploaded here will be displayed as slider images";
 
 $string['sliderone'] = "First Slider";
 $string['slideronedesc'] = "The Image you uploaded here will be displayed as first image of the sliders";
@@ -99,6 +106,15 @@ $string['sliderfifth'] = "Fifth Slider";
 $string['sliderfifthdesc'] = "The Image you uploaded here will be displayed as Fifth image of the sliders";
 $string['sliderfifthtxt'] = "Fifth Slider Text";
 $string['sldrfifthtxtdesc'] = "The text you added here will be displayed as text for the Fifth slider image";
+//--end slider settings---
+
+
+// Footer Settings
+$string['footersetting'] = 'Footer Settings';
+
+// Social media settings
+$string['socialmedia'] = 'Social Media Settings';
+$string['socialmediadesc'] = 'Enter the social media links for your site.';
 
 $string['sociallinks'] = "Social links";
 $string['sociallinksdesc'] = "If you enable this, you can find the social links at footer, And you can add your social networking page urls below text boxes respectively. ";
@@ -117,3 +133,53 @@ $string['youtubedesc'] = "The URL you added here will be the path for your Youtu
 
 $string['instagram'] = "Instagram URL";
 $string['instagramdesc'] = "The URL you added here will be the path for your Instagram page";
+
+$string['footerbgcolor'] = "Footer's bg color";
+$string['footerbg_desc'] = "The color you added here will be affects as Footer's background color";
+$string['footertextcolor'] = "Footer's text color";
+$string['footertext_desc'] = "The color you added here will be affects as Footer's text color";
+$string['footerlinkcolor'] = "Footer's links text color";
+$string['footerlink_desc'] = "The color you added here will be affects as each Footer's link text color";
+//--- end Footer Settings ---
+
+//user profile strings
+$string['interests'] = 'Interests';
+$string['institution'] = 'Unit';
+$string['location'] = 'Location';
+$string['description'] = 'Description';
+$string['editprofile'] = 'Edit Profile';
+
+$string['programs'] = 'Programs';
+$string['programname'] = 'Program Name';
+$string['status'] = 'Status';
+$string['certificates'] = 'Certifications';
+$string['certificatename'] = 'Certification Name';
+
+$string['firstname'] = 'First Name';
+$string['surname'] = 'Last Name';
+$string['email'] = 'Email';
+$string['citytown'] = 'City/Town';
+$string['country'] = 'Country';
+$string['selectcountry'] = 'Select Country';
+$string['description'] = 'Description';
+
+$string['notenrolledanycourse'] = 'Not enrolled in any course.';
+$string['grade'] = "Grade";
+$string['viewnotes'] = "View Notes";
+$string['notenrolled'] = 'No Records Found.';
+$string['courses'] = 'Courses';
+$string['preferences'] = 'Preferences';
+$string['submit'] = 'Submit';
+// User profile page js
+
+$string['actioncouldnotbeperformed'] = 'Action could not be performed!';
+$string['enterfirstname'] = 'Please enter your First Name.';
+$string['enterlastname'] = 'Please enter your Last Name.';
+$string['enteremailid'] = 'Please enter your Email ID.';
+$string['enterproperemailid'] = 'Please enter proper Email ID.';
+$string['detailssavedsuccessfully'] = 'Details Saved Successfully!';
+
+
+
+
+

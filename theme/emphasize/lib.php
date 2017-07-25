@@ -86,6 +86,8 @@ function theme_emphasize_get_pre_scss($theme) {
     $configurable = [
         // Config key => [variableName, ...].
         'brandcolor' => ['brand-primary'],
+        'blockheaderbg' => ['blockheaderbg'],
+        'blocktextcolor' => ['blocktextcolor'],
     ];
 
     // Prepend variables first.

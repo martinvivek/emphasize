@@ -18,6 +18,8 @@ $brand-warning:             #ff8800 !default;
 $brand-danger:              #ff4136 !default;
 $brand-inverse:             $gray-dark !default;
 $navbar-height:             50px !default;
+$blockheaderbg:             #03a9f4 !default;
+$blocktextcolor:            #fff !default;
 
 // Spacing
 $spacer:   1rem !default;
@@ -157,10 +159,12 @@ $breadcrumb-divider-rtl: "/" !default;
  */
 .block-region .card-block {
     .card-title {
-        padding-bottom: ($spacer/2);
         font-size: 1.143rem;
         font-weight: 600;
         text-transform: uppercase;
+        background-color: $blockheaderbg;
+        color:$blocktextcolor;
+        padding: 12px 13px 13px 13px;
     }
 }
 

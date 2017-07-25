@@ -79,33 +79,19 @@ $string['pagebannerdesc'] = "The Images you uploaded here will be displayed as b
 $string['pagebanner'] = "Page Banner Settings";
 
 
-$string['slidersetting'] = "Slider Settings";
-$string['slidersettingdesc'] = "The Images you uploaded here will be displayed as slider images";
-
-$string['sliderone'] = "First Slider";
-$string['slideronedesc'] = "The Image you uploaded here will be displayed as first image of the sliders";
-$string['slideronetext'] = "First Slider Text";
-$string['sldronetxtdesc'] = "The text you added here will be displayed as text for the first slider image";
-
-$string['slidertwo'] = "Second Slider";
-$string['slidertwodesc'] = "The Image you uploaded here will be displayed as Second image of the sliders";
-$string['slidertwotext'] = "Second Slider Text";
-$string['sldrtwotxtdesc'] = "The text you added here will be displayed as text for the Second slider image";
-
-$string['sliderthree'] = "Third Slider";
-$string['sliderthreedesc'] = "The Image you uploaded here will be displayed as Third image of the sliders";
-$string['sliderthreetxt'] = "Third Slider Text";
-$string['sldrthreetxtdesc'] = "The text you added here will be displayed as text for the Third slider image";
-
-$string['sliderfourth'] = "Fourth Slider";
-$string['sliderfourthdesc'] = "The Image you uploaded here will be displayed as Fourth image of the sliders";
-$string['sliderfourthtxt'] = "Fourth Slider Text";
-$string['sldrfourthtxtdesc'] = "The text you added here will be displayed as text for the Fourth slider image";
-
-$string['sliderfifth'] = "Fifth Slider";
-$string['sliderfifthdesc'] = "The Image you uploaded here will be displayed as Fifth image of the sliders";
-$string['sliderfifthtxt'] = "Fifth Slider Text";
-$string['sldrfifthtxtdesc'] = "The text you added here will be displayed as text for the Fifth slider image";
+//code by bunesh
+$string['help_slide1'] = 'help slider1';
+$string['help_slide1desc'] = 'First help Slider Image to be displayed on Helppage';
+$string['help_slide2'] = 'Help slider2';
+$string['help_slide2desc'] = 'Second help Slider Image to be displayed on Helppage';
+$string['help_slide3'] = 'Help slider3';
+$string['help_slide3desc'] = 'Third help Slider Image to be displayed on Helppage';
+$string['help_slide4'] = 'Help slider4';
+$string['help_slide4desc'] = 'Fourth help Slider Image to be displayed on Helppage';
+$string['help_slide5'] = 'Help slider5';
+$string['help_slide5desc'] = 'Fifth help Slider Image to be displayed on Help page';
+$string['noofhelpslides'] = 'No of slides on Help page';
+$string['noofhelpslidesdesc'] = 'Number of slides to be displayed on the help page (Max 5)';
 //--end slider settings---
 
 

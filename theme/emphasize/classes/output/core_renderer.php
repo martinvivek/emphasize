@@ -683,6 +683,67 @@ class core_renderer extends \core_renderer {
         
         return $messageimageurl;
     }
+    
+    // code for slider by Bunesh
+    public function should_render_help_slideshow() {
+        // Only render the slideshow on the front page and login page
+        if ($this->page->theme->settings->noofhelpslides > 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+ public function help_slider() {
+            $slider1 = '';
+            $slider1 .= $this->page->theme->setting_file_url('help_slide1', 'help_slide1');
+            $slider2 = '';
+            $slider2 .= $this->page->theme->setting_file_url('help_slide2', 'help_slide2');
+            $slider3 = '';
+            $slider3 .= $this->page->theme->setting_file_url('help_slide3', 'help_slide3');
+            $slider4 = '';
+            $slider4 .= $this->page->theme->setting_file_url('help_slide4', 'help_slide4');
+            $slider5 = '';
+            $slider5 .= $this->page->theme->setting_file_url('help_slide5', 'help_slide5');
+        $logocontainer = '';
+        $logocontainer .= '<div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                <li data-target="#myCarousel" data-slide-to="4"></li>
+                            </ol>
+                                <div class="carousel-inner" role="listbox">
+                                  <div class="carousel-item active">
+                                    <img class="first-slide" src='.$slider1.' alt="">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="second-slide" src='.$slider2.' alt="">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="third-slide" src='.$slider3.' alt="">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="fourth-slide" src='.$slider4.' alt="">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="fifth-slide" src='.$slider5.' alt="">
+                                  </div>
+                                </div>
+                             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                         </div>';/*courousel -inner div closing*/
+       // $logocontainer .= '</div>';/*myCarousel div closing*/
+        return $logocontainer;
+    }
+    
+    //slider code ends here
     /**
      * Take a node in the nav tree and make an action menu out of it.
      * The links are injected in the action menu.

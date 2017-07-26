@@ -683,6 +683,14 @@ class core_renderer extends \core_renderer {
         
         return $messageimageurl;
     }
+    //function added for profile page image by Bunesh
+    public function logginbackground() {
+        global $CFG;
+        $logginbgimgurl = '';
+            $logginbgimgurl = $this->page->theme->setting_file_url('loginbg', 'loginbg');
+        return $logginbgimgurl;
+    }
+    
     
     // code for slider by Bunesh
     public function should_render_help_slideshow() {

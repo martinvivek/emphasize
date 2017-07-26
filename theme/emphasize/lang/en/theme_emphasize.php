@@ -176,7 +176,8 @@ $string['detailssavedsuccessfully'] = 'Details Saved Successfully!';
 
 //footer string
 $string['followus'] = 'Follow Us';
-
+$string['loginbg'] = 'Background image';
+$string['loginbgdesc'] = 'The uploaded page will displayed in before login only';
 
 
 

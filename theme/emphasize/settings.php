@@ -70,10 +70,14 @@ if ($ADMIN->fulltree) {
     $settings->add($page);
     $page = new admin_settingpage('theme_emphasize_imagesettings',  get_string('imagesettings', 'theme_emphasize'));
     
-    $page->add(new admin_setting_heading(
-        'theme_emphasize_slidersetting',
-        get_string('slidersetting', 'theme_emphasize'),
-        format_text(get_string('slidersettingdesc', 'theme_emphasize'), FORMAT_MARKDOWN))); 
+    //loggin background image by Bunesh
+        $name = 'theme_emphasize/loginbg';
+        $title = get_string('loginbg', 'theme_emphasize');
+        $description = get_string('loginbgdesc', 'theme_emphasize');
+        $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbg');
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+
     // Slider Image1 banner image file setting.
        //code by bunesh
     $name = 'theme_emphasize/noofhelpslides';

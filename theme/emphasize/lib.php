@@ -231,6 +231,13 @@ function theme_emphasize_pluginfile($course, $cm, $context, $filearea, $args, $f
                 $options['cacheability'] = 'public';
             }
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+        }else if($filearea === 'loginbg'){
+            $theme = theme_config::load('emphasize');
+            // By default, theme files must be cache-able by both browsers and proxies.
+            if (!array_key_exists('cacheability', $options)) {
+                $options['cacheability'] = 'public';
+            }
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
         } else {
             send_file_not_found();
         }

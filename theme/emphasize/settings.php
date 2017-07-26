@@ -234,16 +234,16 @@ if ($ADMIN->fulltree) {
         format_text(get_string('socialmediadesc', 'theme_emphasize'), FORMAT_MARKDOWN)));
 
 
-        $name = 'theme_emphasize/sociallinks';
-        $title = get_string('sociallinks', 'theme_emphasize');
-        $description = get_string('sociallinksdesc', 'theme_emphasize');
-        $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-        $setting->set_updatedcallback('theme_reset_all_caches');
-        $page->add($setting);
+        // $name = 'theme_emphasize/sociallinks';
+        // $title = get_string('sociallinks', 'theme_emphasize');
+        // $description = get_string('sociallinksdesc', 'theme_emphasize');
+        // $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+        // $setting->set_updatedcallback('theme_reset_all_caches');
+        // $page->add($setting);
         
-        $name = 'theme_emphasize/fburl';
-        $title = get_string('fburl', 'theme_emphasize');
-        $description = get_string('fburldesc', 'theme_emphasize');
+        $name = 'theme_emphasize/facebook';
+        $title = get_string('facebook', 'theme_emphasize');
+        $description = get_string('facebookdesc', 'theme_emphasize');
         $default = '';
         $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');

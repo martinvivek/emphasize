@@ -61,6 +61,14 @@ $string['btnradius'] = "Button radius";
 $string['btnradius_desc'] = "The value you added here will be affects as each Button's border radius";
 $string['customscss'] = 'Custom SCSS';
 
+//--- end color settings ---
+
+
+//Image setting strings
+$string['imagesettings'] = "Image Settings";
+$string['pagebannerdesc'] = "The Images you uploaded here will be displayed as banner images for respective pages";
+//page banner settings
+$string['pagebanner'] = "Page Banner Settings";
 
 $string['profileimage'] = "Profile Page Image";
 $string['profileimagedesc'] = "The Image you uploaded here will be displayed as banner in Profile Page";
@@ -70,14 +78,10 @@ $string['courseimagedesc'] = "The Image you uploaded here will be displayed as b
 
 $string['messageimage'] = "Message Page Image";
 $string['messageimagedesc'] = "The Image you uploaded here will be displayed as banner in Message Page";
-//--- end color settings ---
 
 //slider settings
-
-$string['imagesettings'] = "Image Settings";
-$string['pagebannerdesc'] = "The Images you uploaded here will be displayed as banner images for respective pages";
-$string['pagebanner'] = "Page Banner Settings";
-
+$string['slidersetting'] = "Slider Settings";
+$string['slidersettingdesc'] = "The Images you uploaded here will be displayed as slider images";
 
 //code by bunesh
 $string['help_slide1'] = 'help slider1';
@@ -105,8 +109,8 @@ $string['socialmediadesc'] = 'Enter the social media links for your site.';
 $string['sociallinks'] = "Social links";
 $string['sociallinksdesc'] = "If you enable this, you can find the social links at footer, And you can add your social networking page urls below text boxes respectively. ";
 
-$string['fburl'] = "FaceBook URL";
-$string['fburldesc'] = "The URL you added here will be the path for your FaceBook page";
+$string['facebook'] = "FaceBook URL";
+$string['facebookdesc'] = "The URL you added here will be the path for your FaceBook page";
 
 $string['twitter'] = "Twitter URL";
 $string['twitterdesc'] = "The URL you added here will be the path for your Twitter page";
@@ -170,6 +174,8 @@ $string['enteremailid'] = 'Please enter your Email ID.';
 $string['enterproperemailid'] = 'Please enter proper Email ID.';
 $string['detailssavedsuccessfully'] = 'Details Saved Successfully!';
 
+//footer string
+$string['followus'] = 'Follow Us';
 
 
 

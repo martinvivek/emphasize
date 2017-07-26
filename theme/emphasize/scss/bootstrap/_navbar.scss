@@ -254,3 +254,16 @@
     }
   }
 }
+.dropdown-menu {
+  list-style-type: none;
+}
+body#page-site-index .dropdown-menu {
+    width: 250px!important;
+    left: -176px;
+    margin-top: 18px !important;
+    padding: 10px;
+}
+body#page-site-index .box-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 14px;
+}

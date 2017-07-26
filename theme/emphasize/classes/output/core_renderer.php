@@ -842,4 +842,244 @@ class core_renderer extends \core_renderer {
     public function secure_login_info() {
         return $this->login_info(false);
     }
+
+    /**
+     * Construct a user menu, returning HTML that can be echoed out by a
+     * layout file.
+     *
+     * @param stdClass $user A user object, usually $USER.
+     * @param bool $withlinks true if a dropdown should be built.
+     * @return string HTML fragment.
+     */
+    public function user_menu($user = null, $withlinks = null) {
+        global $USER, $CFG;
+        require_once($CFG->dirroot . '/user/lib.php');
+        require_once($CFG->dirroot . '/lib/moodlelib.php');
+
+        if (is_null($user)) {
+            $user = $USER;
+        }
+
+        // Note: this behaviour is intended to match that of core_renderer::login_info,
+        // but should not be considered to be good practice; layout options are
+        // intended to be theme-specific. Please don't copy this snippet anywhere else.
+        if (is_null($withlinks)) {
+            $withlinks = empty($this->page->layout_options['nologinlinks']);
+        }
+
+        // Add a class for when $withlinks is false.
+        $usermenuclasses = array('class'=> 'usermenu nav-item dropdown user-menu login-menu pull-right');
+        if (!$withlinks) {
+            $usermenuclasses = array('class'=> ' nav-item dropdown user-menu login-menu withoutlinks');
+        }
+
+        $returnstr = "";
+
+        // If during initial install, return the empty return string.
+        if (during_initial_install()) {
+            return $returnstr;
+        }
+
+        //$login_dropdown = \theme_remui\toolbox::get_setting('navlogin_popup');
+        $loginpage = $this->is_login_page();
+        $loginurl = get_login_url();
+        $forgotpasswordurl = new moodle_url('/login/forgot_password.php');
+        $loginurl_datatoggle = '';
+        //if($login_dropdown) {
+            $loginurl = '#';
+            $loginurl_datatoggle = 'data-toggle="dropdown"';
+        //}
+        // sign in popup
+        $signinformhtml = '<ul class="dropdown-menu w-350 p-15" role="menu">
+                    <form class="mb-0" action="'.get_login_url().'" method="post" id="login">
+                       <div class="input-group form-group">
+                      <span class="input-group-addon bg-gray"><i class="fa fa-user text-muted"></i>&nbsp;</span>
+                      <input type="text" class="form-control" id="username" name="username" placeholder="echo get_string("username")">
+                    </div>
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon bg-gray"><i class="fa fa-key text-muted"></i></span>
+                      <input type="password" name="password" id="password" class="form-control" placeholder="echo get_string("password")">
+                    </div>
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label class="text-muted">
+                        
+                          <input type="checkbox" id="rememberusername" name="rememberusername" value="1" />
+                          <label for="rememberusername">'.get_string('rememberusername', 'theme_emphasize').'</label>
+                        </label>
+                      </div>
+                    </div>    
+                     <li class="box-footer">
+                        <div class="pull-left">
+                            <a class="float-left" href="'.$forgotpasswordurl.'">'.get_string("forgotpassword", "theme_emphasize").'</a>
+                        </div>
+                        <div class="pull-right">
+                            <input type="submit" class="btn btn-default btn-flat" id="submit" name="submit" value="Login">
+                        </div>
+                    </li>
+                </form>
+                    </ul>';
+        
+        // If not logged in, show the typical not-logged-in string.
+        if (!isloggedin()) {
+            //$returnstr = get_string('loggedinnot', 'moodle');
+            $returnstr = '';
+            if (!$loginpage) {
+                $returnstr = '<a href="'.$loginurl.'" class="nav-link" '.$loginurl_datatoggle.' data-animation="scale-up">
+                <i class="icon wb-user"></i>&nbsp;'.get_string('login').'</a>';
+
+                //if($login_dropdown) {
+                    $returnstr  .= $signinformhtml;
+                //}
+            }
+            
+            return html_writer::tag('div', $returnstr, $usermenuclasses);
+        }
+
+        // If logged in as a guest user, show a string to that effect.
+        if (isguestuser()) {
+            //$returnstr = get_string('loggedinasguest');
+            $returnstr = '';
+            if (!$loginpage && $withlinks) {
+                $returnstr = '<a href="'.$loginurl.'" class="nav-link" '.$loginurl_datatoggle.' data-animation="scale-up">
+                <i class="icon wb-user"></i>&nbsp;'.get_string('login').'</a>';
+
+                //if($login_dropdown) {
+                    $returnstr  .= $signinformhtml;
+                //}
+            }
+
+            //return html_writer::tag('li', '<span class="text-white" style="line-height:66px;">'.get_string('loggedinasguest').'</span>', array('class' => 'nav-item'))
+            return html_writer::tag('li', $returnstr, $usermenuclasses);
+        }
+
+        // Get some navigation opts.
+        $opts = user_get_user_navigation_info($user, $this->page);
+
+        $avatarclasses = "avatars";
+        $avatarcontents = html_writer::span($opts->metadata['useravatar'], 'avatar current');
+        $usertextcontents = $opts->metadata['userfullname'];
+
+        // Other user.
+        if (!empty($opts->metadata['asotheruser'])) {
+            $avatarcontents .= html_writer::span(
+                $opts->metadata['realuseravatar'],
+                'avatar realuser'
+            );
+            $usertextcontents = $opts->metadata['realuserfullname'];
+            $usertextcontents .= html_writer::tag(
+                'span',
+                get_string(
+                    'loggedinas',
+                    'moodle',
+                    html_writer::span(
+                        $opts->metadata['userfullname'],
+                        'value'
+                    )
+                ),
+                array('class' => 'meta viewingas')
+            );
+        }
+
+        // Role.
+        if (!empty($opts->metadata['asotherrole'])) {
+            $role = core_text::strtolower(preg_replace('#[ ]+#', '-', trim($opts->metadata['rolename'])));
+            $usertextcontents .= html_writer::span(
+                $opts->metadata['rolename'],
+                'meta role role-' . $role
+            );
+        }
+
+        // User login failures.
+        if (!empty($opts->metadata['userloginfail'])) {
+            $usertextcontents .= html_writer::span(
+                $opts->metadata['userloginfail'],
+                'meta loginfailures'
+            );
+        }
+
+        // MNet.
+        if (!empty($opts->metadata['asmnetuser'])) {
+            $mnet = strtolower(preg_replace('#[ ]+#', '-', trim($opts->metadata['mnetidprovidername'])));
+            $usertextcontents .= html_writer::span(
+                $opts->metadata['mnetidprovidername'],
+                'meta mnet mnet-' . $mnet
+            );
+        }
+
+        $returnstr .= html_writer::span(
+            html_writer::span($usertextcontents, 'usertext') .
+            html_writer::span($avatarcontents, $avatarclasses),
+            'userbutton'
+        );
+
+        // Create a divider
+        $divider = '<div class="dropdown-divider" role="presentation"></div>';
+
+        $usermenu = '';
+        $usermenu .= '<a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+            <span class="username">'.$usertextcontents.'</span>
+            <span class="avatar avatar-online current">
+            '.$opts->metadata['useravatar'].'
+            <i></i>
+            </span>
+        </a>';
+        
+        $usermenu .= '<div class="dropdown-menu" role="menu">';
+        if ($withlinks) {
+            $navitemcount = count($opts->navitems);
+            $idx = 0;
+            foreach ($opts->navitems as $key => $value) {
+
+                switch ($value->itemtype) {
+                    case 'divider':
+                        // If the nav item is a divider, add one and skip link processing.
+                        $usermenu .= $divider;
+                        break;
+
+                    case 'invalid':
+                        // Silently skip invalid entries (should we post a notification?).
+                        break;
+
+                    case 'link':
+                        // Process this as a link item.
+                        $pix = null;
+                        if (isset($value->pix) && !empty($value->pix)) {
+                            $pix = new pix_icon($value->pix, $value->title, null, array('class' => 'iconsmall'));
+                        } else if (isset($value->imgsrc) && !empty($value->imgsrc)) {
+                            $value->title = html_writer::img(
+                                $value->imgsrc,
+                                $value->title,
+                                array('class' => 'iconsmall')
+                            ) . $value->title;
+                        }
+
+                        // $al = new action_menu_link_secondary(
+                        //     $value->url,
+                        //     $pix,
+                        //     $value->title,
+                        //     array('class' => 'icon')
+                        // );
+                        // if (!empty($value->titleidentifier)) {
+                        //     $al->attributes['data-title'] = $value->titleidentifier;
+                        // }
+                        // $am->add($al);
+                        $icon = $this->pix_icon($pix->pix, '', 'moodle', $pix->attributes);
+                        $usermenu .= '<a class="dropdown-item" href="'.$value->url.'" role="menuitem">'.$icon.$value->title.'</a>';
+                        break;
+                }
+
+                $idx++;
+
+                // Add dividers after the first item and before the last item.
+                if ($idx == 1 || $idx == $navitemcount - 1) {
+                    $usermenu .= $divider;
+                }
+            }
+        }
+        $usermenu .= '</div>';
+
+        return html_writer::tag('li', $usermenu, $usermenuclasses);
+    }
 }

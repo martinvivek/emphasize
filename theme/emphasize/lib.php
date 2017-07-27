@@ -72,6 +72,33 @@ function theme_emphasize_get_main_scss_content($theme) {
 
     return $scss;
 }
+/**
+ * Returns the main SCSS content.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_emphasize_get_custom_scss_content($theme) {
+    global $CFG;
+
+    $scss = '';
+    $filename = !empty($theme->settings->custompreset) ? $theme->settings->custompreset : null;
+    $fs = get_file_storage();
+
+    $context = context_system::instance();
+    if ($filename == 'custom1.scss') {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/emphasize/scss/custompreset/custom1.scss');
+    } else if ($filename == 'custom2.scss') {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/emphasize/scss/custompreset/custom2.scss');
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_emphasize', 'custompreset', 0, '/', $filename))) {
+        $scss .= $presetfile->get_content();
+    } else {
+        // Safety fallback - maybe new installs etc.
+        $scss .= file_get_contents($CFG->dirroot . '/theme/emphasize/scss/custompreset/custom1.scss');
+    }
+
+    return $scss;
+}
 
 /**
  * Get SCSS to prepend.
@@ -88,6 +115,8 @@ function theme_emphasize_get_pre_scss($theme) {
         'brandcolor' => ['brand-primary'],
         'blockheaderbg' => ['blockheaderbg'],
         'blocktextcolor' => ['blocktextcolor'],
+        'linkcolor' => ['linkcolor'],
+        'linkhovercolor' => ['linkhovercolor'],
     ];
 
     // Prepend variables first.

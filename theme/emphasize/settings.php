@@ -181,6 +181,22 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
+
+        //links color added by rizwana
+        $name = 'theme_emphasize/linkcolor';
+        $title = get_string('linkcolor', 'theme_emphasize');
+        $description = get_string('linkcolordesc', 'theme_emphasize');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+
+         //links hover added by rizwana
+        $name = 'theme_emphasize/linkhovercolor';
+        $title = get_string('linkhovercolor', 'theme_emphasize');
+        $description = get_string('linkhovercolordesc', 'theme_emphasize');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
         
         // Button's Header background color.
         // We use an empty default value because the default colour should come from the preset.
@@ -331,4 +347,29 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     $settings->add($page);
+    $page = new admin_settingpage('theme_emphasize_othersettings',  get_string('othersettings', 'theme_emphasize'));
+        
+        // Preset.
+        $name = 'theme_emphasize/custompreset';
+        $title = get_string('custompreset', 'theme_emphasize');
+        $description = get_string('custompresetdesc', 'theme_emphasize');
+        $default = 'custom1.scss';
+
+        $context = context_system::instance();
+        $fs = get_file_storage();
+        $files = $fs->get_area_files($context->id, 'theme_emphasize', 'custompreset', 0, 'itemid, filepath, filename', false);
+
+        $choices = [];
+        foreach ($files as $file) {
+            $choices[$file->get_filename()] = $file->get_filename();
+        }
+        // These are the built in presets.
+        $choices['custom1.scss'] = 'custom1.scss';
+        $choices['custom2.scss'] = 'custom2.scss';
+
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+
+     $settings->add($page);
 }

@@ -20,6 +20,9 @@ $brand-inverse:             $gray-dark !default;
 $navbar-height:             50px !default;
 $blockheaderbg:             #03a9f4 !default;
 $blocktextcolor:            #fff !default;
+// link colors
+$linkcolor:                   #0072bc !default;
+$linkhovercolor:              #333    !default;
 
 // Spacing
 $spacer:   1rem !default;
@@ -191,4 +194,14 @@ $breadcrumb-divider-rtl: "/" !default;
 }
 .safari{
     background: none;
+}
+/**
+* link color.
+*/
+a{
+color:  $linkcolor;
+text-decoration: none;
+}
+a:hover{
+color:  $linkhovercolor;
 }

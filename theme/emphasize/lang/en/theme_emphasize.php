@@ -59,6 +59,12 @@ $string['btnhovertextcolor'] = "Button's hover text color";
 $string['btnhovertext_desc'] = "The color you added here will be affects as each Button's text color when mouse hover on them";
 $string['btnradius'] = "Button radius";
 $string['btnradius_desc'] = "The value you added here will be affects as each Button's border radius";
+// link colors
+$string['linkcolor'] = "Link Color";
+$string['linkhovercolor'] = "Link Hover Color";
+
+$string['linkcolordesc'] = "The color you added here will be affects for all site anchor tags color";
+$string['linkhovercolordesc'] = "The color you added here will be affects for all site anchor tags hover color";
 $string['customscss'] = 'Custom SCSS';
 
 //--- end color settings ---
@@ -130,7 +136,15 @@ $string['footertextcolor'] = "Footer's text color";
 $string['footertext_desc'] = "The color you added here will be affects as Footer's text color";
 $string['footerlinkcolor'] = "Footer's links text color";
 $string['footerlink_desc'] = "The color you added here will be affects as each Footer's link text color";
+//footer string
+$string['followus'] = 'Follow Us';
 //--- end Footer Settings ---
+
+// Other Settings
+$string['othersettings'] = 'Other Settings';
+
+$string['custompreset'] = 'Theme custompreset';
+$string['custompresetdesc'] = 'Pick a custompreset to broadly change the look of the theme.';
 
 //user profile strings
 
@@ -174,8 +188,7 @@ $string['enteremailid'] = 'Please enter your Email ID.';
 $string['enterproperemailid'] = 'Please enter proper Email ID.';
 $string['detailssavedsuccessfully'] = 'Details Saved Successfully!';
 
-//footer string
-$string['followus'] = 'Follow Us';
+
 $string['loginbg'] = 'Background image';
 $string['loginbgdesc'] = 'The uploaded page will displayed in before login only';
 $string['username'] = 'Username';

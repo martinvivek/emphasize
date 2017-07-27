@@ -336,17 +336,29 @@ if ($ADMIN->fulltree) {
     // Advanced settings.
     $page = new admin_settingpage('theme_emphasize_advanced', get_string('advancedsettings', 'theme_emphasize'));
 
-    // Raw SCSS to include before the content.
-    $setting = new admin_setting_scsscode('theme_emphasize/scsspre',
-        get_string('rawscsspre', 'theme_emphasize'), get_string('rawscsspre_desc', 'theme_emphasize'), '', PARAM_RAW);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
+        // Raw SCSS to include before the content.
+        $setting = new admin_setting_scsscode('theme_emphasize/scsspre',
+            get_string('rawscsspre', 'theme_emphasize'), get_string('rawscsspre_desc', 'theme_emphasize'), '', PARAM_RAW);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
 
-    // Raw SCSS to include after the content.
-    $setting = new admin_setting_scsscode('theme_emphasize/scss', get_string('rawscss', 'theme_emphasize'),
-        get_string('rawscss_desc', 'theme_emphasize'), '', PARAM_RAW);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
+        // Raw SCSS to include after the content.
+        $setting = new admin_setting_scsscode('theme_emphasize/scss', get_string('rawscss', 'theme_emphasize'),
+            get_string('rawscss_desc', 'theme_emphasize'), '', PARAM_RAW);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+
+        $name = 'theme_emphasize/fontselect';
+        $title = get_string('fontselect', 'theme_emphasize');
+        $description = get_string('fontselectdesc', 'theme_emphasize');
+        $default = 1;
+        $choices = array(
+            1 => get_string('opensans', 'theme_emphasize'),
+            2 => get_string('ptserif', 'theme_emphasize'),
+        );
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
 
     $settings->add($page);
 }

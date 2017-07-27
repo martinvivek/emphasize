@@ -698,6 +698,9 @@ class core_renderer extends \core_renderer {
         global $CFG;
         $logginbgimgurl = '';
             $logginbgimgurl = $this->page->theme->setting_file_url('loginbg', 'loginbg');
+            if(empty($logginbgimgurl)){
+                $logginbgimgurl = $this->image_url('login_background','theme_emphasize');
+            }
         return $logginbgimgurl;
     }
     

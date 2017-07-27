@@ -897,12 +897,12 @@ class core_renderer extends \core_renderer {
                     <form class="mb-0" action="'.get_login_url().'" method="post" id="login">
                        <div class="input-group form-group">
                       <span class="input-group-addon bg-gray"><i class="fa fa-user text-muted"></i>&nbsp;</span>
-                      <input type="text" class="form-control" id="username" name="username" placeholder="echo get_string("username")">
+                      <input type="text" class="form-control" id="username" name="username" placeholder='.get_string('username', 'theme_emphasize').'>
                     </div>
 
                     <div class="input-group form-group">
                       <span class="input-group-addon bg-gray"><i class="fa fa-key text-muted"></i></span>
-                      <input type="password" name="password" id="password" class="form-control" placeholder="echo get_string("password")">
+                      <input type="password" name="password" id="password" class="form-control" placeholder='.get_string('password','theme_emphasize').'>
                     </div>
                     <div class="form-group">
                       <div class="checkbox">
@@ -915,7 +915,7 @@ class core_renderer extends \core_renderer {
                     </div>    
                      <li class="box-footer">
                         <div class="pull-left">
-                            <a class="float-left" href="'.$forgotpasswordurl.'">'.get_string("forgotpassword", "theme_emphasize").'</a>
+                            <a class="float-left" href="'.$forgotpasswordurl.'">'.get_string('forgotpassword', 'theme_emphasize').'</a>
                         </div>
                         <div class="pull-right">
                             <input type="submit" class="btn btn-default btn-flat" id="submit" name="submit" value="Login">

@@ -178,6 +178,9 @@ $string['detailssavedsuccessfully'] = 'Details Saved Successfully!';
 $string['followus'] = 'Follow Us';
 $string['loginbg'] = 'Background image';
 $string['loginbgdesc'] = 'The uploaded page will displayed in before login only';
-
+$string['username'] = 'Username';
+$string['password'] = 'Password';
+$string['rememberusername'] = 'Remember Me'; 
+$string['forgotpassword'] = 'Forgot password';
 
 

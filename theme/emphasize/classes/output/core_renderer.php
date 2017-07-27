@@ -683,6 +683,16 @@ class core_renderer extends \core_renderer {
         
         return $messageimageurl;
     }
+    //function added for font for moodle by Raghuvaran
+    public function fontfamily() {
+        $fontselected = '';
+        if (($this->page->theme->settings->fontselect)==1) {
+            $fontselected = "OpenSans";
+        } else {
+            $fontselected = "PT Serif Caption";
+        }
+        return $fontselected;
+    }
     //function added for profile page image by Bunesh
     public function logginbackground() {
         global $CFG;

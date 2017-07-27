@@ -43,6 +43,8 @@ if ($ADMIN->fulltree) {
     // These are the built in presets.
     $choices['default.scss'] = 'default.scss';
     $choices['plain.scss'] = 'plain.scss';
+    $choices['defaultcustom.scss'] = 'defaultcustom.scss';
+    $choices['plaincustom.scss'] = 'plaincustom.scss';
 
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
@@ -347,29 +349,4 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     $settings->add($page);
-    $page = new admin_settingpage('theme_emphasize_othersettings',  get_string('othersettings', 'theme_emphasize'));
-        
-        // Preset.
-        $name = 'theme_emphasize/custompreset';
-        $title = get_string('custompreset', 'theme_emphasize');
-        $description = get_string('custompresetdesc', 'theme_emphasize');
-        $default = 'custom1.scss';
-
-        $context = context_system::instance();
-        $fs = get_file_storage();
-        $files = $fs->get_area_files($context->id, 'theme_emphasize', 'custompreset', 0, 'itemid, filepath, filename', false);
-
-        $choices = [];
-        foreach ($files as $file) {
-            $choices[$file->get_filename()] = $file->get_filename();
-        }
-        // These are the built in presets.
-        $choices['custom1.scss'] = 'custom1.scss';
-        $choices['custom2.scss'] = 'custom2.scss';
-
-        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
-        $setting->set_updatedcallback('theme_reset_all_caches');
-        $page->add($setting);
-
-     $settings->add($page);
 }

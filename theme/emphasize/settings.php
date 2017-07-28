@@ -132,8 +132,6 @@ if ($ADMIN->fulltree) {
     // Must add the page after definiting all the settings!
     //$settings->add($page);
     
-    $settings->add($page);
-
         $page->add(new admin_setting_heading(
         'theme_emphasize_pagebanner',
         get_string('pagebanner', 'theme_emphasize'),

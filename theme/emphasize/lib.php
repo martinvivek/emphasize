@@ -106,13 +106,7 @@ function theme_emphasize_get_pre_scss($theme) {
             $scss .= '$' . $target . ': ' . $value . ";\n";
         }, (array) $targets);
     }
-    if(($theme->settings->fontselect) === 1){
-        $fontname = "OpenSans";
-        echo $fontname;
-    } else {
-        $fontname = "PT Serif Caption";
-        echo $fontname;
-    }
+    
     // Prepend pre-scss.
     if (!empty($theme->settings->scsspre)) {
         $scss .= $theme->settings->scsspre;

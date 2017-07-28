@@ -71,7 +71,7 @@ $enable-transitions:        false !default;
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
-
+$fontselect:                  Arial !default;
 
 // Spacing
 //
@@ -836,4 +836,8 @@ $pre-scrollable-max-height:   340px !default;
 $linkcolor:                   #0072bc !default;
 $linkhovercolor:              #333    !default;
 $btnradius:                   0px !default;
-$btnbordercolor:              transparent !default;
+$btnbordercolor:              #269abc !default;
+$buttonbgcolor:               #5bc0de !default;
+$btntextcolor:                #fff !default;
+$btnhoverbgcolor:             #31b0d5 !default;
+$btnhovertextcolor:           #fff !default;

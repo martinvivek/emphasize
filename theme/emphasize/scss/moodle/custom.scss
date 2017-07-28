@@ -14,8 +14,10 @@ div[data-region="drawer-toggle"] {
         position: absolute;
         right: -10px;
         background-color: #232323;
+        border: 1px solid #fff;
         @include hover-focus {
             outline: none;
+            border: 1px solid #fff;
         }
     }
     button.btn.pull-xs-left.m-r-1.btn-secondary span[aria-hidden="true"]{
@@ -25,6 +27,7 @@ div[data-region="drawer-toggle"] {
 //Code added for Quick Links Navigation
 #nav-drawer .list-group {
     width: 100%;
+    float:left;
         a.list-group-item {
         padding: 5px 5%;
         width: 100%;

@@ -24,7 +24,12 @@ $blocktextcolor:            #fff !default;
 $linkcolor:                   #0072bc !default;
 $linkhovercolor:              #333    !default;
 $btnradius:                   0px !default;
-$btnbordercolor:              transparent !default;
+$buttonbgcolor:               #5bc0de  !default;
+$btntextcolor:                #fff !default;
+$btnbordercolor:              #269abc !default;
+$btnhoverbgcolor:             #31b0d5 !default;
+$btnhovertextcolor:           #fff !default;
+$fontselect:                  Arial !default;
 // Spacing
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
@@ -163,8 +168,8 @@ $breadcrumb-divider-rtl: "/" !default;
  */
 .block-region .card-block {
     .card-title {
-        font-size: 1.143rem;
-        font-weight: 600;
+        font-size: 14px /*1.143rem*/;
+        font-weight: normal;
         text-transform: uppercase;
         background-color: $blockheaderbg;
         color:$blocktextcolor;
@@ -206,19 +211,20 @@ text-decoration: none;
 a:hover{
 color:  $linkhovercolor;
 }
-.btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
+button.btn-secondary, .btn-default, .btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
     border-radius:$btnradius;
     -webkit-border-radius: $btnradius;
     -moz-border-radius: $btnradius;
-}
-.btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
-    border-color: $btnbordercolor;
-}
-.btn-secondary, .btn-default {
-    border-color: #ccc;
-}
-.btn-secondary, .btn-default, .btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
+    border: 1px solid $btnbordercolor;
+    text-shadow:none;
     box-shadow: none;
     -webkit-box-shadow:none;
     -moz-box-shadow:none;
+    color:$btntextcolor;
+    background-color: $buttonbgcolor;
+}
+button.btn-secondary:hover, .btn-default:hover, .btn-primary:hover, button:hover, html [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover {
+    background-color: $btnhoverbgcolor;
+    color: $btnhovertextcolor;
+    border: 1px solid #269abc;
 }

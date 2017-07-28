@@ -168,7 +168,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/blockheaderbg';
         $title = get_string('blockheaderbg', 'theme_emphasize');
         $description = get_string('blockheaderbg_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#03a9f4');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -178,7 +178,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/blocktextcolor';
         $title = get_string('blocktextcolor', 'theme_emphasize');
         $description = get_string('blocktext_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#fff');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -186,7 +186,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/linkcolor';
         $title = get_string('linkcolor', 'theme_emphasize');
         $description = get_string('linkcolordesc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#0072bc');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -194,7 +194,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/linkhovercolor';
         $title = get_string('linkhovercolor', 'theme_emphasize');
         $description = get_string('linkhovercolordesc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#333');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
@@ -203,7 +203,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/buttonbgcolor';
         $title = get_string('buttonbgcolor', 'theme_emphasize');
         $description = get_string('buttonbg_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#5bc0de');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
@@ -212,7 +212,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/btntextcolor';
         $title = get_string('btntextcolor', 'theme_emphasize');
         $description = get_string('btntext_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#fff');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -222,7 +222,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/btnhoverbgcolor';
         $title = get_string('btnhoverbgcolor', 'theme_emphasize');
         $description = get_string('btnhover_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#31b0d5');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -232,7 +232,7 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/btnhovertextcolor';
         $title = get_string('btnhovertextcolor', 'theme_emphasize');
         $description = get_string('btnhovertext_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, '#fff');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
@@ -241,8 +241,8 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/btnbordercolor';
         $title = get_string('btnbordercolor', 'theme_emphasize');
         $description = get_string('btnbordercolor_desc', 'theme_emphasize');
-        $default = 'transparent';
-        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $default = '#269abc';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
@@ -358,7 +358,7 @@ if ($ADMIN->fulltree) {
             1 => get_string('opensans', 'theme_emphasize'),
             2 => get_string('ptserif', 'theme_emphasize'),
         );
-        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices); 
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         

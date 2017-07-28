@@ -59,6 +59,8 @@ $string['btnhovertextcolor'] = "Button's hover text color";
 $string['btnhovertext_desc'] = "The color you added here will be affects as each Button's text color when mouse hover on them";
 $string['btnradius'] = "Button radius";
 $string['btnradius_desc'] = "The value you added here will be affects as each Button's border radius";
+$string['btnbordercolor'] = "Button border color";
+$string['btnbordercolor_desc'] = "The value you added here will be affects as each Button's border color";
 // link colors
 $string['linkcolor'] = "Link Color";
 $string['linkhovercolor'] = "Link Hover Color";

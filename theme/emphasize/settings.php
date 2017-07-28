@@ -235,13 +235,17 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
-
-        // Custom SCSS to include after the content.
-        $setting = new admin_setting_scsscode('theme_emphasize/btnradius', get_string('customscss', 'theme_emphasize'),
-            get_string('btnradius_desc', 'theme_emphasize'), '', PARAM_RAW);
+        
+        //Custom SCSS to change the border color of each button.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/btnbordercolor';
+        $title = get_string('btnbordercolor', 'theme_emphasize');
+        $description = get_string('btnbordercolor_desc', 'theme_emphasize');
+        $default = 'transparent';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
-    
+        
     $settings->add($page);
     
     // Footer settings.
@@ -355,6 +359,16 @@ if ($ADMIN->fulltree) {
             2 => get_string('ptserif', 'theme_emphasize'),
         );
         $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        //Custom SCSS to change the border radius of each button.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/btnradius';
+        $title = get_string('btnradius', 'theme_emphasize');
+        $description = get_string('btnradius_desc', 'theme_emphasize');
+        $default = '0px, you can give like eg:4px 4px 4px 4px';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 

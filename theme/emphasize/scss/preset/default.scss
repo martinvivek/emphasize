@@ -23,7 +23,8 @@ $blocktextcolor:            #fff !default;
 // link colors
 $linkcolor:                   #0072bc !default;
 $linkhovercolor:              #333    !default;
-
+$btnradius:                   0px !default;
+$btnbordercolor:              transparent !default;
 // Spacing
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
@@ -204,4 +205,20 @@ text-decoration: none;
 }
 a:hover{
 color:  $linkhovercolor;
+}
+.btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
+    border-radius:$btnradius;
+    -webkit-border-radius: $btnradius;
+    -moz-border-radius: $btnradius;
+}
+.btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
+    border-color: $btnbordercolor;
+}
+.btn-secondary, .btn-default {
+    border-color: #ccc;
+}
+.btn-secondary, .btn-default, .btn-primary, button, html [type="button"], [type="reset"], [type="submit"] {
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
 }

@@ -143,7 +143,7 @@ function flatnav_icon_support($flatnav) {
             case 'participants' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-users'; break;
             case 'grades' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-star'; break;
             case 'coursehome' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-book'; break;
-            default : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-folder'; break;
+            default : $flatnav_new[$key]->nav_drwer_icon = 'fa'; break;
         }
         switch($value->text) {
             case $pf : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-copy'; break;

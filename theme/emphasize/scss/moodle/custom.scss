@@ -145,8 +145,21 @@ div[data-region="drawer-toggle"] {
 }
 
 // code added by rizwana
+ul.social_links {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+        li.social_linklist {
+            display: inline;
+            padding: 1px;
+        }
+}
 #page-footer a.social_icon {
     color: #fff;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
 }
 .social-facebook.active, .social-facebook:active {
     background-color: #2d4373;
@@ -192,4 +205,31 @@ div[data-region="drawer-toggle"] {
 }
 .social-instagram:focus, .social-instagram:hover {
     background-color: #e1171d;
+}
+#page-user-profile .user_image_container {
+    position: relative;
+    width: 16%;
+    float: left;
+    min-height: 50px;
+}
+#page-user-profile .user_image_container a img {
+    border: 3px solid #fff;
+    background-color: #fff;
+    position: absolute;
+    top: -70px;
+}
+.user_image_container .edit_profile {
+    left: 43px;
+    color: #FFF;
+    background-color: rgba(86, 86, 86, 0.58);
+    width: 120px;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+#page-user-profile .profile_left_section>.col-md-10>.profile_top_containers {
+    padding: 0px;
+    height: 95px;
+    overflow: hidden;
 }

@@ -77,10 +77,27 @@
                         <div class="card-block">
                             <img src="{{output.profileimage}}" alt="Profile Image" class="profile_image"/>
                         </div>
+                        <div class="profile_left_section col-md-12 desktop-first-column pull-left">
+                            <div class="col-md-10" style="float: none; margin: 0px auto;">
+                                <div class="user_image_container">
+                                    <a href=""><img src="{{imageone}}" alt="" title="" class="defaultuserpic" width="120" height="120"></a>
+                                    <a href="" class="edit_profile" style="visibility: hidden;">Edit Picture</a>
+                                </div>
+                                <div class="profile_top_containers col-md-4 desktop-first-column">
+                                    <div class="text-left  profile_info_top">{{ firstname }} {{ lastname }} ({{ idnumber }})
+                                    </div>
+                                </div>
+                                <div class="profile_top_containers col-md-3 profile_res desktop-first-column">
+                                    <div class="text-left profile_info_top">{{ email }}</div>
+                                </div>
+                                <div class="profile_top_containers col-md-3 profile_res desktop-first-column">
+                                    <div class="text-left profile_info_top">{{city}}</div>
+                                </div>
+                            </div>
+                         </div>
                     </div>
                     <!-- End Page Widget -->
                 </div>
-                
                 <div class="col-lg-12">
                     <!-- Panel -->
                     <div class="panel">
@@ -96,7 +113,7 @@
                             
                             <div class="tab-content">
                                 {{# aboutme }}
-                                <div class="tab-pane active animation-slide-left" id="aboutme" role="tabpanel">
+                                <div class="tab-pane fade active in" id="aboutme" role="tabpanel">
                                     <ul class="list-group">
                                         {{# hasinterests }}
                                         <li class="list-group-item">
@@ -162,7 +179,7 @@
                                 </div>
                                 {{/ aboutme }}
                                 
-                                <div class="tab-pane animation-slide-left" id="usercourses" role="tabpanel">
+                                <div class="tab-pane fade" id="usercourses" role="tabpanel">
                                     <ul class="list-group">
                                         {{^ hascourses }}
                                             <li class="list-group-item">
@@ -215,7 +232,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="tab-pane animation-slide-left float-right" id="userprefs" role="tabpanel">
+                                <div class="tab-pane fade float-right" id="userprefs" role="tabpanel">
                                     <ul class="list-group">
                                         <li class="list-group-item">
                                             <div class="media">
@@ -239,7 +256,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="tab-pane animation-slide-left" id="editprofile" role="tabpanel">
+                                <div class="tab-pane fade" id="editprofile" role="tabpanel">
                                 <div class="panel-body">
                                   <form class="form-horizontal fv-form fv-form-bootstrap4" id="exampleStandardForm" autocomplete="off" novalidate="novalidate">
                                         <div class="form-group row">
@@ -339,8 +356,7 @@ require(['theme_emphasize/loader']);
 require(['theme_emphasize/drawer'], function(mod) {
     mod.init();
 });
-require(['theme_remui/loader', 'theme_remui/profile'], function () {
-  Breakpoints();
+require(['theme_emphasize/profile'], function () {
 });
 {{/js}}
 

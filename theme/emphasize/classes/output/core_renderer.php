@@ -48,7 +48,7 @@ defined('MOODLE_INTERNAL') || die;
 class core_renderer extends \core_renderer {
 
     /** @var custom_menu_item language The language menu if created */
-    use core_renderer_toolbox;
+    //use core_renderer_toolbox;
     protected $language = null;
 
     /**

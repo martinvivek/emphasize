@@ -209,6 +209,13 @@ ul.social_links {
 .social-instagram:focus, .social-instagram:hover {
     background-color: #e1171d;
 }
+// profile image 
+
+#page-user-profile img.profile_image{
+width:100%;
+height:265px;
+}
+
 #page-user-profile .user_image_container {
     position: relative;
     width: 16%;

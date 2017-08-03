@@ -24,6 +24,10 @@ div[data-region="drawer-toggle"] {
             color: #fff;
     }
 }
+#nav-drawer nav.list-group.m-t-1 .list-group-item {
+    float: left;
+    width: 100%;
+}
 //Code added for Quick Links Navigation
 #nav-drawer .list-group {
     width: 100%;
@@ -43,7 +47,7 @@ div[data-region="drawer-toggle"] {
             margin: auto;
             float: left;
         }
-        div.m-l-0 {
+        div.m-l-0, div.m-l-1 {
             display: inherit;
             float: left;
             font-weight: 600;
@@ -51,6 +55,8 @@ div[data-region="drawer-toggle"] {
             text-shadow: none;
             line-height: 25px;
             font-weight: 300;
+            width:85%;
+            margin-left: 0px !important;
         }
     }
 }
@@ -59,7 +65,7 @@ div[data-region="drawer-toggle"] {
         padding: 5px 2%;
         float: left;
         width: 96%;
-        div.m-l-0 {
+        div.m-l-0, div.m-l-1 {
             display: none;
             font-weight: 600;
             font-size: 14px;
@@ -74,7 +80,7 @@ div[data-region="drawer-toggle"] {
         }
     }
     a.list-group-item:hover {
-        div.m-l-0 {
+        div.m-l-0, div.m-l-1 {
             display: inherit;
             position: absolute;
             left: 100%;

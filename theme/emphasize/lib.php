@@ -142,7 +142,7 @@ function flatnav_icon_support($flatnav) {
             case 'home': $flatnav_new[$key]->nav_drwer_icon = 'fa fa-home'; break;
             case 'calendar' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-calendar'; break;
             case 'mycourses' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-book'; break;
-            case 'sitesettings' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-settings'; break;
+            case 'sitesettings' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-cog'; break;
             case 'addblock' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-plus-circle'; break;
             case 'badgesview' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-bookmark'; break;
             case 'participants' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-users'; break;

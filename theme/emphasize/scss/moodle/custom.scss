@@ -103,6 +103,16 @@ div[data-region="drawer-toggle"] {
         }
     }
 }
+#nav-drawer .list-group .list-group-item {
+    float: left;
+    width: 100%;
+    color: #fff;
+}
+#nav-drawer.closed .list-group .list-group-item {
+    float: left;
+    width: 96%;
+    padding: 5px 2%;
+}
 //Code ends for Quick Links Navigation
 
 //Code added for social links

@@ -209,7 +209,7 @@ ul.social_links {
 .social-instagram:focus, .social-instagram:hover {
     background-color: #e1171d;
 }
-// profile image 
+// profile image by rizwana
 
 #page-user-profile img.profile_image{
 width:100%;
@@ -242,4 +242,18 @@ height:265px;
     padding: 0px;
     height: 95px;
     overflow: hidden;
+}
+
+// course view by rizwana
+body#page-course-view-topics .custom_course_image img {
+    border-radius: 7px;
+}
+body#page-course-view-topics .custom_course_name {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 26px;
+    margin-top: 0px;
+}
+body#page-course-view-topics .custom_course_detail {
+padding:0px;
 }

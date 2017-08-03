@@ -34,6 +34,8 @@ use single_button;
 use paging_bar;
 use context_course;
 use pix_icon;
+use course_in_list;
+use coursecat_helper;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -1098,5 +1100,51 @@ class core_renderer extends \core_renderer {
         $usermenu .= '</div>';
 
         return html_writer::tag('li', $usermenu, $usermenuclasses);
+    }
+
+    /**
+      * written by rizwana for getting course summary files
+      * Returns course summary content
+      * @param  course object
+      * @return course summary stored_file objects
+      */
+    public function get_course_summary_file($course){  
+        global $DB, $CFG, $OUTPUT;
+        if ($course instanceof stdClass) {
+            require_once($CFG->libdir . '/coursecatlib.php');
+            $course = new course_in_list($course);
+            $course_summary = new coursecat_helper($course);
+        }
+        
+            $summary_text = '';
+        // display course summary
+         if ($course->has_summary()) {
+            $summary_text .= $course_summary->get_course_formatted_summary($course,
+                    array('overflowdiv' => true, 'noclean' => true, 'para' => false));
+         }
+         else{
+            $summary_text .= '<div class="alert alert-info text-center">No Description Provided</div>';
+         }
+         // set default course image
+         $url = $this->image_url('courseimg','theme_emphasize');
+        foreach ($course->get_course_overviewfiles() as $file) {
+            $isimage = $file->is_valid_image();
+            if($isimage)
+                $url = file_encode_url("$CFG->wwwroot/pluginfile.php", '/' . $file->get_contextid() . '/' . $file->get_component() . '/' .
+                $file->get_filearea() . $file->get_filepath() . $file->get_filename(), !$isimage);
+            }
+
+        $content = '';
+        $content .= html_writer::start_tag('div', array('class' => 'custom_course_top_section row-fluid'));
+            $content .= html_writer::start_tag('div', array('class' => 'custom_course_image col-md-5 pull-left desktop-first-column'));
+                $content .= html_writer::empty_tag('img', array('src' => $url, 'alt' => $course->fullname,'width' => '100%'));
+            $content .= html_writer::end_tag('div');
+        
+            $content .= html_writer::start_tag('div', array('class' => 'custom_course_detail col-md-7 pull-left'));
+                $content .= html_writer::tag('h3', $course->fullname, array('class'=>'col-md-12 custom_course_name pull-left row-fluid'));
+                $content .= html_writer::tag('div', $summary_text, array('class'=>'pull-left row-fluid col-md-12'));
+            $content .= html_writer::end_tag('div');
+        $content .= html_writer::end_tag('div');
+        return $content;
     }
 }

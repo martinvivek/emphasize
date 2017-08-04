@@ -354,7 +354,7 @@ if ($ADMIN->fulltree) {
         $title = get_string('fontselect', 'theme_emphasize');
         $description = get_string('fontselectdesc', 'theme_emphasize');
         $default = 'Open Sans';
-        $setting = new admin_setting_configtext($name, $title, $description, $default, $choices); 
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         

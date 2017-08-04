@@ -695,8 +695,9 @@ class core_renderer extends \core_renderer {
             $fonturl = "<link href='https://fonts.googleapis.com/css?family=".$fontselected."|".$fontselected."' rel='stylesheet' type='text/css'>";
         } else {
             $fontselected = 'OpenSans';
+            $fonturl = "<link href='https://fonts.googleapis.com/css?family=".$fontselected."|".$fontselected."' rel='stylesheet' type='text/css'>";
         }
-        return $fontselected;
+        return $fonturl;
     }
     //function added for profile page image by Bunesh
     public function logginbackground() {

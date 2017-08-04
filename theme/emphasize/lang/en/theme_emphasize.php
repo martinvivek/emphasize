@@ -110,7 +110,7 @@ $string['noofhelpslidesdesc'] = 'Number of slides to be displayed on the help pa
 // Footer Settings
 $string['footersetting'] = 'Footer Settings';
 $string['fontsettings'] = 'Font Family Settings';
-$string['fontselectdesc'] = 'Enter the exact name of the font to use for all the text.';
+$string['fontselectdesc'] = 'Enter the exact name of the font to use for all the text (eg. Open Sans, Roboto, Lato, PT Sans).';
 $string['opensans'] = 'Open Sans';
 $string['fontselect'] = 'Select Font';
 // Social media settings

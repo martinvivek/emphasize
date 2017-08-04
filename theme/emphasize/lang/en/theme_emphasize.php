@@ -110,8 +110,7 @@ $string['noofhelpslidesdesc'] = 'Number of slides to be displayed on the help pa
 // Footer Settings
 $string['footersetting'] = 'Footer Settings';
 $string['fontsettings'] = 'Font Family Settings';
-$string['fontselectdesc'] = 'Select the font family from select box to use the font for moodle';
-$string['ptserif'] = 'PT Serif';
+$string['fontselectdesc'] = 'Enter the exact name of the font to use for all the text.';
 $string['opensans'] = 'Open Sans';
 $string['fontselect'] = 'Select Font';
 // Social media settings

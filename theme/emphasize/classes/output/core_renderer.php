@@ -687,12 +687,14 @@ class core_renderer extends \core_renderer {
         return $messageimageurl;
     }
     //function added for font for moodle by Raghuvaran
-    public function fontfamily() {
-        $fontselected = '';
-        if (($this->page->theme->settings->fontselect)==1) {
-            $fontselected = "OpenSans";
+    public function html_head_fontfamily() {
+        $fontselected = 'OpenSans';
+        $setfont = $this->page->theme->settings->fontselect;
+        if (!empty($setfont)) {
+            $fontselected = $setfont;
+            $fonturl = "<link href='https://fonts.googleapis.com/css?family=".$fontselected."|".$fontselected."' rel='stylesheet' type='text/css'>";
         } else {
-            $fontselected = "PT Serif Caption";
+            $fontselected = 'OpenSans';
         }
         return $fontselected;
     }

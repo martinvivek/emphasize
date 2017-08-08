@@ -367,6 +367,16 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
+        
+        //Custom SCSS to change the Block's Header radius.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/blkradius';
+        $title = get_string('blkradius', 'theme_emphasize');
+        $description = get_string('blkradius_desc', 'theme_emphasize');
+        $default = '8px 8px 0px 0px';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
 
     $settings->add($page);
 }

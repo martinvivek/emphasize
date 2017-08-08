@@ -30,6 +30,7 @@ $btnbordercolor:              #269abc !default;
 $btnhoverbgcolor:             #31b0d5 !default;
 $btnhovertextcolor:           #fff !default;
 $fontselect:                Open Sans !default;
+$blkhdrradius:              8px 8px 0px 0px !default;
 // Spacing
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
@@ -230,4 +231,7 @@ button.btn-secondary:hover, .btn-default:hover, .btn-primary:hover, button:hover
 }
 body {
     font-family:$fontselect;
+}
+.block>.card-block>h3 {
+    border-radius: $blkhdrradius;
 }

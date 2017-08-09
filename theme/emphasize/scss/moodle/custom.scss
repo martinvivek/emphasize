@@ -40,6 +40,9 @@ nav.list-group.m-t-1{
         width: 100%;
         float: left;
         cursor: pointer;
+        border: none;
+        background-color: inherit;
+        border-top: 1px solid #484848;
         i.fa {
             padding-left: 0px;
             margin-right: 10px;

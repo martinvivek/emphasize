@@ -232,6 +232,6 @@ button.btn-secondary:hover, .btn-default:hover, .btn-primary:hover, button:hover
 body {
     font-family:$fontselect;
 }
-.block>.card-block>h3 {
+.block>.card-block>h3, .block {
     border-radius: $blkhdrradius;
 }

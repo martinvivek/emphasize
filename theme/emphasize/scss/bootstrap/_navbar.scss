@@ -257,7 +257,7 @@
 .dropdown {
     list-style-type: none;
 }
-body#page-site-index .dropdown-menu {
+body#page-site-index div.usermenu.nav-item.dropdown > .dropdown-menu{
     width: 250px!important;
     left: -176px;
     margin-top: 18px !important;

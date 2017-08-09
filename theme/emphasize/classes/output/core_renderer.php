@@ -699,6 +699,16 @@ class core_renderer extends \core_renderer {
         }
         return $fonturl;
     }
+    
+    //function added for calling a css file for a selcted mustache files
+    //author Raghuvaran
+    public function html_head_bootstrapcss() {
+        global $CFG;
+        $cssselected = '';
+        $cssselected .= "<link href='".$CFG->wwwroot."/theme/emphasize/scss/moodle/bootstrap.min.css' rel='stylesheet' type='text/css'>";;
+        return $cssselected;
+    }
+    
     //function added for profile page image by Bunesh
     public function logginbackground() {
         global $CFG;

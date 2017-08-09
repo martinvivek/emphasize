@@ -2,7 +2,16 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
-/*code by Bunesh*/
-.carousel-inner{
-    max-height: 350px;
+//code added by Raghuvaran for front page layout(before & after login page slider) on 9-Aug-2017
+body#page-site-index header.navbar.navbar-full.navbar-light .container-fluid.navbar-nav {
+    width: 100%;
+}
+body#page-site-index header.navbar.navbar-full.navbar-light .container-fluid.navbar-nav>a.navbar-brand.hidden-sm-down {
+    margin: inherit;
+    line-height: inherit;
+    height: inherit;
+}
+div#myCarousel .carousel-inner > .item > img {
+    min-height: 400px;
+    max-height: 400px;
 }

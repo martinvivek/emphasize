@@ -12,6 +12,7 @@ body#page-site-index header.navbar.navbar-full.navbar-light .container-fluid.nav
     height: inherit;
 }
 div#myCarousel .carousel-inner > .item > img {
+    width:100%;
     min-height: 400px;
     max-height: 400px;
 }

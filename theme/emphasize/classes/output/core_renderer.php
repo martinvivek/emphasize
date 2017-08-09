@@ -722,7 +722,7 @@ class core_renderer extends \core_renderer {
     
     
     // code for slider by Bunesh
-    public function should_render_help_slideshow() {
+    public function should_render_frontpage_slideshow() {
         // Only render the slideshow on the front page and login page
         if ($this->page->theme->settings->noofhelpslides > 0) {
             return true;
@@ -730,53 +730,88 @@ class core_renderer extends \core_renderer {
             return false;
         }
     }
- public function help_slider() {
-            $slider1 = '';
-            $slider1 .= $this->page->theme->setting_file_url('help_slide1', 'help_slide1');
-            $slider2 = '';
-            $slider2 .= $this->page->theme->setting_file_url('help_slide2', 'help_slide2');
-            $slider3 = '';
-            $slider3 .= $this->page->theme->setting_file_url('help_slide3', 'help_slide3');
-            $slider4 = '';
-            $slider4 .= $this->page->theme->setting_file_url('help_slide4', 'help_slide4');
-            $slider5 = '';
-            $slider5 .= $this->page->theme->setting_file_url('help_slide5', 'help_slide5');
+    
+    
+    //function written by Raghuvaran for Carousal slider on login page
+    public function loginpage_slider() {
+        global $CFG;
+
         $logocontainer = '';
-        $logocontainer .= '<div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                                <li data-target="#myCarousel" data-slide-to="3"></li>
-                                <li data-target="#myCarousel" data-slide-to="4"></li>
-                            </ol>
-                                <div class="carousel-inner" role="listbox">
-                                  <div class="carousel-item active">
-                                    <img class="first-slide" src='.$slider1.' alt="">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="second-slide" src='.$slider2.' alt="">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="third-slide" src='.$slider3.' alt="">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="fourth-slide" src='.$slider4.' alt="">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="fifth-slide" src='.$slider5.' alt="">
-                                  </div>
-                                </div>
-                             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                         </div>';/*courousel -inner div closing*/
-       // $logocontainer .= '</div>';/*myCarousel div closing*/
+        
+        $logocontainer .= "<style> .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;margin: auto;}
+                           </style>";
+    
+        $logocontainer .= '<div id="myCarousel" class="carousel slide" data-ride="carousel">';
+        $logocontainer .= '<!-- Indicators -->';
+        $logocontainer .= '<ol class="carousel-indicators bottomCorousal">';
+        if(!empty($this->page->theme->settings->help_slide1) && ($this->page->theme->settings->noofhelpslides >= 1)){
+            $logocontainer .= '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
+        }
+        if(!empty($this->page->theme->settings->help_slide2) && ($this->page->theme->settings->noofhelpslides >= 2)){
+        $logocontainer .= '<li data-target="#myCarousel" data-slide-to="1"></li>';
+        }
+        if(!empty($this->page->theme->settings->help_slide3) && ($this->page->theme->settings->noofhelpslides >= 3)){
+        $logocontainer .= '<li data-target="#myCarousel" data-slide-to="2"></li>';
+        }
+        if(!empty($this->page->theme->settings->help_slide4) && ($this->page->theme->settings->noofhelpslides >= 4)){
+            $logocontainer .= '<li data-target="#myCarousel" data-slide-to="3"></li>';
+        }
+        if(!empty($this->page->theme->settings->help_slide5) && ($this->page->theme->settings->noofhelpslides >= 5)){
+            $logocontainer .= '<li data-target="#myCarousel" data-slide-to="4"></li>';
+        }
+        $logocontainer .= '</ol>';
+        $logocontainer .= '<div class="carousel-inner" role="listbox">';
+            //$logocontainer .= '<div class="carousel-caption carousel_top">';
+            //$logocontainer .= '<h3>Welcome to Illume - an interactive e-Learning Platform</h3>';
+            //$logocontainer .= '<button class="show_login_button login_btn" onclick="ShowLogin();">Login to Learn</button>';/*login button*/
+            //$logocontainer .= '</div>';
+        if($this->should_render_frontpage_slideshow() == 1){
+            if(!empty($this->page->theme->settings->help_slide1) &&
+                ($this->page->theme->settings->noofhelpslides >= 1)){
+                    $logocontainer .= '<div class="item active">';
+                        //$imageurl1= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
+                        $imageurl1 = $this->page->theme->setting_file_url('help_slide1', 'help_slide1');
+                        $image1 = html_writer::empty_tag('img', array('src' => $imageurl1, 'class' => 's1'));
+                        $logocontainer .= $image1;
+                    $logocontainer .='</div>';
+                }
+                                        if(!empty($this->page->theme->settings->help_slide2) && ($this->page->theme->settings->noofhelpslides >= 2)){
+            $logocontainer .='<div class="item">';
+                                            //$imageurl2= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
+                                            $imageurl2 = $this->page->theme->setting_file_url('help_slide2', 'help_slide2');
+                                            $image2 = html_writer::empty_tag('img', array('src' => $imageurl2, 'class' => 's2'));
+                                            $logocontainer .= $image2;
+             $logocontainer .='</div>';
+                                        }
+                                        if(!empty($this->page->theme->settings->help_slide3) && ($this->page->theme->settings->noofhelpslides >= 3)){
+             $logocontainer .='<div class="item">';
+                                            //$imageurl3= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
+                                            $imageurl3 = $this->page->theme->setting_file_url('help_slide3', 'help_slide3');
+                                            $image3 = html_writer::empty_tag('img', array('src' => $imageurl3, 'class' => 's3'));
+                                            $logocontainer .= $image3;
+             $logocontainer .='</div>';
+                                        }
+                                        if(!empty($this->page->theme->settings->help_slide4) && ($this->page->theme->settings->noofhelpslides >= 4)){
+             $logocontainer .='<div class="item">';
+                                            //$imageurl4= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
+                                            $imageurl4 = $this->page->theme->setting_file_url('help_slide4', 'help_slide4');
+                                            $image4 = html_writer::empty_tag('img', array('src' => $imageurl4, 'class' => 's4'));
+                                            $logocontainer .= $image4;
+            $logocontainer .='</div>';
+                                        }
+                                        if(!empty($this->page->theme->settings->help_slide5) && ($this->page->theme->settings->noofhelpslides >= 5)){
+            $logocontainer .='<div class="item">';
+                                            //$imageurl5= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
+                                            $imageurl5 = $this->page->theme->setting_file_url('help_slide5', 'help_slide5');
+                                            $image5 = html_writer::empty_tag('img', array('src' => $imageurl5, 'class' => 's5'));
+                                            $logocontainer .= $image5;
+            $logocontainer .='</div>';
+                                        }
+            $logocontainer .= '</div>';/*courousel -inner div closing*/
+            
+            
+        }
+        $logocontainer .= '</div>';/*myCarousel div closing*/
         return $logocontainer;
     }
     

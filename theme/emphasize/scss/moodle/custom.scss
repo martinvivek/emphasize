@@ -279,3 +279,9 @@ body#page-course-view-topics .custom_course_name {
 body#page-course-view-topics .custom_course_detail {
 padding:0px;
 }
+.block>.card-block {
+    padding: 0px;
+}
+.block>.card-block .card-text.content {
+    padding: 0px 1.25em 1.25em;
+}

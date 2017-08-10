@@ -50,6 +50,8 @@ if($page_type == 'site-index'){
 }else{
     $front_page = false;
 }
+global $PAGE;
+$PAGE->requires->js('/theme/emphasize/js/jquery.js',true);
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,

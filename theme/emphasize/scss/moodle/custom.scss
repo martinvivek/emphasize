@@ -80,9 +80,9 @@ nav.list-group.m-t-1{
         i.fa {
             float: right;
             text-align: center;
-            -webkit-transition: 0.8s ease-out;
-            -moz-transition: 0.8s ease-out;
-            transition: 0.8s ease-out;
+            //-webkit-transition: 0.8s ease-out;
+            //-moz-transition: 0.8s ease-out;
+            //transition: 0.8s ease-out;
         }
     }
     a.list-group-item:hover {
@@ -102,11 +102,11 @@ nav.list-group.m-t-1{
             font-weight: 300;
             text-transform: uppercase;
         }
-        i.fa {
-            -webkit-transform: rotateY(180deg);
-            -moz-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-        }
+        //i.fa {
+        //    -webkit-transform: rotateY(180deg);
+        //    -moz-transform: rotateY(180deg);
+        //    transform: rotateY(180deg);
+        //}
     }
 }
 #nav-drawer .list-group .list-group-item {

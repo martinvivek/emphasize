@@ -267,16 +267,17 @@ height:265px;
 }
 
 // course view by rizwana
-body#page-course-view-topics .custom_course_image img {
+body#page-course-view-tabtopics .custom_course_image img {
     border-radius: 7px;
+    margin-bottom:20px;
 }
-body#page-course-view-topics .custom_course_name {
+body#page-course-view-tabtopics .custom_course_name {
     font-weight: 400;
     font-size: 2.2rem;
     line-height: 26px;
     margin-top: 0px;
 }
-body#page-course-view-topics .custom_course_detail {
+body#page-course-view-tabtopics .custom_course_detail {
 padding:0px;
 }
 .block>.card-block, .card.card-block, .card .card-block {

@@ -1183,7 +1183,7 @@ class core_renderer extends \core_renderer {
             }
 
         $content = '';
-        $content .= html_writer::start_tag('div', array('class' => 'custom_course_top_section row-fluid'));
+        $content .= html_writer::start_tag('div', array('class' => 'col-md-12 custom_course_top_section row-fluid'));
             $content .= html_writer::start_tag('div', array('class' => 'custom_course_image col-md-5 pull-left desktop-first-column'));
                 $content .= html_writer::empty_tag('img', array('src' => $url, 'alt' => $course->fullname,'width' => '100%'));
             $content .= html_writer::end_tag('div');

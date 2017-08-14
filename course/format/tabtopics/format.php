@@ -125,52 +125,52 @@ if (!$PAGE->user_is_editing())
 
     $course_top_section = '';
     //changes by hameed on 26 Mar Reg: course view changes ----starts here
-	$course_image_url = $corerenderer->course_summary_files($course);
-	$coursedescription = $course->summary;
-	if(!empty($coursedescription)){
-		$description_without_tags = strip_tags($coursedescription);
-		if(strlen($description_without_tags) < 580){
-			$coursedescription = '<div class="course_description">'.$coursedescription.'</div>';
-		}else{
-			//$coursedescription = substtr($coursedescription, 0 , 340);
-			$coursedescription_formated = '<div class="course_description" >'.
-												$coursedescription.
-											'</div>
-												<a id="show_more" class="show_more_less">More</a>
-												<a id="show_less" class="show_more_less" style="display: none;">Less</a>';
-			$coursedescription_formated .= "<script>
-											$(document).ready(function(){
-												$('#show_more').on('click', function() {
-													$('#show_more').hide();
-													$('.course_description').addClass('show_more_description');
-													$('#show_less').show();
-												});
-												$('#show_less').on('click', function() {
-													$('#show_less').hide();
-													$('.course_description').removeClass('show_more_description');
-													$('#show_more').show();
-												});
-											});
-                                        </script>";
-			$coursedescription = $coursedescription_formated;
-		}
-	}else{
-		$coursedescription = '<div class="alert alert-info text-center">No Description Provided</div>';
-	}
-	$course_top_section .= html_writer::start_tag('div', array('class' => 'custom_course_top_section row-fluid'));
-		$course_top_section .= html_writer::start_tag('div', array('class' => 'custom_course_image span5 pull-left desktop-first-column'));
-			//echo html_writer::empty_tag('img', array('src' => $course_image_url));
-			$course_top_section .= html_writer::empty_tag('img', array('src' => $course_image_url, 'alt' => $course->fullname
-                                        ,'width' => '100%'));
-		$course_top_section .= html_writer::end_tag('div');
+	// $course_image_url = $corerenderer->course_summary_files($course);
+	// $coursedescription = $course->summary;
+	// if(!empty($coursedescription)){
+	// 	$description_without_tags = strip_tags($coursedescription);
+	// 	if(strlen($description_without_tags) < 580){
+	// 		$coursedescription = '<div class="course_description">'.$coursedescription.'</div>';
+	// 	}else{
+	// 		//$coursedescription = substtr($coursedescription, 0 , 340);
+	// 		$coursedescription_formated = '<div class="course_description" >'.
+	// 											$coursedescription.
+	// 										'</div>
+	// 											<a id="show_more" class="show_more_less">More</a>
+	// 											<a id="show_less" class="show_more_less" style="display: none;">Less</a>';
+	// 		$coursedescription_formated .= "<script>
+	// 										$(document).ready(function(){
+	// 											$('#show_more').on('click', function() {
+	// 												$('#show_more').hide();
+	// 												$('.course_description').addClass('show_more_description');
+	// 												$('#show_less').show();
+	// 											});
+	// 											$('#show_less').on('click', function() {
+	// 												$('#show_less').hide();
+	// 												$('.course_description').removeClass('show_more_description');
+	// 												$('#show_more').show();
+	// 											});
+	// 										});
+ //                                        </script>";
+	// 		$coursedescription = $coursedescription_formated;
+	// 	}
+	// }else{
+	// 	$coursedescription = '<div class="alert alert-info text-center">No Description Provided</div>';
+	// }
+	// $course_top_section .= html_writer::start_tag('div', array('class' => 'custom_course_top_section row-fluid'));
+	// 	$course_top_section .= html_writer::start_tag('div', array('class' => 'custom_course_image span5 pull-left desktop-first-column'));
+	// 		//echo html_writer::empty_tag('img', array('src' => $course_image_url));
+	// 		$course_top_section .= html_writer::empty_tag('img', array('src' => $course_image_url, 'alt' => $course->fullname
+ //                                        ,'width' => '100%'));
+	// 	$course_top_section .= html_writer::end_tag('div');
 		
-		$course_top_section .= html_writer::start_tag('div', array('class' => 'custom_course_detail span7 pull-left'));
-			$course_top_section .= html_writer::tag('h3', $course->fullname, array('class'=>'custom_course_name pull-left row-fluid'));
-			$course_top_section .= html_writer::tag('div', $coursedescription, array('class'=>'pull-left row-fluid'));
-		$course_top_section .= html_writer::end_tag('div');
-	$course_top_section .= html_writer::end_tag('div');
+	// 	$course_top_section .= html_writer::start_tag('div', array('class' => 'custom_course_detail span7 pull-left'));
+	// 		$course_top_section .= html_writer::tag('h3', $course->fullname, array('class'=>'custom_course_name pull-left row-fluid'));
+	// 		$course_top_section .= html_writer::tag('div', $coursedescription, array('class'=>'pull-left row-fluid'));
+	// 	$course_top_section .= html_writer::end_tag('div');
+	// $course_top_section .= html_writer::end_tag('div');
     
-    echo $course_top_section;
+ //    echo $course_top_section;
     if ($thissection->summary or $thissection->sequence or $PAGE->user_is_editing())
     {
 

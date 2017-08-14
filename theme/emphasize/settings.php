@@ -246,6 +246,36 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
+        //Custom SCSS to change the Left side bar bg color of each button.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/sidebarbgcolor';
+        $title = get_string('sidebarbgcolor', 'theme_emphasize');
+        $description = get_string('sidebarbgcolor_desc', 'theme_emphasize');
+        $default = '#555658';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        //Custom SCSS to change the Header bg color of each button.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/headerbgcolor';
+        $title = get_string('headerbgcolor', 'theme_emphasize');
+        $description = get_string('headerbgcolor_desc', 'theme_emphasize');
+        $default = '#F6F6F6';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
+        //Custom SCSS to change the Body bg color of each button.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/bodybgcolor';
+        $title = get_string('bodybgcolor', 'theme_emphasize');
+        $description = get_string('bodybgcolor_desc', 'theme_emphasize');
+        $default = '#F6F6F6';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
     $settings->add($page);
     
     // Footer settings.

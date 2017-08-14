@@ -31,6 +31,9 @@ $btnhoverbgcolor:             #31b0d5 !default;
 $btnhovertextcolor:           #fff !default;
 $fontselect:                Open Sans !default;
 $blkhdrradius:              8px 8px 0px 0px !default;
+$sidebarbgcolor:            #555658 !default;
+$headerbgcolor:             #FaFaFa !default;
+$bodybgcolor:             #F6F6F6 !default;
 // Spacing
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
@@ -231,7 +234,17 @@ button.btn-secondary:hover, .btn-default:hover, .btn-primary:hover, button:hover
 }
 body {
     font-family:$fontselect;
+    background-color: $bodybgcolor !important;
 }
 .block>.card-block>h3, .block {
     border-radius: $blkhdrradius;
+}
+body .navbar-light {
+    background-color: $headerbgcolor;
+}
+body [data-region="drawer"] {
+    background-color: $sidebarbgcolor;
+}
+div#page>header#page-header .card {
+    background-color: transparent;
 }

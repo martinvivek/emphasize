@@ -63,6 +63,12 @@ $string['btnbordercolor'] = "Button border color";
 $string['btnbordercolor_desc'] = "The value you added here will be affects as each Button's border color";
 $string['blkradius'] = "Block Header radius";
 $string['blkradius_desc'] = "The value you added here will be affects as each Block's border radius";
+$string['sidebarbgcolor'] = "Left Side bar bg color";
+$string['sidebarbgcolor_desc'] = "The color you added here will be affects as side bar's background color";
+$string['headerbgcolor'] = "Header bg color";
+$string['headerbgcolor_desc'] = "The color you added here will be affects as Header's background color";
+$string['bodybgcolor'] = "Body bg color";
+$string['bodybgcolor_desc'] = "The color you added here will be affects as Body's background color";
 // link colors
 $string['linkcolor'] = "Link Color";
 $string['linkhovercolor'] = "Link Hover Color";

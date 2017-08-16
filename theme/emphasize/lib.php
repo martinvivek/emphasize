@@ -94,7 +94,6 @@ function theme_emphasize_get_pre_scss($theme) {
         'blocktextcolor' => ['blocktextcolor'],
         'linkcolor' => ['linkcolor'],
         'linkhovercolor' => ['linkhovercolor'],
-        'btnradius' => ['btnradius'],
         'btnbordercolor' => ['btnbordercolor'],
         'buttonbgcolor' => ['buttonbgcolor'],
         'btntextcolor' => ['btntextcolor'],
@@ -105,6 +104,7 @@ function theme_emphasize_get_pre_scss($theme) {
         'sidebarbgcolor' => ['sidebarbgcolor'],
         'headerbgcolor' => ['headerbgcolor'],
         'bodybgcolor' => ['bodybgcolor'],
+        'btnsradius' => ['btnsradius'],
     ];
 
     // Prepend variables first.

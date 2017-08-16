@@ -388,12 +388,12 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
-        //Custom SCSS to change the border radius of each button.
+        //Custom SCSS to change the All Buttons Border radius.
         //author : K.Raghuvaran
-        $name = 'theme_emphasize/btnradius';
-        $title = get_string('btnradius', 'theme_emphasize');
-        $description = get_string('btnradius_desc', 'theme_emphasize');
-        $default = '0px, you can give like eg:4px 4px 4px 4px';
+        $name = 'theme_emphasize/btnsradius';
+        $title = get_string('btnsradius', 'theme_emphasize');
+        $description = get_string('btnsradius_desc', 'theme_emphasize');
+        $default = '0px 0px 0px 0px';
         $setting = new admin_setting_configtext($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);

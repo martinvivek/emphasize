@@ -322,3 +322,27 @@ body#page-course-view-tabtopics .activity img.activityicon{float:right;}
      padding-top: 0 !important; 
      padding-bottom: 0 !important; 
 }
+
+//code added for tabs
+.card-block .nav-tabs{
+    background-color: #03a9f4;
+      border-radius: 8px 8px 0px 0px;
+}
+.card-block .nav-tabs .nav-link.active{
+    background-color: #58cbff !important;
+    color: #fff !important ;
+}
+.card-block .nav-tabs .nav-link{
+    color: #fff;
+    border: 0;
+}
+.card-block .nav-tabs .nav-link:hover,
+.card-block .nav-tabs .nav-link.active{
+    border: 0;
+}
+.nav.nav-tabs>li.nav-item:first-child>a{
+    border-radius: 8px 0px 0px 0px;
+}
+.nav.nav-tabs>li.nav-item {
+    margin-bottom: 0px;
+}

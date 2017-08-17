@@ -105,6 +105,8 @@ function theme_emphasize_get_pre_scss($theme) {
         'headerbgcolor' => ['headerbgcolor'],
         'bodybgcolor' => ['bodybgcolor'],
         'btnsradius' => ['btnsradius'],
+        'tblhdcolor' => ['tblhdcolor'],
+        'tbltextcolor' => ['tbltextcolor'],
     ];
 
     // Prepend variables first.

@@ -209,4 +209,11 @@ $string['password'] = 'Password';
 $string['rememberusername'] = 'Remember Me'; 
 $string['forgotpassword'] = 'Forgot password';
 
+$string['sliderhgt'] = 'Slider Height'; 
+$string['sliderhgtdesc'] = 'You can select the slider images height from this select box';
 
+$string['tblhdcolor'] = 'Table Header Color'; 
+$string['tblhd_desc'] = 'The selected color code here, will be affected as table header background color';
+
+$string['tbltextcolor'] = 'Table Header Text Color'; 
+$string['tbltext_desc'] = 'The selected color code here, will be affected as table header Text color';

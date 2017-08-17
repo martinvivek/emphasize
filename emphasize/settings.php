@@ -68,6 +68,25 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Tables Header background color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/tblhdcolor';
+    $title = get_string('tblhdcolor', 'theme_emphasize');
+    $description = get_string('tblhd_desc', 'theme_emphasize');
+    $default = '#03A9F4';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // tables Header text color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_emphasize/tbltextcolor';
+    $title = get_string('tbltextcolor', 'theme_emphasize');
+    $description = get_string('tbltext_desc', 'theme_emphasize');
+    $default = '#fff';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     // Must add the page after definiting all the settings!
     $settings->add($page);
     $page = new admin_settingpage('theme_emphasize_imagesettings',  get_string('imagesettings', 'theme_emphasize'));
@@ -129,6 +148,17 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'help_slide5');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+    
+    // code added by Raghuvaran for choices for selecting slider height
+        $name = 'theme_emphasize/sliderhgt';
+        $title = get_string('sliderhgt', 'theme_emphasize');
+        $description = get_string('sliderhgtdesc', 'theme_emphasize');
+        $choices = array(0 => '100px', 1 => '200px', 2 => '300px', 3 => '400px', 4 =>'500px', 5 =>'600px');
+        $default = 3;
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        //$setting = new admin_setting_configselect($name, $title, $description, array('No slide show', '1', '2', '3', '4', '5'));
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
     // Must add the page after definiting all the settings!
     //$settings->add($page);
     

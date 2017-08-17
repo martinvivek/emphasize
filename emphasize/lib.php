@@ -152,7 +152,7 @@ function flatnav_icon_support($flatnav) {
             case 'addblock' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-plus-circle'; break;
             case 'badgesview' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-bookmark'; break;
             case 'participants' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-users'; break;
-            case 'grades' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-star'; break;
+            case 'grades' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-graduation-cap'; break;
             case 'coursehome' : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-book'; break;
             default : $flatnav_new[$key]->nav_drwer_icon = 'fa fa-folder'; break;
         }

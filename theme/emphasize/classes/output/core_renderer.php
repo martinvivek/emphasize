@@ -919,7 +919,7 @@ class core_renderer extends \core_renderer {
      * @return string HTML fragment.
      */
     public function user_menu($user = null, $withlinks = null) {
-        global $USER, $CFG;
+        global $USER, $CFG,$DB;
         require_once($CFG->dirroot . '/user/lib.php');
         require_once($CFG->dirroot . '/lib/moodlelib.php');
 

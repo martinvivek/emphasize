@@ -1082,9 +1082,11 @@ class core_renderer extends \core_renderer {
         );
 
         // Create a divider
-        $divider = '<div class="dropdown-divider" role="presentation"></div>';
-
+       $divider = '<div class="dropdown-divider" role="presentation"></div>';
+        //$usetextcontents = $DB->get_field('user','email',array('id'=>$USER->id));
+        $usetextcontents = $DB->get_record('user',array('id'=>$USER->id));
         $usermenu = '';
+        //$usermenu .='<div class="user_icon">';
         $usermenu .= '<a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
             <span class="username">'.$usertextcontents.'</span>
             <span class="avatar avatar-online current">
@@ -1092,8 +1094,22 @@ class core_renderer extends \core_renderer {
             <i></i>
             </span>
         </a>';
-        
         $usermenu .= '<div class="dropdown-menu" role="menu">';
+        $usermenu .= '<div class="user_main">';
+        $usermenu .= '<div class="user_icon">';
+        $usermenu .= ' <span class="user_pop">
+            '.$opts->metadata['useravatar'].'
+            </span>';
+        $usermenu .='</div>';
+        $usermenu .='<div class="user_content">';
+        $usermenu .='<span class="userid">Name : '.$usertextcontents.'</span>';
+                if(!empty($usetextcontents->idnumber)){
+                      $usermenu .='<span class="userid">User ID : '.$usetextcontents->idnumber.'</span>';
+                 }
+        //$usermenu .='<span class="userid">User ID : '.$usetextcontents->idnumber.'</span>';
+        $usermenu .='<span class="userid">Email ID : '.$usetextcontents->email.'</span>';
+        $usermenu .='</div>';
+        $usermenu .='</div>';
         if ($withlinks) {
             $navitemcount = count($opts->navitems);
             $idx = 0;

@@ -919,8 +919,8 @@ class core_renderer extends \core_renderer {
      * @return string HTML fragment.
      */
     public function user_menu($user = null, $withlinks = null) {
-        global $USER, $CFG,$DB;
-        require_once($CFG->dirroot . '/theme/emphasize/lib.php');
+        global $USER, $CFG;
+        require_once($CFG->dirroot . '/user/lib.php');
         require_once($CFG->dirroot . '/lib/moodlelib.php');
 
         if (is_null($user)) {
@@ -1020,8 +1020,10 @@ class core_renderer extends \core_renderer {
             //return html_writer::tag('li', '<span class="text-white" style="line-height:66px;">'.get_string('loggedinasguest').'</span>', array('class' => 'nav-item'))
             return html_writer::tag('li', $returnstr, $usermenuclasses);
         }
-        // Get some navigation optscustom_navigation_info.
-        $opts = $this->theme_emphasize_user_get_user_navigation_info($user, $this->page,$options = array());
+
+        // Get some navigation opts.
+        $opts = user_get_user_navigation_info($user, $this->page);
+
         $avatarclasses = "avatars";
         $avatarcontents = html_writer::span($opts->metadata['useravatar'], 'avatar current');
         $usertextcontents = $opts->metadata['userfullname'];
@@ -1081,9 +1083,8 @@ class core_renderer extends \core_renderer {
 
         // Create a divider
         $divider = '<div class="dropdown-divider" role="presentation"></div>';
-        $usetextcontents = $DB->get_record('user',array('id'=>$USER->id));
+
         $usermenu = '';
-        //$usermenu .='<div class="user_icon">';
         $usermenu .= '<a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
             <span class="username">'.$usertextcontents.'</span>
             <span class="avatar avatar-online current">
@@ -1091,21 +1092,8 @@ class core_renderer extends \core_renderer {
             <i></i>
             </span>
         </a>';
+        
         $usermenu .= '<div class="dropdown-menu" role="menu">';
-        $usermenu .= '<div class="user_main">';
-        $usermenu .= '<div class="user_icon">';
-        $usermenu .= ' <span class="user_pop">
-            '.$opts->metadata['useravatar'].'
-            </span>';
-        $usermenu .='</div>';
-        $usermenu .='<div class="user_content">';
-        $usermenu .='<span class="userid">Name : '.$usertextcontents.'</span>';
-                if(!empty($usetextcontents->idnumber)){
-                      $usermenu .='<span class="userid">User ID : '.$usetextcontents->idnumber.'</span>';
-                 }
-        $usermenu .='<span class="userid">Email ID : '.$usetextcontents->email.'</span>';
-        $usermenu .='</div>';
-        $usermenu .='</div>';
         if ($withlinks) {
             $navitemcount = count($opts->navitems);
             $idx = 0;
@@ -1133,9 +1121,19 @@ class core_renderer extends \core_renderer {
                                 array('class' => 'iconsmall')
                             ) . $value->title;
                         }
-                        $usermenu .= '<div class="main_links">';
+
+                        // $al = new action_menu_link_secondary(
+                        //     $value->url,
+                        //     $pix,
+                        //     $value->title,
+                        //     array('class' => 'icon')
+                        // );
+                        // if (!empty($value->titleidentifier)) {
+                        //     $al->attributes['data-title'] = $value->titleidentifier;
+                        // }
+                        // $am->add($al);
                         $icon = $this->pix_icon($pix->pix, '', 'moodle', $pix->attributes);
-                        $usermenu .= '<a class="dropdown-item" href="'.$value->url.'" role="menuitem">'/*.$icon*/.$value->title.'</a>';
+                        $usermenu .= '<a class="dropdown-item" href="'.$value->url.'" role="menuitem">'.$icon.$value->title.'</a>';
                         break;
                 }
 
@@ -1146,19 +1144,9 @@ class core_renderer extends \core_renderer {
                     $usermenu .= $divider;
                 }
             }
-            $course = $this->page->course;
-            $context = context_course::instance($course->id);
-            $roles = get_switchable_roles($context);
-            if (is_array($roles) && (count($roles) > 0)) {
-                foreach($roles as $roleid => $rolename){
-                    $switchrole = new stdClass();
-                        $switchrole_button = html_writer::tag('button', $rolename, array('class'=>'user_role'));
-                    $usermenu .= $switchrole_button;
-                }
-            }
         }
         $usermenu .= '</div>';
-        $usermenu .= '</div>';
+
         return html_writer::tag('li', $usermenu, $usermenuclasses);
     }
 
@@ -1206,177 +1194,5 @@ class core_renderer extends \core_renderer {
             $content .= html_writer::end_tag('div');
         $content .= html_writer::end_tag('div');
         return $content;
-    }
-    
-    
-    /**
-     * Get a list of essential user navigation items.
-     *
-     * @param stdclass $user user object.
-     * @param moodle_page $page page object.
-     * @param array $options associative array.
-     *     options are:
-     *     - avatarsize=35 (size of avatar image)
-     * @return stdClass $returnobj navigation information object, where:
-     *
-     *      $returnobj->navitems    array    array of links where each link is a
-     *                                       stdClass with fields url, title, and
-     *                                       pix
-     *      $returnobj->metadata    array    array of useful user metadata to be
-     *                                       used when constructing navigation;
-     *                                       fields include:
-     *
-     *          ROLE FIELDS
-     *          asotherrole    bool    whether viewing as another custom_user_get_user_navigation_inforole
-     *          rolename       string  name of the role
-     *
-     *          USER FIELDS
-     *          These fields are for the currently-logged in user, or for
-     *          the user that the real user is currently logged in as.
-     *
-     *          userid         int        the id of the user in question
-     *          userfullname   string     the user's full name
-     *          userprofileurl moodle_url the url of the user's profile
-     *          useravatar     string     a HTML fragment - the rendered
-     *                                    user_picture for this user
-     *          userloginfail  string     an error string denoting the number
-     *                                    of login failures since last login
-     *
-     *          "REAL USER" FIELDS
-     *          These fields are for when asotheruser is true, and
-     *          correspond to the underlying "real user".
-     *
-     *          asotheruser        bool    whether viewing as another user
-     *          realuserid         int        the id of the user in question
-     *          realuserfullname   string     the user's full name
-     *          realuserprofileurl moodle_url the url of the user's profile
-     *          realuseravatar     string     a HTML fragment - the rendered
-     *                                        user_picture for this user
-     *
-     *          MNET PROVIDER FIELDS
-     *          asmnetuser            bool   whether viewing as a user from an
-     *                                       MNet provider
-     *          mnetidprovidername    string name of the MNet provider
-     *          mnetidproviderwwwroot string URL of the MNet provider
-     */
-    function theme_emphasize_user_get_user_navigation_info($user, $page, $options = array()) {
-        global $OUTPUT, $DB, $SESSION, $CFG;
-        $returnobject = new stdClass();
-        $returnobject->navitems = array();
-        $returnobject->metadata = array();
-    
-        $course = $page->course;
-    
-        // Query the environment.
-        $context = context_course::instance($course->id);
-    
-        // Get basic user metadata.
-        $returnobject->metadata['userid'] = $user->id;
-        $returnobject->metadata['userfullname'] = fullname($user, true);
-        $returnobject->metadata['userprofileurl'] = new moodle_url('/user/profile.php', array(
-            'id' => $user->id
-        ));
-    
-        $avataroptions = array('link' => false, 'visibletoscreenreaders' => false);
-        if (!empty($options['avatarsize'])) {
-            $avataroptions['size'] = $options['avatarsize'];
-        }
-        $returnobject->metadata['useravatar'] = $OUTPUT->user_picture (
-            $user, $avataroptions
-        );
-        // Build a list of items for a regular user.
-    
-        // Query MNet status.
-        if ($returnobject->metadata['asmnetuser'] = is_mnet_remote_user($user)) {
-            $mnetidprovider = $DB->get_record('mnet_host', array('id' => $user->mnethostid));
-            $returnobject->metadata['mnetidprovidername'] = $mnetidprovider->name;
-            $returnobject->metadata['mnetidproviderwwwroot'] = $mnetidprovider->wwwroot;
-        }
-    
-        // Did the user just log in?
-        if (isset($SESSION->justloggedin)) {
-            // Don't unset this flag as login_info still needs it.
-            if (!empty($CFG->displayloginfailures)) {
-                // Don't reset the count either, as login_info() still needs it too.
-                if ($count = user_count_login_failures($user, false)) {
-    
-                    // Get login failures string.
-                    $a = new stdClass();
-                    $a->attempts = html_writer::tag('span', $count, array('class' => 'value'));
-                    $returnobject->metadata['userloginfail'] =
-                        get_string('failedloginattempts', '', $a);
-    
-                }
-            }
-        }
-    
-        // Links: Dashboard.
-        $myhome = new stdClass();
-        $myhome->itemtype = 'link';
-        $myhome->url = new moodle_url('/my/');
-        $myhome->title = get_string('mymoodle', 'admin');
-        $myhome->titleidentifier = 'mymoodle,admin';
-        $myhome->pix = "i/dashboard";
-        $returnobject->navitems[] = $myhome;
-    
-        // Links: My Profile.
-        $myprofile = new stdClass();
-        $myprofile->itemtype = 'link';
-        $myprofile->url = new moodle_url('/user/profile.php', array('id' => $user->id));
-        $myprofile->title = get_string('profile');
-        $myprofile->titleidentifier = 'profile,moodle';
-        $myprofile->pix = "i/user";
-        $returnobject->navitems[] = $myprofile;
-    
-        $returnobject->metadata['asotherrole'] = false;
-    
-        // Before we add the last items (usually a logout + switch role link), add any
-        // custom-defined items.
-        $customitems = user_convert_text_to_menu_items($CFG->customusermenuitems, $page);
-        foreach ($customitems as $item) {
-            $returnobject->navitems[] = $item;
-        }
-    
-    
-        if ($returnobject->metadata['asotheruser'] = \core\session\manager::is_loggedinas()) {
-            $realuser = \core\session\manager::get_realuser();
-    
-            // Save values for the real user, as $user will be full of data for the
-            // user the user is disguised as.
-            $returnobject->metadata['realuserid'] = $realuser->id;
-            $returnobject->metadata['realuserfullname'] = fullname($realuser, true);
-            $returnobject->metadata['realuserprofileurl'] = new moodle_url('/user/profile.php', array(
-                'id' => $realuser->id
-            ));
-            $returnobject->metadata['realuseravatar'] = $OUTPUT->user_picture($realuser, $avataroptions);
-    
-            // Build a user-revert link.
-            $userrevert = new stdClass();
-            $userrevert->itemtype = 'link';
-            $userrevert->url = new moodle_url('/course/loginas.php', array(
-                'id' => $course->id,
-                'sesskey' => sesskey()
-            ));
-            $userrevert->pix = "a/logout";
-            $userrevert->title = get_string('logout');
-            $userrevert->titleidentifier = 'logout,moodle';
-            $returnobject->navitems[] = $userrevert;
-    
-        } else {
-    
-            // Build a logout link.
-            $logout = new stdClass();
-            $logout->itemtype = 'link';
-            $logout->url = new moodle_url('/login/logout.php', array('sesskey' => sesskey()));
-            $logout->pix = "a/logout";
-            $logout->title = get_string('logout');
-            $logout->titleidentifier = 'logout,moodle';
-            $returnobject->navitems[] = $logout;
-        }
-        return $returnobject;
-    }
-    public function theme_emphasize_user_roles($context){
-        $roles = get_switchable_roles($context);
-        return $roles;
     }
 }

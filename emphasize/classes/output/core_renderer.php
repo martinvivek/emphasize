@@ -815,6 +815,16 @@ class core_renderer extends \core_renderer {
         return $logocontainer;
     }
     
+    //Function added for logo displaying throught out the site
+    public function logo() {
+        global $CFG;
+        $logo = '';
+        $logopath = $this->page->theme->setting_file_url('logo', 'logo');
+        if(!empty($logopath)) {
+            $logo .= $logopath;
+        }
+        return $logopath;
+    }
     //slider code ends here
     /**
      * Take a node in the nav tree and make an action menu out of it.

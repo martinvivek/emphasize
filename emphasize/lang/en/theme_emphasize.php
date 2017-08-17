@@ -217,3 +217,6 @@ $string['tblhd_desc'] = 'The selected color code here, will be affected as table
 
 $string['tbltextcolor'] = 'Table Header Text Color'; 
 $string['tbltext_desc'] = 'The selected color code here, will be affected as table header Text color';
+
+$string['logo'] = 'Logo'; 
+$string['logodesc'] = 'The Logo you uploaded here will be displayed as a Logo in Header';

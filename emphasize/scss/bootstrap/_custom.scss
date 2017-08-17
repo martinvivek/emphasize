@@ -16,3 +16,15 @@ div#myCarousel .carousel-inner > .item > img {
     min-height: 400px;
     max-height: 400px;
 }
+header .container-fluid .logo {
+  float: left;
+  width: 80px;
+  text-align: center;
+  margin: auto;
+}
+header .container-fluid .logo img.img_logo {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}

@@ -87,6 +87,15 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+    
+    // Logo setting added bu Raghuvaran
+    $name = 'theme_emphasize/logo';
+    $title = get_string('logo', 'theme_emphasize');
+    $description = get_string('logodesc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     // Must add the page after definiting all the settings!
     $settings->add($page);
     $page = new admin_settingpage('theme_emphasize_imagesettings',  get_string('imagesettings', 'theme_emphasize'));
@@ -98,7 +107,7 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbg');
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
-
+        
     // Slider Image1 banner image file setting.
        //code by bunesh
     $name = 'theme_emphasize/noofhelpslides';

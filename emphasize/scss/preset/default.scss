@@ -73,8 +73,8 @@ $card-border-color:        rgba(238, 238, 238, 1) !default;
 // Breadcrumbs
 $breadcrumb-bg:                 transparent !default;
 $breadcrumb-padding-x:          0 !default;
-$breadcrumb-divider: "/" !default;
-$breadcrumb-divider-rtl: "/" !default;
+$breadcrumb-divider: "" !default;
+$breadcrumb-divider-rtl: "" !default;
 
 // Import everything.
 @import "moodle";

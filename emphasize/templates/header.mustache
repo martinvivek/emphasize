@@ -20,12 +20,11 @@
 <header role="banner" class="pos-f-t navbar navbar-full navbar-light bg-faded navbar-static-top moodle-has-zindex">
 
     <div class="container-fluid navbar-nav">
-        <div class="logo">
-            <img class ="img_logo" src="{{{ output.logo }}}" />
-        </div>
+        
         <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.should_display_navbar_logo }}has-logo{{/ output.should_display_navbar_logo }}
             {{^ output.should_display_navbar_logo }}
                 hidden-sm-down
+                
             {{/ output.should_display_navbar_logo }}
                 ">
             {{# output.should_display_navbar_logo }}
@@ -33,7 +32,19 @@
                     <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
                 </span>
             {{/ output.should_display_navbar_logo }}
-            <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+            
+            {{^ output.should_display_navbar_logo }}
+                {{# output.logo }}
+                    <div class="logo">
+                        <img class ="img_logo" src="{{{ output.logo }}}" />
+                    </div>        
+                {{/ output.logo }}
+                
+                {{^ output.logo }}
+                    <span class="site-name hidden-sm-down">{{{ sitename }}}</span>
+                {{/ output.logo }}
+            {{/ output.should_display_navbar_logo }}
+            
         </a>
 
         <!-- user_menu -->

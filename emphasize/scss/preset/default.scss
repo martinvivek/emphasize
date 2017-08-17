@@ -95,8 +95,8 @@ $breadcrumb-divider-rtl: "/" !default;
         padding-left: 1rem;
         padding-right: 1rem;
         margin-right: $spacer * 2;
-        color: #fff;
-        background-color: $brand-primary;
+        color: $brand-primary;
+        //background-color: $brand-primary;
         @include hover-focus {
             color: #fff;
         }

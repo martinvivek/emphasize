@@ -1112,12 +1112,12 @@ class core_renderer extends \core_renderer {
             </span>';
         $usermenu .='</div>';
         $usermenu .='<div class="user_content">';
-        $usermenu .='<span class="userid">Name : '.$usertextcontents.'</span>';
+        $usermenu .='<span class="userid"> '.$usertextcontents.'</span>';
                 if(!empty($usetextcontents->idnumber)){
-                      $usermenu .='<span class="userid">User ID : '.$usetextcontents->idnumber.'</span>';
+                      $usermenu .='<span class="userid"> '.$usetextcontents->idnumber.'</span>';
                  }
         //$usermenu .='<span class="userid">User ID : '.$usetextcontents->idnumber.'</span>';
-        $usermenu .='<span class="userid">Email ID : '.$usetextcontents->email.'</span>';
+        $usermenu .='<span class="userid"> '.$usetextcontents->email.'</span>';
         $usermenu .='</div>';
         $usermenu .='</div>';
         if ($withlinks) {

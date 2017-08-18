@@ -1105,6 +1105,7 @@ class core_renderer extends \core_renderer {
             </span>
         </a>';
         $usermenu .= '<div class="dropdown-menu" role="menu">';
+        $usermenu .= '<span class="pop_show"></span>';
         $usermenu .= '<div class="user_main">';
         $usermenu .= '<div class="user_icon">';
         $usermenu .= ' <span class="user_pop">

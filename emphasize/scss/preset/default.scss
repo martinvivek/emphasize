@@ -256,6 +256,12 @@ table thead, table.dataTable.no-footer>thead{
 table thead>tr>th, table.dataTable.no-footer>thead>tr>th{
     color: $tbltextcolor;
 }
+#site-news-forum,
+#frontpage-course-list,
+#frontpage-category-names,
+#frontpage-category-combo {
+    margin-top: 20px;
+}
 #site-news-forum h2,
 #frontpage-course-list h2,
 #frontpage-category-names h2,

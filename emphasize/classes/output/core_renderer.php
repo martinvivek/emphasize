@@ -969,6 +969,7 @@ class core_renderer extends \core_renderer {
         //}
         // sign in popup
         $signinformhtml = '<ul class="dropdown-menu w-350 p-15" role="menu">
+                    <span class="pop_show"></span>
                     <form class="mb-0" action="'.get_login_url().'" method="post" id="login">
                        <div class="input-group form-group">
                       <span class="input-group-addon bg-gray"><i class="fa fa-user text-muted"></i>&nbsp;</span>

@@ -349,5 +349,46 @@ body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 body#page-site-index.notloggedin div#region-main-box section#region-main .card.card-block {
     min-height: 0px;
 }
-#page-course-edit div[role=main]{padding:10px; overflow-x:hidden;}
- body#page-course-view-tabtopics .activity img.activityicon {float: left;margin-right: 35px;}
+#page-course-edit div[role="main"]{padding:10px; overflow-x:hidden;}
+body#page-course-view-tabtopics .activity img.activityicon {float: left;margin-right: 35px;}
+//Code added for Marketings Spots by Raghuvaran
+.marketing_spots_container {
+  padding: 20px 5%;
+}
+.marketing_spots_container .div-section {
+  border-radius: 8px !important;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 4px 4px 5px #dedcdc;
+  border: 1px solid #ddd;
+  min-height: 24pc;
+  max-height: 24pc;
+  overflow: hidden;
+}
+.marketing_spots_container .marketing_icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+.marketing_spots_container .div-quote {
+  padding: 10px;
+  border-radius: 8px !important;
+  font-size: 20px;
+  color: #34495e;
+}
+.marketing_spots_container .ms_content_container {
+  font-size: 17px;
+  text-align: justify;
+  margin-top: 20px;
+}
+//settings for textbox in themesettingsemphasize page added by Raghuvaran
+body#page-admin-setting-themesettingemphasize .form-item.row .editor_atto div.editor_atto_toolbar button {
+    color: #333;
+}
+body#page-admin-setting-themesettingemphasize .form-item.row .editor_atto div.editor_atto_toolbar button:hover {
+    border: 0px solid transparent;
+}
+body#page-admin-setting-themesettngemphasize .form-item.row .editor_atto div.editor_atto_toolbar button + button {
+    border-left: 1px solid #ccc !important;
+}

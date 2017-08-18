@@ -1432,5 +1432,61 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
 
     return $returnobject;
 }
+    
+    //function added for Marketing Spots by Raghuvaram
+    public function marketing_spots() {
+        $spots = '';
+        if (!empty($this->page->theme->settings->marketingspots)) {
+        
+        $spots .= ' <div style ="background-color: rgb(241, 241, 241);" class="marketing_spots_container text-center row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="div-section">';
+                                $url1 = $this->page->theme->setting_file_url('firstmarketingspot_icon', 'firstmarketingspot_icon');
+                                $first_header = $this->page->theme->settings->first_ms_header;
+                                $first_content = $this->page->theme->settings->first_ms_Content;
+                                $spots .= html_writer::empty_tag('img',array('class'=>'marketing_icon', 'src'=>$url1, 'alt'=>$first_header, 'title'=>$first_header));
+                                $spots .= '<div class="div-quote">';
+                                            $spots .= $first_header;
+                                            $spots .='<div class="ms_content_container">';
+                                                $spots .= $first_content;
+                                            $spots .='</div>
+                                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 sec_spot">
+                            <div class="div-section">';
+                                $url2 = $this->page->theme->setting_file_url('secmarketingspot_icon', 'secmarketingspot_icon');
+                                $sec_header = $this->page->theme->settings->sec_ms_header;
+                                $sec_ms_Content = $this->page->theme->settings->sec_ms_Content;
+                                
+                                $spots .= html_writer::empty_tag('img', array('class'=>'marketing_icon','src'=>$url2, 'alt'=>$sec_header ,'title'=>$sec_header ));
+                                $spots .='<div class="div-quote">';
+                                                $spots .= $sec_header;
+                                            $spots .='<div class="ms_content_container">';
+                                                $spots .= $sec_ms_Content;
+                                            $spots .='</div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 third_spot">
+                            <div class="div-section">';
+                                $url3 = $this->page->theme->setting_file_url('third_ms_icon', 'third_ms_icon');
+                                $third_header = $this->page->theme->settings->third_ms_header;
+                                $third_marketing_content = $this->page->theme->settings->third_ms_Content;
+                                
+                                $spots .= html_writer::empty_tag('img', array('class'=>'marketing_icon','src' => $url3, 'alt' => $third_header, 'title' => $third_header));
+                                $spots .='<div class="div-quote">';
+                                          $spots .= $third_header;
+                                       $spots .='<div class="ms_content_container">';
+                                          $third_ms_Content = $third_marketing_content;
+                                          $spots .= $third_ms_Content;
+                                       $spots .='</div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>';
+        }            
+        return $spots;                
+    }
 
 }

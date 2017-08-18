@@ -96,6 +96,94 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    //Code added for Marketings Spots by Raghuvaran
+    //code added for Marketing Spots to be displayed on login page
+    //Number of Marketing Spots.
+    $name = 'theme_emphasize/marketingspots';
+    $title = get_string('marketingspots', 'theme_emphasize');
+    $description = get_string('marketingspotsdesc', 'theme_emphasize');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //First Marketing Spots Icon to be displayed on login page
+    $name = 'theme_emphasize/firstmarketingspot_icon';
+    $title = get_string('firstmarketingspot_icon', 'theme_emphasize');
+    $description = get_string('firstmarketingspot_icon_desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'firstmarketingspot_icon');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //First Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/first_ms_header';
+    $title = get_string('first_ms_header', 'theme_emphasize');
+    $description = get_string('first_ms_header_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    //First Marketing Spots HTML Content to be displayed on login page
+    $name = 'theme_emphasize/first_ms_Content';
+    $title = get_string('first_ms_Content', 'theme_emphasize');
+    $description = get_string('first_ms_Content_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //Second Marketing Spots Icon to be displayed on login page
+    $name = 'theme_emphasize/secmarketingspot_icon';
+    $title = get_string('secmarketingspot_icon', 'theme_emphasize');
+    $description = get_string('secmarketingspot_icon_desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'secmarketingspot_icon');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/sec_ms_header';
+    $title = get_string('sec_ms_header', 'theme_emphasize');
+    $description = get_string('sec_ms_header_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    //Second Marketing Spots HTML Content to be displayed on login page
+    $name = 'theme_emphasize/sec_ms_Content';
+    $title = get_string('sec_ms_Content', 'theme_emphasize');
+    $description = get_string('sec_ms_Content_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //Third Marketing Spots Icon to be displayed on login page
+    $name = 'theme_emphasize/third_ms_icon';
+    $title = get_string('third_ms_icon', 'theme_emphasize');
+    $description = get_string('third_ms_icon_desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'third_ms_icon');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/third_ms_header';
+    $title = get_string('third_ms_header', 'theme_emphasize');
+    $description = get_string('third_ms_header_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    //Second Marketing Spots HTML Content to be displayed on login page
+    $name = 'theme_emphasize/third_ms_Content';
+    $title = get_string('third_ms_Content', 'theme_emphasize');
+    $description = get_string('third_ms_Content_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     // Must add the page after definiting all the settings!
     $settings->add($page);
     $page = new admin_settingpage('theme_emphasize_imagesettings',  get_string('imagesettings', 'theme_emphasize'));

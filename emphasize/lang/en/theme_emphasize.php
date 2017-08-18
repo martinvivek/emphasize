@@ -220,3 +220,36 @@ $string['tbltext_desc'] = 'The selected color code here, will be affected as tab
 
 $string['logo'] = 'Logo'; 
 $string['logodesc'] = 'The Logo you uploaded here will be displayed as a Logo in Header';
+
+//code added for Marketing Spots
+$string['marketingspots'] = 'Marketing Spots on Login Page';
+$string['marketingspotsdesc'] = 'Number of Marketing Spots to be displayed on the Login Page (Max 3)';
+
+$string['firstmarketingspot_icon'] = 'Image for Marketing Spot1';
+$string['firstmarketingspot_icon_desc'] = 'Image for Marketing Spot1 to be displayed on the Login Page ';
+
+$string['first_ms_header'] = 'Header for Marketing Spot1';
+$string['first_ms_header_desc'] = 'The text entered here, will be displayed as Headding for Marketing Spot1 on the Login Page ';
+
+$string['first_ms_Content'] = 'Content for Marketing Spot1';
+$string['first_ms_Content_desc'] = 'The text entered here, will be displayed as Content for Marketing Spot1 on the Login Page, Max 50 words can be shown ';
+
+//second Marketing Spots
+$string['secmarketingspot_icon'] = 'Image for Marketing Spot2';
+$string['secmarketingspot_icon_desc'] = 'Image for Marketing Spot2 to be displayed on the Login Page ';
+
+$string['sec_ms_header'] = 'Header for Marketing Spot2';
+$string['sec_ms_header_desc'] = 'The text entered here, will be displayed as Headding for Marketing Spot2 on the Login Page ';
+
+$string['sec_ms_Content'] = 'Content for Marketing Spot2';
+$string['sec_ms_Content_desc'] = 'The text entered here, will be displayed as Content for Marketing Spot2 on the Login Page, Max 50 words can be shown ';
+
+//third Marketing Spots
+$string['third_ms_icon'] = 'Image for Marketing Spot3';
+$string['third_ms_icon_desc'] = 'Image for Marketing Spot3 to be displayed on the Login Page ';
+
+$string['third_ms_header'] = 'Header for Marketing Spot3';
+$string['third_ms_header_desc'] = 'The text entered here, will be displayed as Headding for Marketing Spot3 on the Login Page ';
+
+$string['third_ms_Content'] = 'Content for Marketing Spot3';
+$string['third_ms_Content_desc'] = 'The text entered here, will be displayed as Content for Marketing Spot3 on the Login Page, Max 50 words can be shown ';

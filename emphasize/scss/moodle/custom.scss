@@ -303,15 +303,15 @@ margin:0px;
 .region_main_settings_menu_proxy{background-color: #f6f6f6;}
 
 // course format view by rizwana
-body#page-course-view-tabtopics .card.card-block {
+#page-course-view-tabtopics .card.card-block {
     padding: 20px 4%;
     border-radius: 8px !important;
     overflow: hidden;
     box-shadow: 4px 4px 5px #dedcdc;
     margin: 0px 0px 30px;
-    width: 90%;
 }
-body#page-course-view-tabtopics a .icon{
+#page-course-view-tabtopics div.action-menu{float: right;margin-top: -50px;margin-right: 10px;}
+#page-course-view-tabtopics a .icon{
 color:#a9a9a9;}
 body#page-course-view-tabtopics .icon{color:#a9a9a9;}
 body#page-course-view-tabtopics .activity img.activityicon{float:right;}

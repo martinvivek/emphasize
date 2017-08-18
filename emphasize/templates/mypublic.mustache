@@ -117,7 +117,13 @@
                                 <div class="tab-pane fade active in" id="aboutme" role="tabpanel">
                                     <ul class="list-group">
                                     {{^ hasinterests }}
-                                        <span>No Data Available</span>
+                                    <li class="list-group-item">
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <div class="alert alert-info">No Data Available</div>
+                                        </div>
+                                    </div>
+                                    </li>
                                     {{/ hasinterests }}
                                         {{# hasinterests }}
                                         <li class="list-group-item">
@@ -189,7 +195,8 @@
                                             <li class="list-group-item">
                                                 <div class="media">
                                                     <div class="media-body">
-                                                        {{# str }} notenrolledanycourse, theme_emphasize {{/ str }}
+                                                        <div class="alert alert-info">{{# str }} notenrolledanycourse, theme_emphasize {{/ str }}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -328,9 +335,6 @@
     <div class="container">
         <div class="default_links col-md-7 col-sm-7 col-sx-12 pull-left">
             <div id="course-footer">{{{ output.course_footer }}}</div>
-                {{#fptextbox}}
-                    {{{fptextbox}}}
-                {{/fptextbox}}
                 {{# output.page_doc_link }}
                     <p class="helplink">{{{ output.page_doc_link }}}</p>
                 {{/ output.page_doc_link }}

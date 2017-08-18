@@ -81,7 +81,8 @@ $templatecontext = [
     //'usercanmanage'             => \theme_remui\utility::check_user_admin_cap($userobject),
     'notcurrentuser'    => ($userobject->id != $USER->id)?true:false,
     'countries' => $tempArray,
-    'imageone' => $OUTPUT->image_url('f1', 'theme'),
+    'userpicture' => $OUTPUT->get_user_picture($userobject, 35),
+    //'imageone' => $OUTPUT->image_url('f1', 'theme'),
     //'footerdata' => \theme_emphasize\utility::get_footer_data() 
     //'fptextbox' => '<div class="fptextbox">'.format_text($PAGE->theme->settings->fptextbox).'</div>'
 ];

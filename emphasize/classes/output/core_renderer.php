@@ -36,6 +36,7 @@ use context_course;
 use pix_icon;
 use course_in_list;
 use coursecat_helper;
+use user_picture;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -1490,4 +1491,15 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
         return $spots;                
     }
 
+    // get user profile pic link
+    public static function get_user_picture($userobject , $imgsize = 100) {
+        global $USER, $PAGE;
+        if (!$userobject) {
+            $userobject = $USER;
+        }
+
+        $userimg = new user_picture($userobject);
+        $userimg->size = $imgsize;
+        return  $userimg->get_url($PAGE);
+    }
 }

@@ -81,8 +81,12 @@
                         <div class="profile_left_section col-md-12 desktop-first-column pull-left">
                             <div class="col-md-10" style="float: none; margin: 0px auto;">
                                 <div class="user_image_container">
-                                    <a href=""><img src="{{imageone}}" alt="" title="" class="defaultuserpic" width="120" height="120"></a>
-                                    <a href="" class="edit_profile" style="visibility: hidden;">Edit Picture</a>
+                                    {{# userpicture }}
+                                        <a href="">
+                                        <img src="{{ userpicture }}" alt="{{ firstname }} {{ lastname }}" class="defaultuserpic" width="120" height="120">
+                                        </a>
+                                        <a href="http://localhost/emphasize/local/upload_picture/index.php?id=3" class="edit_profile" style="visibility: hidden;">Edit Picture</a>
+                                    {{/ userpicture }}
                                 </div>
                                 <div class="profile_top_containers col-md-4 desktop-first-column">
                                     <div class="text-left  profile_info_top">{{ firstname }} {{ lastname }} ({{ idnumber }})

@@ -409,7 +409,7 @@ img.message_img{width:100%;height:265px;}
 .messages_header_container{height:50px;text-align:center;border-bottom: 1px solid #dbdfff;border-bottom: 1px solid #4f94cd;padding-top: 5px;background-color: #4f94cd;}
 .messaging-area-container .messaging-area .contacts-area {height: 550px;}
 .messaging-area-container .messaging-area .messages-area {height: 550px;}
-#page-message-index .messaging-area-container .messaging-area .contacts-area .contacts{height:400px;}
+#page-message-index .messaging-area-container .messaging-area .contacts-area .contacts{height:402px;}
 #page-message-index #maincontent {height: initial;}
 #page-message-index .card.card-block{border-radius: 8px;min-height: initial;}
 #page-message-index .messaging-area-container .messaging-area .messages .blocktime
@@ -436,3 +436,7 @@ img.message_img{width:100%;height:265px;}
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
     outline: none;
 }
+#page-message-index .contacts-area:before {content: "Messages";text-align: center;padding: 18px    94px 18px 94px;width: 100%;font-size: 24px;color: #fff;border-bottom: 1px solid #4f94cd;
+    background-color: #4f94cd;}
+#page-message-index .messaging-area-container .messaging-area .contacts-area .searchtextarea {
+    margin-top: 12px;}

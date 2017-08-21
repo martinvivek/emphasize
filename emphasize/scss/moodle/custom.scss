@@ -354,7 +354,8 @@ div[role="main"]{padding:10px; overflow-x:hidden;}
 body#page-course-view-tabtopics .activity img.activityicon {float: left;margin-right: 35px;}
 //Code added for Marketings Spots by Raghuvaran
 .marketing_spots_container {
-  padding: 20px 5%;
+    padding: 20px 5%;
+    margin:auto;
 }
 .marketing_spots_container .div-section {
   border-radius: 8px !important;
@@ -392,4 +393,11 @@ body#page-admin-setting-themesettingemphasize .form-item.row .editor_atto div.ed
 }
 body#page-admin-setting-themesettngemphasize .form-item.row .editor_atto div.editor_atto_toolbar button + button {
     border-left: 1px solid #ccc !important;
+}
+body.notloggedin div#page.container-fluid {
+    padding: 0px;
+}
+body.notloggedin div#page.container-fluid div#page-content.row {
+    width: 100%;
+    margin: auto;
 }

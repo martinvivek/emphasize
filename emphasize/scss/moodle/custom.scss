@@ -401,3 +401,38 @@ body.notloggedin div#page.container-fluid div#page-content.row {
     width: 100%;
     margin: auto;
 }
+
+// messages page by rizwana
+img.message_img{width:100%;height:265px;}
+#page-message-index #page.container-fluid{padding:0px;margin:auto;}
+#page-message-index #page-content.row{margin:0px;padding:15px;}
+.messages_header_container{height:50px;text-align:center;border-bottom: 1px solid #dbdfff;border-bottom: 1px solid #4f94cd;padding-top: 5px;background-color: #4f94cd;}
+.messaging-area-container .messaging-area .contacts-area {height: 550px;}
+.messaging-area-container .messaging-area .messages-area {height: 550px;}
+#page-message-index .messaging-area-container .messaging-area .contacts-area .contacts{height:400px;}
+#page-message-index #maincontent {height: initial;}
+#page-message-index .card.card-block{border-radius: 8px;min-height: initial;}
+#page-message-index .messaging-area-container .messaging-area .messages .blocktime
+{font-size: 15px;color:#0070a8;margin: 10px 0;font-weight: bold;}
+.messaging-area-container .messaging-area .messages-area .messages .message .content.right{float:left;background: #f6f6f6;border-radius: 0px 15px 15px 15px;width:45%;border:none;font-size: 14px;}
+.messaging-area-container .messaging-area .messages-area .messages .message .content.left{float:right;background:#dbf4ff;border-radius: 20px 0 20px 20px;width:45%;border:none;font-size: 14px;}
+.messaging-area-container .messaging-area .messages-area .response{background-color: #dbf4ff;border-top:none;}
+.messaging-area-container .messaging-area .messages-area .response .message-box .message-text-container textarea{background-color: #fff;border-radius: 8px 0px 0px 8px;}
+.messaging-area-container .messaging-area .messages-area .response .message-box .send-button-container button{background: #03A9F4;color: #fff;border-radius: 0px 8px 8px 0px;text-decoration: none;}
+.messages_header{font-size:2rem;color:#fff;}
+#page-message-index h2{display:none;}
+#page-message-index div[role=main]{padding:0px;overflow:hidden;}
+#page-message-index .messaging-area-container {margin-bottom: 0px;}
+#page-message-index .messaging-area-container .messaging-area .contacts-area .tabs .tab{background-color: #4f94cd;}
+#page-message-index .messaging-area-container .messaging-area .contacts-area .tabs .tab{color:#fff;}
+.messaging-area-container .messaging-area{border:none;}
+#page-message-index #page-wrapper{background-color: #b9b9b9;}
+#page-message-index .contact.selected {background-color:#f6f6f6;color: initial;}
+.messaging-area-container .messaging-area .contacts-area .contacts .contact:hover{color: initial;}
+.messaging-area-container .messaging-area .contacts-area .contacts .contact:hover .information .lastmessage{color: initial;}
+.messaging-area-container .messaging-area .contacts-area .contacts .contact.selected .information .lastmessage{color:initial;}
+.messaging-area-container .messaging-area .messages-area .response.messaging{background-color:#dbf4ff;}
+.messaging-area-container .messaging-area .messages-area .response .message-box .message-text-container textarea:focus {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    outline: none;
+}

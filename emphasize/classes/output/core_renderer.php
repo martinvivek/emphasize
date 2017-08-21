@@ -736,7 +736,7 @@ class core_renderer extends \core_renderer {
     //function written by Raghuvaran for Carousal slider on login page
     public function loginpage_slider() {
         global $CFG;
-
+        $slider_height = $this->get_slider_hgt();
         $logocontainer = '';
         
         $logocontainer .= "<style> .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;margin: auto;}
@@ -772,7 +772,7 @@ class core_renderer extends \core_renderer {
                     $logocontainer .= '<div class="item active">';
                         //$imageurl1= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                         $imageurl1 = $this->page->theme->setting_file_url('help_slide1', 'help_slide1');
-                        $image1 = html_writer::empty_tag('img', array('src' => $imageurl1, 'class' => 's1'));
+                        $image1 = html_writer::empty_tag('img', array('src' => $imageurl1, 'class' => 's1 '.$slider_height));
                         $logocontainer .= $image1;
                     $logocontainer .='</div>';
                 }
@@ -780,7 +780,7 @@ class core_renderer extends \core_renderer {
             $logocontainer .='<div class="item">';
                                             //$imageurl2= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl2 = $this->page->theme->setting_file_url('help_slide2', 'help_slide2');
-                                            $image2 = html_writer::empty_tag('img', array('src' => $imageurl2, 'class' => 's2'));
+                                            $image2 = html_writer::empty_tag('img', array('src' => $imageurl2, 'class' => 's2 '.$slider_height));
                                             $logocontainer .= $image2;
              $logocontainer .='</div>';
                                         }
@@ -788,7 +788,7 @@ class core_renderer extends \core_renderer {
              $logocontainer .='<div class="item">';
                                             //$imageurl3= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl3 = $this->page->theme->setting_file_url('help_slide3', 'help_slide3');
-                                            $image3 = html_writer::empty_tag('img', array('src' => $imageurl3, 'class' => 's3'));
+                                            $image3 = html_writer::empty_tag('img', array('src' => $imageurl3, 'class' => 's3 '.$slider_height));
                                             $logocontainer .= $image3;
              $logocontainer .='</div>';
                                         }
@@ -796,7 +796,7 @@ class core_renderer extends \core_renderer {
              $logocontainer .='<div class="item">';
                                             //$imageurl4= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl4 = $this->page->theme->setting_file_url('help_slide4', 'help_slide4');
-                                            $image4 = html_writer::empty_tag('img', array('src' => $imageurl4, 'class' => 's4'));
+                                            $image4 = html_writer::empty_tag('img', array('src' => $imageurl4, 'class' => 's4 '.$slider_height));
                                             $logocontainer .= $image4;
             $logocontainer .='</div>';
                                         }
@@ -804,7 +804,7 @@ class core_renderer extends \core_renderer {
             $logocontainer .='<div class="item">';
                                             //$imageurl5= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl5 = $this->page->theme->setting_file_url('help_slide5', 'help_slide5');
-                                            $image5 = html_writer::empty_tag('img', array('src' => $imageurl5, 'class' => 's5'));
+                                            $image5 = html_writer::empty_tag('img', array('src' => $imageurl5, 'class' => 's5 '.$slider_height));
                                             $logocontainer .= $image5;
             $logocontainer .='</div>';
                                         }
@@ -1502,5 +1502,38 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
         $userimg = new user_picture($userobject);
         $userimg->size = $imgsize;
         return  $userimg->get_url($PAGE);
+    }
+    
+    // function added by Raghuvaran on 21_AUG-17
+    //for gettings the slider images height dynamic
+    function get_slider_hgt() {
+        global $CFG;
+        $maxheight = '400px';
+        $setting = get_config('theme_emphasize', 'sliderhgt');
+        //$choices = array(0 => '100px', 1 => '200px', 2 => '300px', 3 => '400px', 4 =>'500px', 5 =>'600px');
+        switch($setting){
+            case 0:
+                $height = 'one';
+                break;
+            case 1:
+                $height = 'two';
+                break;
+            case 2:
+                $height = 'three';
+                break;
+            case 3:
+                $height = 'four';
+                break;
+            case 4:
+                $height = 'five';
+                break;
+            case 5:
+                $height = 'six';
+                break;
+            default:
+                $height = 'four';
+                break;
+        }
+        return $height;
     }
 }

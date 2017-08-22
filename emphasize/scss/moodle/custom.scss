@@ -446,3 +446,41 @@ div.tab.tabcontacts.selected {background-color: #83B4DC !important;}
 .messaging-area-container .messaging-area .contacts-area .searchtextarea input:focus {outline: none;border-color: rgba(82,168,236,0.8);box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);}
 .messaging-area-container .messaging-area .contacts-area .searchtextarea input{background-color:#fff;border-radius: 5px;border: 1px solid #ccc;}
 .messaging-area-container .messaging-area .contacts-area .searchtextarea .searching input{background-color:#fff;}
+//responsive code for header nav button
+body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
+    display: none;
+    margin-top: .425rem;
+    background-color: #232323;
+    border: 1px solid #fff;
+}
+@media (max-width:980px) {
+    body {
+        margin-left:0px;
+    }
+    body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
+        display: block;
+    }
+    div[data-region="drawer-toggle"] button.btn.pull-xs-left.m-r-1.btn-secondary,
+    #nav-drawer.closed{
+        display: none;
+    }
+    #nav-drawer {
+        margin: 0px;
+        left: inherit;
+        width: 100%;
+        padding: 0px;
+        position: relative;
+        float: left;
+    }
+    body.drawer-open-left{
+        margin-left:inherit;
+    }
+    #page {
+        padding-top: 60px !important;
+        margin-top: 0px;
+        clear: both;
+    }
+    #nav-drawer .list-group{
+        margin-top:0px;
+    }
+}

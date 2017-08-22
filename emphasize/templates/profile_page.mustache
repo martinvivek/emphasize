@@ -65,7 +65,9 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{>theme_emphasize/header}}
-
+    {{#isloggedin}}
+        {{> theme_emphasize/nav-drawer }}
+    {{/isloggedin}}
     <div id="page" class="container-fluid">
     <div class="message_image"><img src="{{output.messageimage}}" alt="user-avatar" /></div>
         <div id="page-content" class="row">
@@ -93,9 +95,6 @@
             </div>
         </div>
     </div>
-    {{#isloggedin}}
-    {{> theme_emphasize/nav-drawer }}
-    {{/isloggedin}}
 </div>
 <footer id="page-footer" class="p-y-1 bg-inverse">
     <div class="container">

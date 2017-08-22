@@ -440,3 +440,9 @@ img.message_img{width:100%;height:265px;}
     background-color: #4f94cd;}
 #page-message-index .messaging-area-container .messaging-area .contacts-area .searchtextarea {
     margin-top: 12px;}
+    
+div.tab.tabconversations.selected {background-color: #83B4DC !important;}
+div.tab.tabcontacts.selected {background-color: #83B4DC !important;}
+.messaging-area-container .messaging-area .contacts-area .searchtextarea input:focus {outline: none;border-color: rgba(82,168,236,0.8);box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);}
+.messaging-area-container .messaging-area .contacts-area .searchtextarea input{background-color:#fff;border-radius: 5px;border: 1px solid #ccc;}
+.messaging-area-container .messaging-area .contacts-area .searchtextarea .searching input{background-color:#fff;}

@@ -490,6 +490,15 @@ span.trafficlight:before {
 }
 #page-mod-quiz-review #page-mod-quiz-attempt .submitbtns, #page-mod-quiz-review .submitbtns{clear:both}
 #page-mod-quiz-review table.quizreviewsummary tbody tr:hover>td{background-color: #f5f5f5;}
+a.qnbutton.incorrect span.trafficlight:before {
+    content: "\f024";
+    color: #fff;
+}
+a.qnbutton.correct span.trafficlight:before {
+    content: "\f024";
+    color: #fff;
+}
+
 //responsive code for header nav button
 body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
     display: none;

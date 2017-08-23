@@ -51,7 +51,8 @@ if($page_type == 'site-index'){
     $front_page = false;
 }
 global $PAGE;
-$PAGE->requires->js('/theme/emphasize/js/jquery.js',true);
+$PAGE->requires->js('/theme/emphasize/js/jquery.min.js',true);
+$PAGE->requires->js('/theme/emphasize/js/bootstrap.min.js',true);
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -68,4 +69,5 @@ $templatecontext = [
 //$templatecontext['flatnavigation'] = $PAGE->flatnav;
 $templatecontext['flatnavigation'] = flatnav_icon_support($PAGE->flatnav);
 echo $OUTPUT->render_from_template('theme_emphasize/frontpage', $templatecontext);
+$PAGE->requires->js('/theme/emphasize/js/bootstrap.min.js',false);
 

@@ -446,6 +446,31 @@ div.tab.tabcontacts.selected {background-color: #83B4DC !important;}
 .messaging-area-container .messaging-area .contacts-area .searchtextarea input:focus {outline: none;border-color: rgba(82,168,236,0.8);box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);}
 .messaging-area-container .messaging-area .contacts-area .searchtextarea input{background-color:#fff;border-radius: 5px;border: 1px solid #ccc;}
 .messaging-area-container .messaging-area .contacts-area .searchtextarea .searching input{background-color:#fff;}
+
+#page-message-index #page-header{margin:0px;}
+.popover-region-header-actions .newmessage-link{margin-right: 0px;}
+.popover-region-header-actions > * {margin-left: 0px;}
+#page-footer a .icon {
+    color: inherit;
+    margin-left: 0px !important;
+}
+
+// notifications by rizwana
+#page-message-output-popup-notifications .card.card-block{border-radius: 8px;min-height: initial;}
+#page-message-output-popup-notifications div[role=main]{padding:0px;}
+#page-message-output-popup-notifications .notification-area{margin-bottom: 3px; border: none}
+#page-message-output-popup-notifications .content:before {
+    content: "Notifications";text-align: center;padding: 18px 94px 18px 80px;
+    width: 100%;font-size: 24px;color: #fff;border-bottom: 1px solid #03a9f4;
+    background-color: #03a9f4;
+}
+#page-message-output-popup-notifications #page-wrapper {
+    background-color: #b9b9b9;
+}
+#page-message-output-popup-notifications #maincontent {height: initial;}
+#page-message-output-popup-notifications h2{display:none;}
+
+
 //responsive code for header nav button
 body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
     display: none;

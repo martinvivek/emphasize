@@ -470,6 +470,13 @@ div.tab.tabcontacts.selected {background-color: #83B4DC !important;}
 #page-message-output-popup-notifications #maincontent {height: initial;}
 #page-message-output-popup-notifications h2{display:none;}
 
+// quiz attempt page
+.path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder {border: 1px solid #0072bc;}
+.path-mod-quiz #mod_quiz_navblock .qnbutton{color:#0072bc;}
+span.trafficlight:before {
+    content: "\f024";
+    font-family: fontAwesome;
+}
 
 //responsive code for header nav button
 body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {

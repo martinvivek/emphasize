@@ -186,35 +186,35 @@ function theme_emphasize_pluginfile($course, $cm, $context, $filearea, $args, $f
         $theme = theme_config::load('emphasize');
     }
     if ($context->contextlevel == CONTEXT_SYSTEM) {
-        if($filearea === 'help_slide1'){
+        if($filearea === 'slide_image1'){
             $theme = theme_config::load('emphasize');
             // By default, theme files must be cache-able by both browsers and proxies.
             if (!array_key_exists('cacheability', $options)) {
                 $options['cacheability'] = 'public';
             }
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
-        } else if($filearea === 'help_slide2'){
+        } else if($filearea === 'slide_image2'){
             $theme = theme_config::load('emphasize');
             // By default, theme files must be cache-able by both browsers and proxies.
             if (!array_key_exists('cacheability', $options)) {
                 $options['cacheability'] = 'public';
             }
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
-        } else if($filearea === 'help_slide3'){
+        } else if($filearea === 'slide_image3'){
             $theme = theme_config::load('emphasize');
             // By default, theme files must be cache-able by both browsers and proxies.
             if (!array_key_exists('cacheability', $options)) {
                 $options['cacheability'] = 'public';
             }
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
-        } else if($filearea === 'help_slide4'){
+        } else if($filearea === 'slide_image4'){
             $theme = theme_config::load('emphasize');
             // By default, theme files must be cache-able by both browsers and proxies.
             if (!array_key_exists('cacheability', $options)) {
                 $options['cacheability'] = 'public';
             }
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
-        } else if($filearea === 'help_slide5'){
+        } else if($filearea === 'slide_image5'){
             $theme = theme_config::load('emphasize');
             // By default, theme files must be cache-able by both browsers and proxies.
             if (!array_key_exists('cacheability', $options)) {

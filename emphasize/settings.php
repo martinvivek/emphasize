@@ -208,41 +208,41 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
-     $name = 'theme_emphasize/help_slide1';
-    $title = get_string('help_slide1', 'theme_emphasize');
-    $description = get_string('help_slide1desc', 'theme_emphasize');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'help_slide1');
+     $name = 'theme_emphasize/slide_image1';
+    $title = get_string('slide_image1', 'theme_emphasize');
+    $description = get_string('slide_image1desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image1');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
     
     //slider2 file setting.
-    $name = 'theme_emphasize/help_slide2';
-    $title = get_string('help_slide2', 'theme_emphasize');
-    $description = get_string('help_slide2desc', 'theme_emphasize');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'help_slide2');
+    $name = 'theme_emphasize/slide_image2';
+    $title = get_string('slide_image2', 'theme_emphasize');
+    $description = get_string('slide_image2desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image2');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
-     $name = 'theme_emphasize/help_slide3';
-    $title = get_string('help_slide3', 'theme_emphasize');
-    $description = get_string('help_slide3desc', 'theme_emphasize');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'help_slide3');
+     $name = 'theme_emphasize/slide_image3';
+    $title = get_string('slide_image3', 'theme_emphasize');
+    $description = get_string('slide_image3desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image3');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
     //slider2 file setting.
-    $name = 'theme_emphasize/help_slide4';
-    $title = get_string('help_slide4', 'theme_emphasize');
-    $description = get_string('help_slide4desc', 'theme_emphasize');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'help_slide4');
+    $name = 'theme_emphasize/slide_image4';
+    $title = get_string('slide_image4', 'theme_emphasize');
+    $description = get_string('slide_image4desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image4');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
-    $name = 'theme_emphasize/help_slide5';
-    $title = get_string('help_slide5', 'theme_emphasize');
-    $description = get_string('help_slide5desc', 'theme_emphasize');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'help_slide5');
+    $name = 'theme_emphasize/slide_image5';
+    $title = get_string('slide_image5', 'theme_emphasize');
+    $description = get_string('slide_image5desc', 'theme_emphasize');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image5');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     

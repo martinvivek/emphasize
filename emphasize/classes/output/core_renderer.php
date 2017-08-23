@@ -745,19 +745,19 @@ class core_renderer extends \core_renderer {
         $logocontainer .= '<div id="myCarousel" class="carousel slide" data-ride="carousel">';
         $logocontainer .= '<!-- Indicators -->';
         $logocontainer .= '<ol class="carousel-indicators bottomCorousal">';
-        if(!empty($this->page->theme->settings->help_slide1) && ($this->page->theme->settings->noofhelpslides >= 1)){
+        if(!empty($this->page->theme->settings->slide_image1) && ($this->page->theme->settings->noofhelpslides >= 1)){
             $logocontainer .= '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
         }
-        if(!empty($this->page->theme->settings->help_slide2) && ($this->page->theme->settings->noofhelpslides >= 2)){
+        if(!empty($this->page->theme->settings->slide_image2) && ($this->page->theme->settings->noofhelpslides >= 2)){
         $logocontainer .= '<li data-target="#myCarousel" data-slide-to="1"></li>';
         }
-        if(!empty($this->page->theme->settings->help_slide3) && ($this->page->theme->settings->noofhelpslides >= 3)){
+        if(!empty($this->page->theme->settings->slide_image3) && ($this->page->theme->settings->noofhelpslides >= 3)){
         $logocontainer .= '<li data-target="#myCarousel" data-slide-to="2"></li>';
         }
-        if(!empty($this->page->theme->settings->help_slide4) && ($this->page->theme->settings->noofhelpslides >= 4)){
+        if(!empty($this->page->theme->settings->slide_image4) && ($this->page->theme->settings->noofhelpslides >= 4)){
             $logocontainer .= '<li data-target="#myCarousel" data-slide-to="3"></li>';
         }
-        if(!empty($this->page->theme->settings->help_slide5) && ($this->page->theme->settings->noofhelpslides >= 5)){
+        if(!empty($this->page->theme->settings->slide_image5) && ($this->page->theme->settings->noofhelpslides >= 5)){
             $logocontainer .= '<li data-target="#myCarousel" data-slide-to="4"></li>';
         }
         $logocontainer .= '</ol>';
@@ -767,43 +767,43 @@ class core_renderer extends \core_renderer {
             //$logocontainer .= '<button class="show_login_button login_btn" onclick="ShowLogin();">Login to Learn</button>';/*login button*/
             //$logocontainer .= '</div>';
         if($this->should_render_frontpage_slideshow() == 1){
-            if(!empty($this->page->theme->settings->help_slide1) &&
+            if(!empty($this->page->theme->settings->slide_image1) &&
                 ($this->page->theme->settings->noofhelpslides >= 1)){
                     $logocontainer .= '<div class="item active">';
                         //$imageurl1= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
-                        $imageurl1 = $this->page->theme->setting_file_url('help_slide1', 'help_slide1');
+                        $imageurl1 = $this->page->theme->setting_file_url('slide_image1', 'slide_image1');
                         $image1 = html_writer::empty_tag('img', array('src' => $imageurl1, 'class' => 's1 '.$slider_height));
                         $logocontainer .= $image1;
                     $logocontainer .='</div>';
                 }
-                                        if(!empty($this->page->theme->settings->help_slide2) && ($this->page->theme->settings->noofhelpslides >= 2)){
+                                        if(!empty($this->page->theme->settings->slide_image2) && ($this->page->theme->settings->noofhelpslides >= 2)){
             $logocontainer .='<div class="item">';
                                             //$imageurl2= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
-                                            $imageurl2 = $this->page->theme->setting_file_url('help_slide2', 'help_slide2');
+                                            $imageurl2 = $this->page->theme->setting_file_url('slide_image2', 'slide_image2');
                                             $image2 = html_writer::empty_tag('img', array('src' => $imageurl2, 'class' => 's2 '.$slider_height));
                                             $logocontainer .= $image2;
              $logocontainer .='</div>';
                                         }
-                                        if(!empty($this->page->theme->settings->help_slide3) && ($this->page->theme->settings->noofhelpslides >= 3)){
+                                        if(!empty($this->page->theme->settings->slide_image3) && ($this->page->theme->settings->noofhelpslides >= 3)){
              $logocontainer .='<div class="item">';
                                             //$imageurl3= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
-                                            $imageurl3 = $this->page->theme->setting_file_url('help_slide3', 'help_slide3');
+                                            $imageurl3 = $this->page->theme->setting_file_url('slide_image3', 'slide_image3');
                                             $image3 = html_writer::empty_tag('img', array('src' => $imageurl3, 'class' => 's3 '.$slider_height));
                                             $logocontainer .= $image3;
              $logocontainer .='</div>';
                                         }
-                                        if(!empty($this->page->theme->settings->help_slide4) && ($this->page->theme->settings->noofhelpslides >= 4)){
+                                        if(!empty($this->page->theme->settings->slide_image4) && ($this->page->theme->settings->noofhelpslides >= 4)){
              $logocontainer .='<div class="item">';
                                             //$imageurl4= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
-                                            $imageurl4 = $this->page->theme->setting_file_url('help_slide4', 'help_slide4');
+                                            $imageurl4 = $this->page->theme->setting_file_url('slide_image4', 'slide_image4');
                                             $image4 = html_writer::empty_tag('img', array('src' => $imageurl4, 'class' => 's4 '.$slider_height));
                                             $logocontainer .= $image4;
             $logocontainer .='</div>';
                                         }
-                                        if(!empty($this->page->theme->settings->help_slide5) && ($this->page->theme->settings->noofhelpslides >= 5)){
+                                        if(!empty($this->page->theme->settings->slide_image5) && ($this->page->theme->settings->noofhelpslides >= 5)){
             $logocontainer .='<div class="item">';
                                             //$imageurl5= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
-                                            $imageurl5 = $this->page->theme->setting_file_url('help_slide5', 'help_slide5');
+                                            $imageurl5 = $this->page->theme->setting_file_url('slide_image5', 'slide_image5');
                                             $image5 = html_writer::empty_tag('img', array('src' => $imageurl5, 'class' => 's5 '.$slider_height));
                                             $logocontainer .= $image5;
             $logocontainer .='</div>';

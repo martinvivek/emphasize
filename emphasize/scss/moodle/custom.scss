@@ -275,6 +275,10 @@ height:265px;
 }
 
 // course view by rizwana
+#page-course-view-tabtopics section#region-main div.action-menu {
+    margin-top: 0px;
+    margin-right: 0px;
+}
 body#page-course-view-tabtopics .custom_course_image img {
     border-radius: 7px;
     margin-bottom:20px;
@@ -359,6 +363,7 @@ body#page-site-index.notloggedin div#region-main-box section#region-main .card.c
 }
 div[role="main"]{padding:10px; overflow-x:hidden;}
 body#page-course-view-tabtopics .activity img.activityicon {float: left;margin-right: 35px;}
+
 //Code added for Marketings Spots by Raghuvaran
 .marketing_spots_container {
     padding: 20px 5%;

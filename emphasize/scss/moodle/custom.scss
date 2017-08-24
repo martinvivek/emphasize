@@ -511,6 +511,36 @@ a.qnbutton.correct span.trafficlight:before {
     color: #fff;
 }
 
+#page-course-view-tabtopics section#region-main div.action-menu {
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+body#page-mod-quiz-edit .moodle-dialogue-base .yui3-panel {
+    z-index: 1030 !important;
+}
+body#page-course-view-tabtopics .course-content h3.sectionname{
+    padding: 10px 2%;
+    margin: 0px 2% 0px 2%;
+}
+body#page-course-view-tabtopics .activity .activityinstance span.inplaceeditable>a {
+    float: left;
+}
+body#page-course-view-tabtopics .course-content ul.section {
+    margin: auto;
+    float: none;
+    width: 96%;
+    padding: 0px;
+}
+#page-course-view-tabtopics i.fa-arrows {
+    color: #a9a9a9;
+}
+div.dropdown a.dropdown-toggle i.icon.fa-cog.fa-fw {
+    color: #3a3a3a !important;
+    height: 24px;
+    font-size: 24px;
+}
+
 //responsive code for header nav button
 body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
     display: none;

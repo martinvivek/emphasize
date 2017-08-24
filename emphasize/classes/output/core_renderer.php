@@ -738,7 +738,36 @@ class core_renderer extends \core_renderer {
         global $CFG;
         $slider_height = $this->get_slider_hgt();
         $logocontainer = '';
-        
+        $text1 = $this->page->theme->settings->slider_text1;
+        $text2 = $this->page->theme->settings->slider_text2;
+        $text3 = $this->page->theme->settings->slider_text3;
+        $text4 = $this->page->theme->settings->slider_text4;
+        $text5 = $this->page->theme->settings->slider_text5;
+        if(!empty($text1)){
+            $logocontainertxt1 = '<div class="carousel-caption carousel_top">';
+            $logocontainertxt1 .= '<h3>'.$text1.'</h3>';
+            $logocontainertxt1 .= '</div>';                         
+        }
+        if(!empty($text2)){
+            $logocontainertxt2 = '<div class="carousel-caption carousel_top">';
+            $logocontainertxt2 .= '<h3>'.$text2.'</h3>';
+            $logocontainertxt2 .= '</div>';                         
+        }
+        if(!empty($text3)){
+            $logocontainertxt3 = '<div class="carousel-caption carousel_top">';
+            $logocontainertxt3 .= '<h3>'.$text3.'</h3>';
+            $logocontainertxt3 .= '</div>';                         
+        }
+        if(!empty($text4)){
+            $logocontainertxt4 = '<div class="carousel-caption carousel_top">';
+            $logocontainertxt4 .= '<h3>'.$text4.'</h3>';
+            $logocontainertxt4 .= '</div>';                         
+        }
+        if(!empty($text5)){
+            $logocontainertxt5 = '<div class="carousel-caption carousel_top">';
+            $logocontainertxt5 .= '<h3>'.$text5.'</h3>';
+            $logocontainertxt5 .= '</div>';                         
+        }
         $logocontainer .= "<style> .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;margin: auto;}
                            </style>";
     
@@ -770,6 +799,7 @@ class core_renderer extends \core_renderer {
             if(!empty($this->page->theme->settings->slide_image1) &&
                 ($this->page->theme->settings->noofhelpslides >= 1)){
                     $logocontainer .= '<div class="item active">';
+                        $logocontainer .= $logocontainertxt1;
                         //$imageurl1= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                         $imageurl1 = $this->page->theme->setting_file_url('slide_image1', 'slide_image1');
                         $image1 = html_writer::empty_tag('img', array('src' => $imageurl1, 'class' => 's1 '.$slider_height));
@@ -778,6 +808,7 @@ class core_renderer extends \core_renderer {
                 }
                                         if(!empty($this->page->theme->settings->slide_image2) && ($this->page->theme->settings->noofhelpslides >= 2)){
             $logocontainer .='<div class="item">';
+                                            $logocontainer .= $logocontainertxt2;
                                             //$imageurl2= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl2 = $this->page->theme->setting_file_url('slide_image2', 'slide_image2');
                                             $image2 = html_writer::empty_tag('img', array('src' => $imageurl2, 'class' => 's2 '.$slider_height));
@@ -786,6 +817,7 @@ class core_renderer extends \core_renderer {
                                         }
                                         if(!empty($this->page->theme->settings->slide_image3) && ($this->page->theme->settings->noofhelpslides >= 3)){
              $logocontainer .='<div class="item">';
+                                            $logocontainer .= $logocontainertxt3;
                                             //$imageurl3= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl3 = $this->page->theme->setting_file_url('slide_image3', 'slide_image3');
                                             $image3 = html_writer::empty_tag('img', array('src' => $imageurl3, 'class' => 's3 '.$slider_height));
@@ -794,6 +826,7 @@ class core_renderer extends \core_renderer {
                                         }
                                         if(!empty($this->page->theme->settings->slide_image4) && ($this->page->theme->settings->noofhelpslides >= 4)){
              $logocontainer .='<div class="item">';
+                                            $logocontainer .= $logocontainertxt4;
                                             //$imageurl4= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl4 = $this->page->theme->setting_file_url('slide_image4', 'slide_image4');
                                             $image4 = html_writer::empty_tag('img', array('src' => $imageurl4, 'class' => 's4 '.$slider_height));
@@ -802,6 +835,7 @@ class core_renderer extends \core_renderer {
                                         }
                                         if(!empty($this->page->theme->settings->slide_image5) && ($this->page->theme->settings->noofhelpslides >= 5)){
             $logocontainer .='<div class="item">';
+                                            $logocontainer .= $logocontainertxt5;
                                             //$imageurl5= $CFG->wwwroot.'/theme/clean/pix/schedule.png';
                                             $imageurl5 = $this->page->theme->setting_file_url('slide_image5', 'slide_image5');
                                             $image5 = html_writer::empty_tag('img', array('src' => $imageurl5, 'class' => 's5 '.$slider_height));

@@ -98,7 +98,17 @@ $string['messageimagedesc'] = "The Image you uploaded here will be displayed as 
 //slider settings
 $string['slidersetting'] = "Slider Settings";
 $string['slidersettingdesc'] = "The Images you uploaded here will be displayed as slider images";
-
+//code added by Raghuvaran for slider text
+$string['slider_text1'] = 'First Slider Text';
+$string['slider_text1_desc'] = 'The text you entered here will be displayed on First slider image';
+$string['slider_text2'] = 'Second Slider Text';
+$string['slider_text2_desc'] = 'The text you entered here will be displayed on Second slider image';
+$string['slider_text3'] = 'Third Slider Text';
+$string['slider_text3_desc'] = 'The text you entered here will be displayed on Third slider image';
+$string['slider_text4'] = 'Fourth Slider Text';
+$string['slider_text4_desc'] = 'The text you entered here will be displayed on Fourth slider image';
+$string['slider_text5'] = 'Fifth Slider Text';
+$string['slider_text5_desc'] = 'The text you entered here will be displayed on Fifth slider image';
 //code by bunesh
 $string['slide_image1'] = 'Slide Image1';
 $string['slide_image1desc'] = 'First help Slider Image to be displayed on Helppage';

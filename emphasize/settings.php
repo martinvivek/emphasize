@@ -208,13 +208,21 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
-     $name = 'theme_emphasize/slide_image1';
+    $name = 'theme_emphasize/slide_image1';
     $title = get_string('slide_image1', 'theme_emphasize');
     $description = get_string('slide_image1desc', 'theme_emphasize');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image1');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/slider_text1';
+    $title = get_string('slider_text1', 'theme_emphasize');
+    $description = get_string('slider_text1_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
     //slider2 file setting.
     $name = 'theme_emphasize/slide_image2';
@@ -224,10 +232,28 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
-     $name = 'theme_emphasize/slide_image3';
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/slider_text2';
+    $title = get_string('slider_text2', 'theme_emphasize');
+    $description = get_string('slider_text2_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_emphasize/slide_image3';
     $title = get_string('slide_image3', 'theme_emphasize');
     $description = get_string('slide_image3desc', 'theme_emphasize');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image3');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/slider_text3';
+    $title = get_string('slider_text3', 'theme_emphasize');
+    $description = get_string('slider_text3_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
@@ -239,10 +265,28 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/slider_text4';
+    $title = get_string('slider_text4', 'theme_emphasize');
+    $description = get_string('slider_text4_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_emphasize/slide_image5';
     $title = get_string('slide_image5', 'theme_emphasize');
     $description = get_string('slide_image5desc', 'theme_emphasize');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'slide_image5');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/slider_text5';
+    $title = get_string('slider_text5', 'theme_emphasize');
+    $description = get_string('slider_text5_desc', 'theme_emphasize');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     

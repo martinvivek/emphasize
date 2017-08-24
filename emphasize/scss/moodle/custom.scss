@@ -397,13 +397,13 @@ body#page-course-view-tabtopics .activity img.activityicon {float: left;margin-r
   margin-top: 20px;
 }
 //settings for textbox in themesettingsemphasize page added by Raghuvaran
-body#page-admin-setting-themesettingemphasize .form-item.row .editor_atto div.editor_atto_toolbar button {
+div.editor_atto_toolbar button {
     color: #333;
 }
-body#page-admin-setting-themesettingemphasize .form-item.row .editor_atto div.editor_atto_toolbar button:hover {
+div.editor_atto_toolbar button:hover {
     border: 0px solid transparent;
 }
-body#page-admin-setting-themesettngemphasize .form-item.row .editor_atto div.editor_atto_toolbar button + button {
+div.editor_atto_toolbar button + button {
     border-left: 1px solid #ccc !important;
 }
 body.notloggedin div#page.container-fluid {

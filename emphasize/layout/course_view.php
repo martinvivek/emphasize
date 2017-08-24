@@ -24,7 +24,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// Get user's object from page url
+// Get course's object from page url
+if(empty($urlparams)){
+    $urlparams = '';
+}
+
 $courseid = optional_param('id', $urlparams, PARAM_INT);
 $course = get_course($courseid);
 

@@ -86,6 +86,7 @@ nav.list-group.m-t-1{
         }
     }
     a.list-group-item:hover {
+        background-color: #303030;
         div.m-l-0, div.m-l-1 {
             display: inherit;
             position: absolute;
@@ -93,7 +94,7 @@ nav.list-group.m-t-1{
             top: 0px;
             background-color: #303030;
             z-index: 3;
-            padding: 3px 10px 3px 10px;
+            padding: 2px 10px 3px 10px;
             font-size: 14px !important;
             text-shadow: none;
             width: 200px;
@@ -101,12 +102,18 @@ nav.list-group.m-t-1{
             text-align: left;
             font-weight: 300;
             text-transform: uppercase;
+            border-top: 1px solid #303030;
         }
         //i.fa {
         //    -webkit-transform: rotateY(180deg);
         //    -moz-transform: rotateY(180deg);
         //    transform: rotateY(180deg);
         //}
+    }
+    a.list-group-item:last-child:hover {
+        div.m-l-0, div.m-l-1 {
+            padding: 3px 10px 3px 10px;  
+        }
     }
 }
 #nav-drawer .list-group .list-group-item {
@@ -627,4 +634,8 @@ body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
 }
 .p15{
     padding:15px;
+}
+body .breadcrumb-item + .breadcrumb-item::before, body .breadcrumb-item + .breadcrumb-item::after {
+    padding-left: 0px;
+    padding-right: 0px;
 }

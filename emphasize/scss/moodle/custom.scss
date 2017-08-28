@@ -163,7 +163,7 @@ nav.list-group.m-t-1{
     body {
         margin-left: 50px;
     }
-    body.notloggedin {
+    body.notloggedin, body#page-login-index {
         margin-left: inherit;
     }
 }

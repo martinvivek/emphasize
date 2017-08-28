@@ -1412,6 +1412,13 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
         }
     }
 
+    // Before we add the last items (usually a logout + switch role link), add any
+    // custom-defined items.
+    $customitems = user_convert_text_to_menu_items($CFG->customusermenuitems, $page);
+    foreach ($customitems as $item) {
+        $returnobject->navitems[] = $item;
+    }
+
     // Links: My Profile.
     $myprofile = new stdClass();
     $myprofile->itemtype = 'link';
@@ -1422,14 +1429,6 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
     $returnobject->navitems[] = $myprofile;
 
     $returnobject->metadata['asotherrole'] = false;
-
-    // Before we add the last items (usually a logout + switch role link), add any
-    // custom-defined items.
-    $customitems = user_convert_text_to_menu_items($CFG->customusermenuitems, $page);
-    foreach ($customitems as $item) {
-        $returnobject->navitems[] = $item;
-    }
-
     
     if ($returnobject->metadata['asotheruser'] = \core\session\manager::is_loggedinas()) {
         $realuser = \core\session\manager::get_realuser();

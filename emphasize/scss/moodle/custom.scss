@@ -293,7 +293,7 @@ body#page-course-view-tabtopics .custom_course_detail {
 padding:0px;
 margin:0px;
 }
-.block>.card-block, .card.card-block, .card .card-block {
+.block>.card-block, body#page-my-index .card.card-block, body#page-my-index .card .card-block {
     padding: 0px;
 }
 .block>.card-block .card-text.content {

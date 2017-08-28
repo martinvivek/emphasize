@@ -38,6 +38,8 @@ $tblhdcolor:                #03A9F4 !default;
 $tbltextcolor:              #fff !default;
 $logowidth:                 130px !default;
 $logoheight:                42px !default;
+$footerbgcolor:             #555658 !default;
+
 // Spacing
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
@@ -288,3 +290,4 @@ header .container-fluid .logo img.img_logo  {
     height: 100%;
     max-height: 100%;
 }
+.bg-inverse{background-color:$footerbgcolor !important;}

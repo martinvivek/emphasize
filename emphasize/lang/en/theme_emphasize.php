@@ -138,8 +138,8 @@ $string['socialmediadesc'] = 'Enter the social media links for your site.';
 $string['sociallinks'] = "Social links";
 $string['sociallinksdesc'] = "If you enable this, you can find the social links at footer, And you can add your social networking page urls below text boxes respectively. ";
 
-$string['facebook'] = "FaceBook URL";
-$string['facebookdesc'] = "The URL you added here will be the path for your FaceBook page";
+$string['facebook'] = "Facebook URL";
+$string['facebookdesc'] = "The URL you added here will be the path for your Facebook page";
 
 $string['twitter'] = "Twitter URL";
 $string['twitterdesc'] = "The URL you added here will be the path for your Twitter page";

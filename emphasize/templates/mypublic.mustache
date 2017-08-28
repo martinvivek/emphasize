@@ -64,8 +64,9 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{> theme_emphasize/header }}
-    
-    {{> theme_emphasize/nav-drawer }}
+    {{#isloggedin}}
+        {{> theme_emphasize/nav-drawer }}
+    {{/isloggedin}}
     <!-- Page -->
      <div id="page" class="container-fluid">
         <div id="region-main-box" class="page-content container-fluid">

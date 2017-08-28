@@ -67,7 +67,9 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{>theme_emphasize/header}}
-        {{> theme_emphasize/nav-drawer }}
+        {{#isloggedin}}
+            {{> theme_emphasize/nav-drawer }}
+        {{/isloggedin}}
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
         {{{ output.context_header_settings_menu }}}

@@ -579,6 +579,13 @@ body .navbar-light .container-fluid.navbar-nav button.btn.pull-xs-right {
         margin-top:0px;
     }
 }
+//custom css classes added by Raghuvaran on 28-08-17
+@media (max-width:480px) {
+    #page.container-fluid {
+        padding: 0px 15px;
+    }
+}
+//code ends here
 //custom css classes added by Raghuvaran on 23-08-17
 .ml5{
     margin-left:5px;

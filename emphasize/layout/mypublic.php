@@ -136,7 +136,7 @@ $templatecontext['user']->instidept = $userobject->department.$userobject->insti
     $aboutme = true;
 // }
 $templatecontext['user']->aboutme = $aboutme;
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
+$templatecontext['flatnavigation'] = flatnav_icon_support($PAGE->flatnav);
 echo $OUTPUT->render_from_template('theme_emphasize/mypublic', $templatecontext);
 
 $PAGE->requires->strings_for_js(array('enterfirstname', 'enterlastname', 'enteremailid', 'enterproperemailid', 'detailssavedsuccessfully', 'actioncouldnotbeperformed'), 'theme_emphasize');

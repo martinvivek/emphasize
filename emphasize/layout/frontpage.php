@@ -37,7 +37,11 @@ if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
-$blockshtml = $OUTPUT->blocks('side-pre');
+if (isloggedin()) {
+    $blockshtml = $OUTPUT->blocks('side-pre');
+}else{
+    $blockshtml = '';
+}
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 

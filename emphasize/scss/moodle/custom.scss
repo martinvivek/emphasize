@@ -686,3 +686,5 @@ body .breadcrumb-item + .breadcrumb-item::before, body .breadcrumb-item + .bread
     padding-left: 0px;
     padding-right: 0px;
 }
+.dropdown-menu a:first-of-type > .icon{margin-left:0px;}
+.dropdown-menu .dropdown-item{padding:3px 10px;}

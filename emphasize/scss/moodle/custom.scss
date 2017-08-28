@@ -120,6 +120,9 @@ nav.list-group.m-t-1{
     float: left;
     width: 100%;
     color: #fff;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #484848;
 }
 #nav-drawer.closed .list-group .list-group-item {
     float: left;

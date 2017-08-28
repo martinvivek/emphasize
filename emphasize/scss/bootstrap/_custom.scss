@@ -81,6 +81,7 @@ li.breadcrumb-item:before {
     margin-left: 1px;
 }
 .breadcrumb-item>a {color: #fff;float: left;padding: 5px 3px 5px 25px;}
+.dropdown-menu .dropdown-item.dropdown_others {float: left;display: inline;width: auto;clear: none;}
 .dropdown-menu .dropdown-item.dropdown_others:last-child {float: right;}
 .dropdown_others.link_button {margin-top: 5px;}
 span.breadcrumb_disable {padding: 5px 3px 5px 25px;float: left;}

@@ -527,7 +527,8 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/footerbgcolor';
         $title = get_string('footerbgcolor', 'theme_emphasize');
         $description = get_string('footerbg_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $default = '#555658';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -537,7 +538,8 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/footertextcolor';
         $title = get_string('footertextcolor', 'theme_emphasize');
         $description = get_string('footertext_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $default = '#fff';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
@@ -546,7 +548,8 @@ if ($ADMIN->fulltree) {
         $name = 'theme_emphasize/footerlinkcolor';
         $title = get_string('footerlinkcolor', 'theme_emphasize');
         $description = get_string('footerlink_desc', 'theme_emphasize');
-        $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+        $default = '#00acdf';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 

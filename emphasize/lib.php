@@ -110,6 +110,8 @@ function theme_emphasize_get_pre_scss($theme) {
         'logoheight' => ['logoheight'],
         'logowidth' => ['logowidth'],
         'footerbgcolor' => ['footerbgcolor'],
+        'footertextcolor' => ['footertextcolor'],
+        'footerlinkcolor' => ['footerlinkcolor'],
     ];
 
     // Prepend variables first.

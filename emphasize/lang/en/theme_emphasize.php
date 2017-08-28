@@ -230,6 +230,10 @@ $string['tbltext_desc'] = 'The selected color code here, will be affected as tab
 
 $string['logo'] = 'Logo'; 
 $string['logodesc'] = 'The Logo you uploaded here will be displayed as a Logo in Header';
+$string['logoheight'] = 'Logo Height'; 
+$string['logoheight_desc'] = 'The given value here will be the Height for Logo in Header (Max-height is 44px)';
+$string['logowidth'] = 'Logo Width'; 
+$string['logowidth_desc'] = 'The given value here will be the width for Logo in Header (Max-width is 160px)';
 
 //code added for Marketing Spots
 $string['marketingspots'] = 'Marketing Spots on Login Page';

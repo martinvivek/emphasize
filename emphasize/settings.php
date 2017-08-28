@@ -95,6 +95,22 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/logoheight';
+    $title = get_string('logoheight', 'theme_emphasize');
+    $description = get_string('logoheight_desc', 'theme_emphasize');
+    $default = '42px';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    //Second Marketing Spots Header to be displayed on login page
+    $name = 'theme_emphasize/logowidth';
+    $title = get_string('logowidth', 'theme_emphasize');
+    $description = get_string('logowidth_desc', 'theme_emphasize');
+    $default = '130px';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
     //Code added for Marketings Spots by Raghuvaran
     //code added for Marketing Spots to be displayed on login page

@@ -111,16 +111,16 @@ $string['slider_text5'] = 'Fifth Slider Text';
 $string['slider_text5_desc'] = 'The text you entered here will be displayed on Fifth slider image';
 //code by bunesh
 $string['slide_image1'] = 'Slide Image1';
-$string['slide_image1desc'] = 'First help Slider Image to be displayed on Helppage';
+$string['slide_image1desc'] = 'First Slider Image to be displayed on Front page';
 $string['slide_image2'] = 'Slide Image2';
-$string['slide_image2desc'] = 'Second help Slider Image to be displayed on Helppage';
+$string['slide_image2desc'] = 'Second Slider Image to be displayed on Front page';
 $string['slide_image3'] = 'Slide Image3';
-$string['slide_image3desc'] = 'Third help Slider Image to be displayed on Helppage';
+$string['slide_image3desc'] = 'Third Slider Image to be displayed on Front page';
 $string['slide_image4'] = 'Slide Image4';
-$string['slide_image4desc'] = 'Fourth help Slider Image to be displayed on Helppage';
+$string['slide_image4desc'] = 'Fourth Slider Image to be displayed on Front page';
 $string['slide_image5'] = 'Slide Image5';
-$string['slide_image5desc'] = 'Fifth help Slider Image to be displayed on Help page';
-$string['noofhelpslides'] = 'No of slides on Help page';
+$string['slide_image5desc'] = 'Fifth Slider Image to be displayed on Front page';
+$string['noofhelpslides'] = 'No of slides on Front page';
 $string['noofhelpslidesdesc'] = 'Number of slides to be displayed on the help page (Max 5)';
 //--end slider settings---
 

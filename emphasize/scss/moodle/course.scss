@@ -662,8 +662,9 @@ span.editinstructions {
 }
 
 .coursebox .content .courseimage img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 400px;
+    max-height: 250px;
+    width: 100%;
 }
 
 .coursebox .content .coursecat,
@@ -1197,4 +1198,8 @@ span.editinstructions {
     width: auto;
     height: 32px;
     font-size: 32px;
+}
+
+.coursebox .content .courseimage {
+    text-align: center;
 }

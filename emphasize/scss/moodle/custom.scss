@@ -690,3 +690,9 @@ body .breadcrumb-item + .breadcrumb-item::before, body .breadcrumb-item + .bread
 .dropdown-menu .dropdown-item{padding:3px 10px;}
 .form-control{border-radius: 8px;}
 .navbar .popover-region{margin-top:6px;}
+body#page-enrol-users .users.list-group .list-group-item-action:hover .details {
+    color:#fff;
+}
+.user-enroller-panel .uep-search-results .user .details {
+    color:#3a3a3a;
+}

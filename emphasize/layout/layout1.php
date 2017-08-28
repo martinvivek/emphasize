@@ -32,6 +32,10 @@ if (isloggedin()) {
 } else {
     $navdraweropen = false;
 }
+
+$is_loggedin = isloggedin();
+$is_loggedin = empty($is_loggedin) ? false : true;
+
 $extraclasses = [];
 if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
@@ -48,6 +52,7 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
+    'isloggedin' => $is_loggedin,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
 ];
 

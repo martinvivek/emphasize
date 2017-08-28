@@ -36,6 +36,10 @@ $extraclasses = [];
 if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
+
+$is_loggedin = isloggedin();
+$is_loggedin = empty($is_loggedin) ? false : true;
+
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
@@ -48,6 +52,7 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
+    'isloggedin' => $is_loggedin,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
 ];
 

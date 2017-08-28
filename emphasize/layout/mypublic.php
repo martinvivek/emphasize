@@ -42,9 +42,18 @@ $systemcontext = context_system::instance();
 // } else {
 //     //$menubar_state = 'unfold';
 // }
+
+if (isloggedin()) {
+    $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
+} else {
+    $navdraweropen = false;
+}
 $menubar_state = 'unfold';
 $blockshtml = $OUTPUT->blocks('side-pre', array(), 'aside');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
+
+$is_loggedin = isloggedin();
+$is_loggedin = empty($is_loggedin) ? false : true;
 
 $extraclasses = [];
 $extraclasses [] = 'page-profile site-menubar-'.$menubar_state.' site-menubar-fold-alt';
@@ -81,6 +90,7 @@ $templatecontext = [
     //'usercanmanage'             => \theme_remui\utility::check_user_admin_cap($userobject),
     'notcurrentuser'    => ($userobject->id != $USER->id)?true:false,
     'countries' => $tempArray,
+    'isloggedin' => $is_loggedin,
     'userpicture' => $OUTPUT->get_user_picture($userobject, 35),
     //'imageone' => $OUTPUT->image_url('f1', 'theme'),
     //'footerdata' => \theme_emphasize\utility::get_footer_data() 

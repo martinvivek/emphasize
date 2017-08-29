@@ -332,7 +332,7 @@ margin:0px;
 #page-course-view-tabtopics div.action-menu{float: right;margin-top: -50px;margin-right: 10px;}
 #page-course-view-tabtopics a .icon{
 color:#a9a9a9;}
-body#page-course-view-tabtopics .icon{color: #3a3a3a;height: 24px;font-size: 24px;width: auto;}
+//body#page-course-view-tabtopics .icon{color: #3a3a3a;height: 24px;font-size: 24px;width: auto;}
 body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 // quiz view by rizwana
 #page-mod-quiz-view .card.card-block{background-color: #f6f6f6;}
@@ -773,4 +773,10 @@ header span.hidden-md-down .search-input-wrapper form.search-input-form {
 }
 body.pagelayout-course .action-menu.moodle-actionmenu {
     float: right;
+}
+header span.hidden-md-down .search-input-wrapper form.search-input-form > input[type="text"] {
+    padding: 0px 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #737373;
 }

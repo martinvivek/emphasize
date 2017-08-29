@@ -271,3 +271,24 @@ body#page-blocks-manage-courseinfo #courseallsections i.activityicon.iconcourse{
 		width: 25.076923%;
 	}
 }
+
+body#page-course-view-tabtopics .course-content h3.sectionname{
+    padding: 10px 2%;
+    margin: 0px 2% 0px 2%;
+}
+body#page-course-view-tabtopics .activity .activityinstance span.inplaceeditable>a {
+    float: left;
+}
+body#page-course-view-tabtopics .course-content ul.section {
+    margin: auto;
+    float: none;
+    width: 96%;
+    padding: 0px;
+}
+#page-course-view-tabtopics i.fa-arrows {
+    color: #a9a9a9;
+}
+#page-course-view-tabtopics section#region-main div.action-menu {
+    margin-top: 0px;
+    margin-right: 0px;
+}

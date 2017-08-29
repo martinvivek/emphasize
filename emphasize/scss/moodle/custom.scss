@@ -721,9 +721,13 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
     margin-bottom: 4px;
 }
 body .popover-region-header-container{
-    padding-left:10px;
-    padding-right:10px;
-    background-color: #eaedf2;
+    padding:3px 10px;
+    background-color: $blockheaderbg;
+    color:$blocktextcolor;
+    min-height: 33px;
+}
+.popover-region-header-actions .newmessage-link a, .popover-region-header-actions .hover-tooltip-container a i.fa {
+    color:$blocktextcolor;
 }
 body .navbar .popover-region-container {
     top: 2.178rem;
@@ -773,4 +777,19 @@ header#page-header div.card-block, header#page-header div.card {
 }
 header#page-header div.card-block .breadcrumb-button>.singlebutton>form {
     margin-bottom: 0px;
+}
+header.navbar .popover-region i.fa.fa-bell, header.navbar .popover-region i.fa.fa-comment,
+header span.hidden-md-down .search-input-wrapper i.fa.fa-search{
+    font-size: 17px;
+    color: #999;
+}
+body.pagelayout-course #nav-drawer .list-group:not(.m-t-1)>a.list-group-item-action {
+    padding-left: 15%;
+}
+body.pagelayout-course #nav-drawer .list-group:not(.m-t-1)>a.list-group-item-action>i.fa {
+    font-size: 22px;
+    text-align: left;
+}
+body.pagelayout-course #nav-drawer.closed .list-group:not(.m-t-1)>a.list-group-item-action>i.fa {
+    text-align: center;
 }

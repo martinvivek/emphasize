@@ -786,6 +786,9 @@ header span.hidden-md-down .search-input-wrapper i.fa.fa-search{
 body.pagelayout-course #nav-drawer .list-group:not(.m-t-1)>a.list-group-item-action {
     padding-left: 15%;
 }
+body.pagelayout-course #nav-drawer .list-group:not(.m-t-1)>a.list-group-item-action>div {
+    width: 80%;
+}
 body.pagelayout-course #nav-drawer .list-group:not(.m-t-1)>a.list-group-item-action>i.fa {
     font-size: 22px;
     text-align: left;

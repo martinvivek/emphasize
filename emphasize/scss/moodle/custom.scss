@@ -719,7 +719,7 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
     min-width: 30px;
     margin: auto;
     float: left;
-    margin-right: 2px;
+    margin-right: 1px;
     height:22px;
 }
 #nav-drawer .list-group .list-group-item[data-key="mycourses"] {
@@ -728,4 +728,19 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
 #nav-drawer .list-group .list-group-item[data-key="mycourses"] > div {
     margin-top: 3px;
     text-transform: uppercase;
+    float: left;
+}
+#nav-drawer.closed .list-group .list-group-item[data-key="mycourses"]:after {
+    content: "\f19d";
+    font-family: FontAwesome;
+    padding-left: 0px;
+    font-size: 21px;
+    color: #fff;
+    text-shadow: none;
+    min-width: 30px;
+    margin: auto;
+    float: right;
+    height: 22px;
+    margin-top: -3px;
+    margin-right: -2px;
 }

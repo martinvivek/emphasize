@@ -764,3 +764,6 @@ header span.hidden-md-down .search-input-wrapper form.search-input-form {
 #nav-drawer.closed .list-group .list-group-item[data-key="mycourses"]:before, #nav-drawer.closed .list-group .list-group-item[data-key="mycourses"] > div {
     display: none;
 }
+.block_myoverview .courses-view-course-item {
+    padding: .75rem 1.25rem;
+}

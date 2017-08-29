@@ -15,9 +15,11 @@ div[data-region="drawer-toggle"] {
         right: -10px;
         background-color: transparent;
         border: 1px solid #ccc;
+        right: 5px;
+        margin-right: 0px !important;
         @include hover-focus {
             outline: none;
-            border: 1px solid #fff;
+            border: 1px solid #ccc;
         }
     }
     button.btn.pull-xs-left.m-r-1.btn-secondary span[aria-hidden="true"]{
@@ -764,4 +766,8 @@ body.path-grade-report-grader .gradeparent {
     overflow-x: auto;
     width: 100%;
     float: left;
+}
+header#page-header div.card-block, header#page-header div.card {
+    padding: 0px;
+    margin-bottom: 0px;
 }

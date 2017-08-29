@@ -25,11 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Get course's object from page url
-if(empty($urlparams)){
-    $urlparams = '';
-}
-
-$courseid = optional_param('id', $urlparams, PARAM_INT);
+$courseid = optional_param('id', 1, PARAM_INT);
 $course = get_course($courseid);
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);

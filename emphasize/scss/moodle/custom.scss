@@ -689,6 +689,12 @@ body .breadcrumb-item + .breadcrumb-item::before, body .breadcrumb-item + .bread
     padding-left: 0px;
     padding-right: 0px;
 }
+#nav-drawer .list-group .list-group-item[data-key="mycourses"] ~ a.list-group-item-action {
+    padding-left: 15%;
+}
+#nav-drawer .list-group .list-group-item[data-key="mycourses"] ~ a.list-group-item-action> i ~ div {
+    width: 80%;
+}
 .dropdown-menu a:first-of-type > .icon{margin-left:0px;}
 .dropdown-menu .dropdown-item{padding:3px 10px;}
 .form-control{border-radius: 8px;}

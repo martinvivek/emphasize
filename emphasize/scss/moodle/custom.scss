@@ -721,12 +721,12 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
     float: left;
     margin-right: 1px;
     height:22px;
+    margin-top: -4px;
 }
 #nav-drawer .list-group .list-group-item[data-key="mycourses"] {
     padding: 5px 5%;
 }
 #nav-drawer .list-group .list-group-item[data-key="mycourses"] > div {
-    margin-top: 3px;
     text-transform: uppercase;
     float: left;
 }
@@ -743,6 +743,7 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
     height: 22px;
     margin-top: -3px;
     margin-right: -2px;
+    margin-bottom: 4px;
 }
 body .popover-region-header-container{
     padding-left:10px;
@@ -759,4 +760,7 @@ header span.hidden-md-down .search-input-wrapper>div {
 header span.hidden-md-down .search-input-wrapper form.search-input-form {
     margin-bottom: 8px;
     margin-top: 4px;
+}
+#nav-drawer.closed .list-group .list-group-item[data-key="mycourses"]:before, #nav-drawer.closed .list-group .list-group-item[data-key="mycourses"] > div {
+    display: none;
 }

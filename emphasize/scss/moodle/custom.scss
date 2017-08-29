@@ -753,3 +753,10 @@ body .navbar .popover-region-container {
     top: 2.178rem;
     box-shadow: 5px 5px rgba(102,102,102,.1);
 }
+header span.hidden-md-down .search-input-wrapper>div {
+    margin-top: 6px;
+}
+header span.hidden-md-down .search-input-wrapper form.search-input-form {
+    margin-bottom: 8px;
+    margin-top: 4px;
+}

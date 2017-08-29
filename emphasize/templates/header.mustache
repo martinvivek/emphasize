@@ -59,12 +59,12 @@
 
         <!-- navbar_plugin_output -->
         {{{ output.navbar_plugin_output }}}
-
-        <!-- search_box -->
-        <span class="hidden-md-down">
-        {{{ output.search_box }}}
-        </span>
-
+        {{#isloggedin}}
+            <!-- search_box -->
+            <span class="hidden-md-down">
+            {{{ output.search_box }}}
+            </span>
+        {{/isloggedin}}
         <nav class="nav navbar-nav hidden-md-down">
             <!-- custom_menu -->
             {{{ output.custom_menu }}}

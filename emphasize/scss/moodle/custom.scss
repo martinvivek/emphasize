@@ -13,8 +13,8 @@ div[data-region="drawer-toggle"] {
     button.btn.pull-xs-left.m-r-1.btn-secondary {
         position: absolute;
         right: -10px;
-        background-color: #232323;
-        border: 1px solid #fff;
+        background-color: transparent;
+        border: 1px solid #ccc;
         @include hover-focus {
             outline: none;
             border: 1px solid #fff;
@@ -731,7 +731,7 @@ header span.hidden-md-down .search-input-wrapper>div {
     margin-top: 6px;
 }
 header span.hidden-md-down .search-input-wrapper form.search-input-form {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     margin-top: 4px;
 }
 #nav-drawer.closed .list-group .list-group-item[data-key="mycourses"]:before, #nav-drawer.closed .list-group .list-group-item[data-key="mycourses"] > div {
@@ -747,10 +747,14 @@ header span.hidden-md-down .search-input-wrapper form.search-input-form {
 body.pagelayout-course .action-menu.moodle-actionmenu {
     float: right;
 }
-header span.hidden-md-down .search-input-wrapper form.search-input-form > input[type="text"] {
-    width: 100%;
-    border-radius: 5px;
-    padding: 6px 8px;
+header span.hidden-md-down .search-input-wrapper form.search-input-form>input[type="text"] {
+    border: none;
+}
+header span.hidden-md-down .search-input-wrapper.expanded {
+    background-color: #fff;
+    padding: 2px 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
 }
 //Reports page code added
 body.path-grade-report-grader #region-main {

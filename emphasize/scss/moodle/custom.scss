@@ -126,7 +126,7 @@ nav.list-group.m-t-1{
 }
 #nav-drawer.closed .list-group .list-group-item {
     float: left;
-    width: 96%;
+    width: 100%;
     padding: 5px 2%;
 }
 //Code ends for Quick Links Navigation
@@ -709,3 +709,23 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
     width: 100%;
 }
 .flt_none{float:none;margin:auto;}
+#nav-drawer .list-group .list-group-item[data-key="mycourses"]:before {
+    content: "\f19d";
+    font-family: FontAwesome;
+    padding-left: 0px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: none;
+    min-width: 30px;
+    margin: auto;
+    float: left;
+    margin-right: 2px;
+    height:22px;
+}
+#nav-drawer .list-group .list-group-item[data-key="mycourses"] {
+    padding: 5px 5%;
+}
+#nav-drawer .list-group .list-group-item[data-key="mycourses"] > div {
+    margin-top: 3px;
+    text-transform: uppercase;
+}

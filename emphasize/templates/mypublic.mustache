@@ -90,7 +90,10 @@
                                     {{/ userpicture }}
                                 </div>
                                 <div class="profile_top_containers col-md-4 desktop-first-column">
-                                    <div class="text-left  profile_info_top">{{ firstname }} {{ lastname }} ({{ idnumber }})
+                                    <div class="text-left  profile_info_top">{{ firstname }} {{ lastname }}
+                                        {{# idnumber }}
+                                            ({{ idnumber }})
+                                        {{/ idnumber }}
                                     </div>
                                 </div>
                                 <div class="profile_top_containers col-md-3 profile_res desktop-first-column">
@@ -338,13 +341,7 @@
     <footer id="page-footer" class="p-y-1 bg-inverse">
     <div class="container">
         <div class="default_links col-md-7 col-sm-7 col-sx-12 pull-left">
-            <div id="course-footer">{{{ output.course_footer }}}</div>
-                {{# output.page_doc_link }}
-                    <p class="helplink">{{{ output.page_doc_link }}}</p>
-                {{/ output.page_doc_link }}
-
-                {{{ output.login_info }}}
-                {{{ output.home_link }}}
+            <div id="course-footer">
                 <nav class="nav navbar-nav hidden-lg-up">
                     {{# output.custom_menu_flat }}
                         <ul class="list-unstyled p-t-1">

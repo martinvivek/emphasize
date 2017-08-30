@@ -822,6 +822,7 @@ span.editinstructions {
     h3 {
         margin: 0;
         padding: 0.4rem 0.6rem 0.3rem;
+        text-decoration: underline;
     }
 
     h4 {
@@ -962,7 +963,8 @@ span.editinstructions {
             }
 
             > div {
-                padding-left: 1rem;
+                padding-left: 0.5rem;
+                border-bottom: 1px solid #ccc;
             }
         }
 
@@ -1066,9 +1068,15 @@ span.editinstructions {
             border: 0;
             margin: 0.4rem 0.2rem 0.45rem;
             font-size: 10.4px;
+            box-shadow: none;
+            background-image: none;
+            color: #fff;
+            border: 1px solid $btnbordercolor;
+            border-radius: $btnsradius;
 
             &.active-page {
                 background-color: $btn-primary-color;
+                color: #444;
             }
         }
     }

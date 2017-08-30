@@ -815,3 +815,44 @@ body#page-user-profile .panel .panel-body form#exampleStandardForm button#btn-sa
 body#page-user-profile .panel-body .nav-tabs .nav-item a.nav-link>i.icon {
     display: none;
 }
+//code for available courses on site index page written by Raghuvaran on 30-08-17
+body#page-site-index .courses.frontpage-course-list-all .coursebox {
+    border: 1px solid #c8c8c8;
+    float: left;
+    min-width: 24%;
+    margin: 15px .5%;
+    min-height: 350px;
+    max-height: 350px;
+    overflow: hidden;
+    border-bottom: 5px solid #37554b;
+}
+body#page-site-index .courses.frontpage-course-list-all {
+    position: relative;
+    float: left;
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+}
+body#page-site-index .courses.frontpage-course-list-all .coursebox:hover {
+    border: 1px solid #80a2c5;
+    border-bottom: 10px solid #37554b;
+}
+body#page-site-index .courses.frontpage-course-list-all .coursebox .courseimage,
+body#page-site-index .courses.frontpage-course-list-all .coursebox .summary {
+    width: 100%;
+    float: left;
+    margin: auto;
+}
+body#page-site-index div#frontpage-course-list>h2 {
+    text-align: left;
+    color: #0072bc;
+}
+body#page-site-index .courses.frontpage-course-list-all .coursebox h3.coursename {
+    border-bottom: 3px solid #37554b;
+    width: 60%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 10px 5px 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+}

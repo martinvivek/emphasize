@@ -1574,7 +1574,8 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
         $footnote='';
         $footnotepath = $this->page->theme->settings->footnote;
         if(!empty($footnotepath)){
-            $footnote .= $footnotepath;
+            $year = '<p class="copy_right"> ©'. date("Y") .'</p>';
+            $footnote .= $footnotepath.$year;
         }
         return $footnote;
     }

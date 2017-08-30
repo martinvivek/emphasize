@@ -345,15 +345,15 @@ body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 }
 
 //code added for tabs
-.card-block .nav-tabs{
+.card-block .nav-tabs, .panel-body .nav-tabs{
     background-color: #03a9f4;
-      border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
 }
-.card-block .nav-tabs .nav-link.active{
+.card-block .nav-tabs .nav-link.active, .panel-body .nav-tabs .nav-link.active{
     background-color: #58cbff !important;
     color: #fff !important ;
 }
-.card-block .nav-tabs .nav-link{
+.card-block .nav-tabs .nav-link, .panel-body .nav-tabs .nav-link{
     color: #fff;
     border: 0;
 }
@@ -805,4 +805,16 @@ body#page-admin-user .no-overflow table#users>thead>tr>th>a{
 }
 #page-footer .copy_right_content>* {
     float: left;
+}
+body#page-user-profile .panel .panel-body form#exampleStandardForm .form-control {
+    width: 77%;
+}
+body#page-user-profile .panel .panel-body form#exampleStandardForm .text-right {
+    padding-left: 15px;
+}
+body#page-user-profile .panel .panel-body form#exampleStandardForm button#btn-save-changes {
+    margin-bottom: 10px;
+}
+body#page-user-profile .panel-body .nav-tabs .nav-item a.nav-link>i.icon {
+    display: none;
 }

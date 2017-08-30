@@ -796,3 +796,10 @@ body.pagelayout-course #nav-drawer .list-group:not(.m-t-1)>a.list-group-item-act
 body.pagelayout-course #nav-drawer.closed .list-group:not(.m-t-1)>a.list-group-item-action>i.fa {
     text-align: center;
 }
+body#page-admin-user .no-overflow table#users>thead>tr>th, body#page-admin-user .no-overflow table#users>tbody>tr>td {
+    min-width: 120px !important;
+    padding: 6px 8px;
+}
+body#page-admin-user .no-overflow table#users>thead>tr>th>a{
+    color:$tbltextcolor;
+}

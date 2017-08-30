@@ -1569,4 +1569,13 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
         }
         return $height;
     }
+    
+    function get_footnote() {
+        $footnote='';
+        $footnotepath = $this->page->theme->settings->footnote;
+        if(!empty($footnotepath)){
+            $footnote .= $footnotepath;
+        }
+        return $footnote;
+    }
 }

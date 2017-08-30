@@ -552,6 +552,15 @@ if ($ADMIN->fulltree) {
         $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
+        
+        // Footnote setting.
+        $name = 'theme_emphasize/footnote';
+        $title = get_string('footnote', 'theme_emphasize');
+        $description = get_string('footnotedesc', 'theme_emphasize');
+        $default = '';
+        $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
 
     $settings->add($page);
 

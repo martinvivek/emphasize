@@ -267,3 +267,6 @@ $string['third_ms_header_desc'] = 'The text entered here, will be displayed as H
 
 $string['third_ms_Content'] = 'Content for Marketing Spot3';
 $string['third_ms_Content_desc'] = 'The text entered here, will be displayed as Content for Marketing Spot3 on the Login Page, Max 50 words can be shown ';
+
+$string['footnote'] = 'Footnote';
+$string['footnotedesc'] = 'Whatever you add to this textarea will be displayed in the footer throughout your Moodle site.';

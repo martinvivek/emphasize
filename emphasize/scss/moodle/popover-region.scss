@@ -498,3 +498,8 @@ $content-header-footer-height: $region-header-height + $region-footer-height;
 .modal-dialog .modal-content .modal-body .list-group a.list-group-item-action:hover {
     color: #fff;
 }
+.navbar-light .navbar-nav .nav-link i.fa.fa-comment, .navbar-light .navbar-nav .nav-link i.fa.fa-bell, .navbar-light .navbar-nav .nav-link i.fa.fa-search {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #999;
+    -webkit-text-stroke-width: 1px;
+}

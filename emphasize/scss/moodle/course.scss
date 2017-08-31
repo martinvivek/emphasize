@@ -1023,6 +1023,10 @@ span.editinstructions {
         .category-listing > ul > .listitem:first-child {
             position: relative;
         }
+        .category-listing > ul > .listitem{
+            padding: .5rem 0px;
+            border-bottom: 1px solid #ccc;
+        }
 
         .category-bulk-actions {
             margin: 0 0.5em 0.5em;

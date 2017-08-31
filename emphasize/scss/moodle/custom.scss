@@ -745,8 +745,8 @@ body .popover-region-header-container{
     color:$blocktextcolor;
 }
 body .navbar .popover-region-container {
-    top: 2.178rem;
-    box-shadow: 5px 5px rgba(102,102,102,.1);
+    //top: 2.178rem;
+    box-shadow: 0px 1px 15px 0px #333;
 }
 header span.hidden-md-down .search-input-wrapper>div {
     margin-top: 6px;

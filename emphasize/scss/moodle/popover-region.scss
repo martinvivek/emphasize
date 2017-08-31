@@ -106,11 +106,12 @@ $content-header-footer-height: $region-header-height + $region-footer-height;
 }
 
 .popover-region-footer-container {
-    height: $region-footer-height;
+    //height: $region-footer-height;
     text-align: center;
     border-top: $standard-border;
     background-color: $popover-bg;
-    padding-top: 3px;
+    //padding-top: 3px;
+    border-bottom: $standard-border;
 }
 
 .popover-region-header-text {

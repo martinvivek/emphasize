@@ -1215,3 +1215,10 @@ span.editinstructions {
 .coursebox .content .courseimage {
     text-align: center;
 }
+#course-category-listings.columns-3 #course-detail .course-detail .detail-pair {
+    border-bottom: 1px solid #ccc;
+}
+#course-category-listings.columns-3 #course-detail .course-detail .detail-pair .pair-key, #course-category-listings.columns-3 #course-detail .course-detail .detail-pair .pair-value {
+    margin: auto !important;
+    padding: 10px 15px;
+}

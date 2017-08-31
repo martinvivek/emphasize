@@ -492,3 +492,9 @@ $content-header-footer-height: $region-header-height + $region-footer-height;
         }
     }
 }
+.modal-dialog .modal-content .modal-body .list-group a.list-group-item-action {
+    color: #3a3a3a;
+}
+.modal-dialog .modal-content .modal-body .list-group a.list-group-item-action:hover {
+    color: #fff;
+}

@@ -7,3 +7,7 @@
     border: 0;
     background-color: inherit;
 }
+body#page-login-index .loginbg_img .flt_none .forgetpass, body#page-login-index .loginbg_img .flt_none .forgetpass+.m-t-1,
+body#page-login-index .loginbg_img .flt_none .forgetpass ~ .m-t-2 {
+    text-align: center;
+}

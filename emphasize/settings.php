@@ -433,6 +433,16 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
         
+        //Custom SCSS to change the active tabs background color.
+        //author : K.Raghuvaran
+        $name = 'theme_emphasize/activetabbgcolor';
+        $title = get_string('activetabbgcolor', 'theme_emphasize');
+        $description = get_string('activetabbgclr_desc', 'theme_emphasize');
+        $default = '#58cbff';
+        $setting = new admin_setting_configcolourpicker($name, $title, $description, $default);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+        
         //Custom SCSS to change the Left side bar bg color of each button.
         //author : K.Raghuvaran
         $name = 'theme_emphasize/sidebarbgcolor';

@@ -45,7 +45,6 @@ div#myCarousel .carousel-inner > .item > img.six {
 .user_content{line-height: 30px;margin-left: 10px;clear: both;}.userid{float: left;word-break: break-all;}
 button.user_role{margin: 2px;}
 .breadcrumb-nav{padding-right: 5px;padding-left: 5px;}
-.breadcrumb-item>a{color:#fff;}
 li.breadcrumb-item:after {
     content: " ";
     display: block;
@@ -64,7 +63,7 @@ li.breadcrumb-item:after {
 }
 div#page-navbar .breadcrumb-nav{background: none;border: none;}
 .breadcrumb-nav .breadcrumb {margin: 0;padding: 0px;float: left;}
-.breadcrumb-item {float: left;position: relative; background: #5bc0de;}
+.breadcrumb-item {float: left;position: relative; background: $buttonbgcolor;}
 li.breadcrumb-item:before {
     content: " ";
     display: block;
@@ -80,7 +79,7 @@ li.breadcrumb-item:before {
     border-left: 20px solid #fff;
     margin-left: 1px;
 }
-.breadcrumb-item>a {color: #fff;float: left;padding: 5px 3px 5px 25px;}
+.breadcrumb-item>a {color: $btntextcolor;float: left;padding: 5px 3px 5px 25px;}
 .dropdown-menu .dropdown-item.dropdown_others {float: left;display: inline;width: auto;clear: none;border: none;}
 .dropdown-menu .dropdown-item.dropdown_others:last-child {float: right;}
 .dropdown_others.link_button {margin-top: 5px;}

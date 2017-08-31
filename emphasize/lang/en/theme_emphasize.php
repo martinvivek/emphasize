@@ -72,6 +72,9 @@ $string['bodybgcolor_desc'] = "The color you added here will be affects as Body'
 // link colors
 $string['linkcolor'] = "Link Color";
 $string['linkhovercolor'] = "Link Hover Color";
+// active tabs color
+$string['activetabbgcolor'] = "Active Tabs bg color";
+$string['activetabbgclr_desc'] = "The color you added here will be affects as background color for Active tabs";
 
 $string['linkcolordesc'] = "The color you added here will be affects for all site anchor tags color";
 $string['linkhovercolordesc'] = "The color you added here will be affects for all site anchor tags hover color";

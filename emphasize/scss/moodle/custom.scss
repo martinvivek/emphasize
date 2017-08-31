@@ -345,16 +345,18 @@ body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 }
 
 //code added for tabs
-.card-block .nav-tabs, .panel-body .nav-tabs{
-    background-color: #03a9f4;
+.card-block .nav-tabs, .panel-body .nav-tabs, ul.nav.nav-tabs {
+    background-color: $blockheaderbg; /*#03a9f4*/
+}
+.card-block .nav-tabs {
     border-radius: 8px 8px 0px 0px;
 }
-.card-block .nav-tabs .nav-link.active, .panel-body .nav-tabs .nav-link.active{
-    background-color: #58cbff !important;
-    color: #fff !important ;
+.card-block .nav-tabs .nav-link.active, .panel-body .nav-tabs .nav-link.active, ul.nav.nav-tabs li.ui-state-active {
+    background-color: $activetabbgcolor !important; /*#58cbff*/
+    color: $btntextcolor !important ; /*#fff*/
 }
-.card-block .nav-tabs .nav-link, .panel-body .nav-tabs .nav-link{
-    color: #fff;
+.card-block .nav-tabs .nav-link, .panel-body .nav-tabs .nav-link, ul.nav.nav-tabs li.ui-state-default>a {
+    color: $btntextcolor; /*#fff*/
     border: 0;
 }
 .card-block .nav-tabs .nav-link:hover,
@@ -363,6 +365,19 @@ body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 }
 .nav.nav-tabs>li.nav-item:first-child>a{
     border-radius: 8px 0px 0px 0px;
+}
+.panel-body .nav-tabs>li.nav-item:first-child>a {
+  border-radius: 0px;
+}
+body#page-user-profile .panel .panel-body ul.nav.nav-tabs {
+    border-bottom: none;
+}
+body#page-user-profile .panel .panel-body .tab-content .list-group-item:last-child {
+    border-top: none;
+}
+body#page-user-profile .panel .panel-body {
+    background-color: #fff;
+    margin-bottom: 10px;
 }
 .nav.nav-tabs>li.nav-item {
     margin-bottom: 0px;

@@ -112,6 +112,7 @@ function theme_emphasize_get_pre_scss($theme) {
         'footerbgcolor' => ['footerbgcolor'],
         'footertextcolor' => ['footertextcolor'],
         'footerlinkcolor' => ['footerlinkcolor'],
+        'activetabbgcolor' => ['activetabbgcolor'],
     ];
 
     // Prepend variables first.

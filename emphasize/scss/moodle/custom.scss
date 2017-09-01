@@ -105,6 +105,8 @@ nav.list-group.m-t-1{
             font-weight: 300;
             text-transform: uppercase;
             border-top: 1px solid #303030;
+            max-height: 31px;
+            overflow: hidden;
         }
         //i.fa {
         //    -webkit-transform: rotateY(180deg);

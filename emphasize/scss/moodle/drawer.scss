@@ -18,6 +18,7 @@ $drawer-offscreen-gutter: 50px;
 #nav-drawer.closed {
     margin: 0px 10px 0px 0px;
     left: -($drawer-width - $drawer-offscreen-gutter);
+    overflow: inherit;
 }
 #page {
     margin-top: $navbar-height;
@@ -43,6 +44,10 @@ $drawer-bg: $bajaj-gray-lighter !default;
 #nav-drawer {
     right: auto;
     left: 0;
+    overflow: scroll;
+}
+#nav-drawer::-webkit-scrollbar {
+    width: 0px;
 }
 #page {
     margin-top: $fixed-header-y;

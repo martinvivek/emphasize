@@ -814,8 +814,12 @@ body.pagelayout-course #nav-drawer.closed .list-group:not(.m-t-1)>a.list-group-i
     text-align: center;
 }
 body#page-admin-user .no-overflow table#users>thead>tr>th, body#page-admin-user .no-overflow table#users>tbody>tr>td {
-    min-width: 120px !important;
-    padding: 6px 8px;
+    min-width: 86px !important;
+    padding: 6px 5px;
+    font-size: 14px;
+}
+body#page-admin-user .no-overflow table#users>tbody>tr>td>a>i.icon {
+    margin: auto;
 }
 body#page-admin-user .no-overflow table#users>thead>tr>th>a{
     color:$tbltextcolor;
@@ -879,4 +883,23 @@ body#page-site-index .courses.frontpage-course-list-all .coursebox h3.coursename
 body#page-grade-report-grader-index form>div .initialbar {
     width: 73%;
     margin: auto;
+}
+@media (min-width:768px) {
+    [data-region="blocks-column"],
+    div#page > header#page-header > .col-xs-12.p-a-1{
+        padding-right: 0px !important;
+    }
+    div#page-content div#region-main-box.col-xs-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    div#page>header#page-header>.col-xs-12.p-a-1, div#page>header#page-header>.col-xs-12.p-a-1 div#page-navbar .breadcrumb-nav {
+        padding-left: 0px !important;
+    }
+}
+@media (max-width:767px) {
+    [data-region="blocks-column"] {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }

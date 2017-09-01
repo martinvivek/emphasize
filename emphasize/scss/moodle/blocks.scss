@@ -19,9 +19,9 @@
         color: $body-color;
     }
 }
-
-$blocks-column-width: 250px !default;
-
+//commented by Raghuvaran on 1-SEP
+//$blocks-column-width: 250px !default;
+$blocks-column-width: 300px !default;
 [data-region="blocks-column"] {
     width: $blocks-column-width;
     float: right;

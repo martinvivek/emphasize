@@ -89,7 +89,7 @@ class course_renderer extends \core_course_renderer {
      * @param stdClass|course_in_list $course
      * @return string
      */
-    public function coursecat_coursebox_content($chelper, $course) {
+    public function coursecat_coursebox_content(coursecat_helper $chelper, $course) {
         global $CFG;
         if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
             return '';

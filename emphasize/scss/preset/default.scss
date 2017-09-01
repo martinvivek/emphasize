@@ -257,10 +257,13 @@ body [data-region="drawer"] {
 div#page>header#page-header .card {
     background-color: transparent;
 }
-table thead, table.dataTable.no-footer>thead{
+table thead, table.dataTable.no-footer>thead,
+.path-grade-report-grader .gradeparent tr.heading th.cell{
     background-color: $tblhdcolor;   
 }
-table thead>tr>th, table.dataTable.no-footer>thead>tr>th{
+table thead>tr>th, table.dataTable.no-footer>thead>tr>th,
+.path-grade-report-grader .gradeparent tr.heading th.cell,.path-grade-report-grader .gradeparent tr.heading th.cell>a,
+.path-grade-report-grader .gradeparent tr.heading th.cell>a>i.fa{
     color: $tbltextcolor;
 }
 #site-news-forum,

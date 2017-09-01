@@ -1228,7 +1228,16 @@ class core_renderer extends \core_renderer {
         if ($course instanceof stdClass) {
             require_once($CFG->libdir . '/coursecatlib.php');
             $course = new course_in_list($course);
-            $course_summary = new coursecat_helper($course);
+            
+            //code added by raghuvaran $course_summary = new coursecat_helper($course);(only this code had here, I added if and else statement on 1-9-17)
+            if (!class_exists('coursecat_helper')) {
+                // generate the class here
+                 $course_summary = '';
+            }else{
+                $course_summary = new coursecat_helper($course);
+            }
+           
+            
         }
         
             $summary_text = '';
@@ -1574,7 +1583,7 @@ function theme_emphasize_user_get_user_navigation_info($user, $page, $options = 
         $footnote='';
         $footnotepath = $this->page->theme->settings->footnote;
         if(!empty($footnotepath)){
-            $footnote .= $footnotepath.$year;
+            $footnote .= $footnotepath;
         }
         return $footnote;
     }

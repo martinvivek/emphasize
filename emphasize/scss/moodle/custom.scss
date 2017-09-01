@@ -903,3 +903,11 @@ body#page-grade-report-grader-index form>div .initialbar {
         padding-right: 0px;
     }
 }
+@-moz-document url-prefix() {
+    #nav-drawer .list-group a.list-group-item{
+        display:inline-flex;
+    }
+    #nav-drawer.closed .list-group a.list-group-item{
+        display:inherit;
+    }
+}

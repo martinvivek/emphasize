@@ -913,12 +913,17 @@ body#page-grade-report-grader-index form>div .initialbar {
 }
 .block .block-controls {margin-right:7px;}
 //code added for turn editing button
+header#page-header form#on_off_custom_btn {
+    float: right;
+    margin-bottom: 0px;
+}
 .turnedit_switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 26px;
     float: right;
+    margin-bottom: 0px;
 }
 
 .turnedit_switch input {display:none;}
@@ -938,8 +943,8 @@ body#page-grade-report-grader-index form>div .initialbar {
 .turnedit_switch .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 18px;
+  width: 18px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -983,18 +988,18 @@ body#page-grade-report-grader-index form>div .initialbar {
 body:not(#page-my-index) header#page-header .breadcrumb-button .singlebutton form>input[type="hidden"] + button.btn.btn-secondary {
     display: none;
 }
-header#page-header input[checked]+span.slider:after {
-    content: "OFF";
-    position: relative;
-    top: 7px;
-    color: #fff;
-    font-size: 14px;
-    left: 2px;
-}
-header#page-header input[unchecked] + span.slider:after {
-    content: "ON";
-    position: relative;
-    right: -33px;
-    color: #fff;
-    top: 7px;
-}
+//header#page-header input[checked]+span.slider:after {
+//    content: "OFF";
+//    position: relative;
+//    top: 7px;
+//    color: #fff;
+//    font-size: 14px;
+//    left: 2px;
+//}
+//header#page-header input[unchecked] + span.slider:after {
+//    content: "ON";
+//    position: relative;
+//    right: -33px;
+//    color: #fff;
+//    top: 7px;
+//}

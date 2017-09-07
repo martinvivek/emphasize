@@ -64,6 +64,7 @@ li.breadcrumb-item:after {
 div#page-navbar .breadcrumb-nav{background: none;border: none;}
 .breadcrumb-nav .breadcrumb {margin: 0;padding: 0px;float: left;}
 .breadcrumb-item {float: left;position: relative; background: $buttonbgcolor;}
+li.breadcrumb-item:after {border-left-color: $buttonbgcolor;}
 li.breadcrumb-item:before {
     content: " ";
     display: block;

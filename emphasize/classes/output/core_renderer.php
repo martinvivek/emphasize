@@ -76,51 +76,7 @@ class core_renderer extends \core_renderer {
      */
     public function full_header() {
         global $PAGE;
-        $turn_on_off="";
-         if ($PAGE->user_allowed_editing()) {
-                if (empty($PAGE->layout_options['nonavbar'])) {
-                    $adminediting = optional_param('adminedit', -1, PARAM_BOOL);
-                    if ($PAGE->user_is_editing()) {
-                        $adminediting= 1;
-                    } else {
-                        $adminediting= 0;
-                    }
-                    
-                    $edit="adminedit";
-                }else{
-                    $adminediting = optional_param('edit', -1, PARAM_BOOL);
-                    if ($PAGE->user_is_editing()) {
-                        $adminediting= 1;
-                    } else {
-                        $adminediting= 0;
-                    }
-                    
-                    $edit="edit";
-                }
-                if($adminediting==1){
-                    $adminedit=0;
-                    $checkbox="checked";
-                }else{
-                    $adminedit=1;
-                    $checkbox="unchecked";
-                }
-                $sesskey=sesskey();
-                $turn_on_off.='
-                <form method="post" id="on_off_custom_btn">
-                <input type="hidden" name="'.$edit.'" value="'.$adminedit.'">
-                <input type="hidden" name="sesskey" value="'.$sesskey.'">';
-                $turn_on_off .='<label class="turnedit_switch">
-                            <input class="turnedit_input" type="checkbox" id="myCheck" '.$checkbox.' onclick="check();" >
-                            <span class="slider round" ></span>
-                        </label>';
-                $turn_on_off .='<script>
-                            function check() {
-                                $("#on_off_custom_btn").submit();
-                            }
-                        </script>';   
-                $turn_on_off .='</form>';
-    
-         }
+
         $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'row'));
         $html .= html_writer::start_div('col-xs-12 p-a-1');
         $html .= html_writer::start_div('card');
@@ -134,12 +90,9 @@ class core_renderer extends \core_renderer {
             $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
             $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
             $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
-            $html .= $turn_on_off;
             $html .= html_writer::end_div();
         } else if ($pageheadingbutton) {
-            //print_object($pageheadingbutton);
             $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button nonavbar pull-xs-right');
-            $html .= $turn_on_off;
         }
         $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
         $html .= html_writer::end_div();

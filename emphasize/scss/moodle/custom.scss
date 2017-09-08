@@ -1003,3 +1003,6 @@ body:not(#page-my-index) header#page-header .breadcrumb-button .singlebutton for
 //    color: #fff;
 //    top: 7px;
 //}
+.ui-draggable .ui-dialog-titlebar{border-bottom: 1px solid #e5e5e5;}
+.ui-dialog .ui-dialog-title{margin-bottom: 20px;}
+.ui-dialog .ui-dialog-titlebar-close{top:30% !important}

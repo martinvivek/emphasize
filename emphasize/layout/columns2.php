@@ -58,5 +58,9 @@ $templatecontext = [
 
 //$templatecontext['flatnavigation'] = $PAGE->flatnav;
 $templatecontext['flatnavigation'] = flatnav_icon_support($PAGE->flatnav);
+if ($this->page->pagelayout == 'standard' && $this->page->pagetype == 'message-index') {
+echo $OUTPUT->render_from_template('theme_emphasize/message', $templatecontext);
+} else {
 echo $OUTPUT->render_from_template('theme_emphasize/columns2', $templatecontext);
+}
 

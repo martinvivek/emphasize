@@ -347,21 +347,10 @@ body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 }
 
 //code added for tabs
-.card-block .nav-tabs, .panel-body .nav-tabs, ul.nav.nav-tabs, ul.ui-tabs-nav {
-    background-color: $blockheaderbg; /*#03a9f4*/
-}
 .card-block .nav-tabs, ul.nav.nav-tabs, ul.ui-tabs-nav {
     border-radius: 8px 8px 0px 0px;
 }
-.card-block .nav-tabs .nav-link.active, .panel-body .nav-tabs .nav-link.active, ul.nav.nav-tabs li.ui-state-active,
-ul.ui-tabs-nav .ui-state-default .ui-state-active{
-    background-color: $activetabbgcolor !important; /*#58cbff*/
-    color: $btntextcolor !important ; /*#fff*/
-}
-.card-block .nav-tabs .nav-link, .panel-body .nav-tabs .nav-link, ul.nav.nav-tabs li.nav-item>a, ul.ui-tabs-nav .ui-state-default .ui-tabs-anchor {
-    color: $btntextcolor; /*#fff*/
-    border: 0;
-}
+
 .card-block .nav-tabs .nav-link:hover,
 ul.nav.nav-tabs li.nav-item>a:hover,
 ul.ui-tabs-nav .ui-state-default .ui-tabs-anchor:hover,
@@ -744,15 +733,8 @@ body#page-my-index div#myoverview_courses_view .tab-content div#myoverview_cours
     margin-right: -2px;
     margin-bottom: 4px;
 }
-body .popover-region-header-container{
-    padding:3px 10px;
-    background-color: $blockheaderbg;
-    color:$blocktextcolor;
-    min-height: 33px;
-}
-.popover-region-header-actions .newmessage-link a, .popover-region-header-actions .hover-tooltip-container a i.fa {
-    color:$blocktextcolor;
-}
+
+
 body .navbar .popover-region-container {
     //top: 2.178rem;
     box-shadow: 0px 1px 15px 0px #333;
@@ -828,9 +810,7 @@ body#page-admin-user .no-overflow table#users>thead>tr>th, body#page-admin-user 
 body#page-admin-user .no-overflow table#users>tbody>tr>td>a>i.icon {
     margin: auto;
 }
-body#page-admin-user .no-overflow table#users>thead>tr>th>a{
-    color:$tbltextcolor;
-}
+
 body#page-user-profile .panel .panel-body form#exampleStandardForm .form-control {
     width: 50%;
 }

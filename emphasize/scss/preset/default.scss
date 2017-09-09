@@ -299,3 +299,28 @@ header .container-fluid .logo img.img_logo  {
 .bg-inverse{background-color:$footerbgcolor !important;color:$footertextcolor !important;}
 #page-footer a {color: $footerlinkcolor;}
 .list-group .list-group-item:active{background-color: #fff;}
+//code added for tabs colors settings
+.card-block .nav-tabs, .panel-body .nav-tabs, ul.nav.nav-tabs, ul.ui-tabs-nav {
+    background-color: $blockheaderbg; /*#03a9f4*/
+}
+.card-block .nav-tabs .nav-link.active, .panel-body .nav-tabs .nav-link.active, ul.nav.nav-tabs li.ui-state-active,
+ul.ui-tabs-nav .ui-state-default .ui-state-active{
+    background-color: $activetabbgcolor !important; /*#58cbff*/
+    color: $btntextcolor !important ; /*#fff*/
+}
+.card-block .nav-tabs .nav-link, .panel-body .nav-tabs .nav-link, ul.nav.nav-tabs li.nav-item>a, ul.ui-tabs-nav .ui-state-default .ui-tabs-anchor {
+    color: $btntextcolor; /*#fff*/
+    border: 0;
+}
+body .popover-region-header-container{
+    padding:3px 10px;
+    background-color: $blockheaderbg;
+    color:$blocktextcolor;
+    min-height: 33px;
+}
+.popover-region-header-actions .newmessage-link a, .popover-region-header-actions .hover-tooltip-container a i.fa {
+    color:$blocktextcolor;
+}
+body#page-admin-user .no-overflow table#users>thead>tr>th>a{
+    color:$tbltextcolor;
+}

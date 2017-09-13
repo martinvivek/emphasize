@@ -514,7 +514,7 @@ if (!$PAGE->user_is_editing())
                     }
                     else
                     {
-                        echo '&nbsp;';
+                        //echo '&nbsp;';
                     }
 
                     //Replace get_context_instance by the class for moodle 2.6+

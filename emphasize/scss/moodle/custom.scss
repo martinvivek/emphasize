@@ -333,10 +333,25 @@ margin:0px;
     box-shadow: 4px 4px 5px #dedcdc;
     margin: 0px 0px 30px;
 }
-#page-course-view-tabtopics div.action-menu{float: right; /*margin-top: -50px;*/ margin-right: 10px;}
+#page-course-view-tabtopics div.action-menu{float: right;margin-right: 10px;}
+#page-course-view-tabtopics div#action-menu-1-menubar{margin-top: -44px;}
 #page-course-view-tabtopics a .icon{
 color:#a9a9a9;}
-//body#page-course-view-tabtopics .icon{color: #3a3a3a;height: 24px;font-size: 24px;width: auto;}
+#page-course-view-tabtopics div#action-menu-1-menubar .dropdown.d-inline a.dropdown-toggle i.icon.fa.fa-cog.fa-fw {
+    color: #3a3a3a;
+    font-size: 24px;
+    height: 24px;
+    width: auto;
+}
+#page-course-view-tabtopics span.section-handle .icon {
+    color: #a9a9a9;
+}
+#page-course-view-tabtopics span.editing_move .icon {
+    color: #a9a9a9;
+}
+#page-course-view-tabtopics .course-content ul.section {
+    margin: 0px 22px 0px 9px;
+}
 body#page-course-view-tabtopics .activity img.activityicon{float:right;}
 // quiz view by rizwana
 #page-mod-quiz-view .card.card-block{background-color: #f6f6f6;}
@@ -384,7 +399,6 @@ body#page-site-index.notloggedin div#region-main-box section#region-main .card.c
     min-height: 0px;
 }
 //div[role="main"]{padding:10px; overflow-x:hidden;}
-body#page-course-view-tabtopics .activity img.activityicon {float: left;margin-right: 35px;}
 
 //Code added for Marketings Spots by Raghuvaran
 .marketing_spots_container {

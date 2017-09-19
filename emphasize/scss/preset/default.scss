@@ -54,7 +54,7 @@ $body-bg:    #f4f4f4 !default;
 $body-color: #3a3a3a !default;
 
 // Typography
-$font-family-sans-serif: "Open Sans", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: $fontselect !default;
 $font-size-root: 14px !default;
 
 // Tables
@@ -245,10 +245,10 @@ body {
     background-color: $bodybgcolor !important;
 }
 body *{
-    font-family:$fontselect !important;
+    font-family:$fontselect;
 }
 .fa {
-    font-family:FontAwesome !important;
+    font-family:FontAwesome;
 }
 .block>.card-block>h3, .block {
     border-radius: $blkhdrradius;

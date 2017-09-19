@@ -242,8 +242,13 @@ button.btn-secondary:hover, .btn-default:hover, .btn-primary:hover, button:hover
     border: 1px solid #269abc;
 }
 body {
-    font-family:$fontselect;
     background-color: $bodybgcolor !important;
+}
+body *{
+    font-family:$fontselect !important;
+}
+.fa {
+    font-family:FontAwesome !important;
 }
 .block>.card-block>h3, .block {
     border-radius: $blkhdrradius;
